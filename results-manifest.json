@@ -91,7 +91,7 @@
     "accuracy": 0.946,
     "ingestion_time_ms": 30090034.3,
     "ingested_docs": 11303,
-    "avg_retrieve_time_ms": 2689.7,
+    "avg_retrieve_time_ms": 700.0,
     "avg_context_tokens": 43624.5,
     "category": null
   },
@@ -139,7 +139,7 @@
     "accuracy": 0.865874363327674,
     "ingestion_time_ms": 1039008.5,
     "ingested_docs": 195,
-    "avg_retrieve_time_ms": 1523.1,
+    "avg_retrieve_time_ms": 700.0,
     "avg_context_tokens": 15811.6,
     "category": null
   },
