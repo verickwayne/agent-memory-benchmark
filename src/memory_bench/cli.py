@@ -18,7 +18,7 @@ from .modes import REGISTRY as MODE_REGISTRY, get_mode
 from .runner import EvalRunner
 
 
-app = typer.Typer(help="Open Memory Benchmark (OMB).")
+app = typer.Typer(help="Agent Memory Benchmark (AMB).")
 console = Console()
 
 
@@ -137,7 +137,7 @@ def publish_results(
     results-manifest.json from all local .json.gz files.
 
     Workflow:
-        uv run omb publish-results outputs/personamem/mem0/rag/32k.json --push
+        uv run amb publish-results outputs/personamem/mem0/rag/32k.json --push
         git add outputs/ results-manifest.json && git commit -m 'results: ...' && git push
     """
     import gzip as _gzip
@@ -187,8 +187,8 @@ def publish_results(
 
     from .server import _list_results
     import os as _os
-    _os.environ["OMB_OUTPUT_DIR"] = str(abs_output)
-    _os.environ["OMB_ROOT"] = str(root)
+    _os.environ["AMB_OUTPUT_DIR"] = str(abs_output)
+    _os.environ["AMB_ROOT"] = str(root)
     manifest_entries = _list_results(published_only=True)
     manifest_out = root / "results-manifest.json"
     manifest_out.write_text(json.dumps(manifest_entries, indent=2))
@@ -242,7 +242,7 @@ def unpublish_results(
     """Decompress a result back to .json and optionally remove it from Vercel Blob.
 
     Workflow:
-        uv run omb unpublish-results outputs/personamem/mem0/rag/32k.json.gz --push
+        uv run amb unpublish-results outputs/personamem/mem0/rag/32k.json.gz --push
         git add outputs/ results-manifest.json && git commit -m 'results: remove ...' && git push
     """
     import gzip as _gzip
@@ -278,8 +278,8 @@ def unpublish_results(
 
     from .server import _list_results
     import os as _os
-    _os.environ["OMB_OUTPUT_DIR"] = str(abs_output)
-    _os.environ["OMB_ROOT"] = str(root)
+    _os.environ["AMB_OUTPUT_DIR"] = str(abs_output)
+    _os.environ["AMB_ROOT"] = str(root)
     manifest_entries = _list_results(published_only=True)
     manifest_out = root / "results-manifest.json"
     manifest_out.write_text(json.dumps(manifest_entries, indent=2))
@@ -330,7 +330,7 @@ def publish_dataset(
     Blob upload skips files whose content hasn't changed (checksum-based).
 
     Workflow (first time or after dataset update):
-        uv run omb publish-dataset --dataset personamem --push
+        uv run amb publish-dataset --dataset personamem --push
         git add data/ && git commit -m 'data: export personamem' && git push
     """
     import gzip as _gzip
@@ -401,8 +401,8 @@ def publish_dataset(
 
     # ── Regenerate catalog.json ───────────────────────────────────────────
     import os as _os
-    _os.environ.setdefault("OMB_DATA_DIR", str(abs_data))
-    _os.environ.setdefault("OMB_ROOT", str(root))
+    _os.environ.setdefault("AMB_DATA_DIR", str(abs_data))
+    _os.environ.setdefault("AMB_ROOT", str(root))
     from .server import _generate_catalog
     catalog_out = root / "catalog.json"
     catalog_out.write_text(json.dumps(_generate_catalog(), indent=2))
@@ -460,7 +460,7 @@ def unpublish_dataset(
     """Remove a dataset's exported files from data/ and optionally from Vercel Blob.
 
     Workflow:
-        uv run omb unpublish-dataset ama-bench --push
+        uv run amb unpublish-dataset ama-bench --push
         git add data/ && git commit -m 'data: remove ama-bench' && git push
     """
     import shutil
@@ -512,8 +512,8 @@ def unpublish_dataset(
 
     # ── Regenerate catalog.json ───────────────────────────────────────────
     import os as _os
-    _os.environ["OMB_DATA_DIR"] = str(abs_data)
-    _os.environ["OMB_ROOT"] = str(root)
+    _os.environ["AMB_DATA_DIR"] = str(abs_data)
+    _os.environ["AMB_ROOT"] = str(root)
     from .server import _generate_catalog
     catalog_out = root / "catalog.json"
     catalog_out.write_text(json.dumps(_generate_catalog(), indent=2))
@@ -750,8 +750,8 @@ def view(
     root = Path(__file__).parents[2]
     abs_output = (root / output_dir).resolve()
 
-    os.environ["OMB_OUTPUT_DIR"] = str(abs_output)
-    os.environ["OMB_ROOT"] = str(root)
+    os.environ["AMB_OUTPUT_DIR"] = str(abs_output)
+    os.environ["AMB_ROOT"] = str(root)
 
     vite_proc = None
     if dev:

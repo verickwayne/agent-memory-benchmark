@@ -206,6 +206,51 @@ wheels = [
 ]
 
 [[package]]
+name = "amb"
+version = "0.1.0"
+source = { editable = "." }
+dependencies = [
+    { name = "cognee" },
+    { name = "datasets" },
+    { name = "fastapi", extra = ["standard"] },
+    { name = "google-genai" },
+    { name = "groq" },
+    { name = "hindsight-all" },
+    { name = "httpx" },
+    { name = "mem0ai" },
+    { name = "python-dotenv" },
+    { name = "qdrant-client" },
+    { name = "rank-bm25" },
+    { name = "rich" },
+    { name = "sentence-transformers" },
+    { name = "supermemory" },
+    { name = "tiktoken" },
+    { name = "typer" },
+    { name = "uvicorn" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "cognee", specifier = ">=0.5.4" },
+    { name = "datasets", specifier = ">=2.0" },
+    { name = "fastapi", extras = ["standard"], specifier = ">=0.135.1" },
+    { name = "google-genai", specifier = ">=1.66.0" },
+    { name = "groq", specifier = ">=1.1.1" },
+    { name = "hindsight-all", specifier = ">=0.4" },
+    { name = "httpx", specifier = ">=0.27" },
+    { name = "mem0ai", specifier = ">=1.0.5" },
+    { name = "python-dotenv", specifier = ">=1.0" },
+    { name = "qdrant-client", specifier = ">=1.13" },
+    { name = "rank-bm25", specifier = ">=0.2" },
+    { name = "rich", specifier = ">=13" },
+    { name = "sentence-transformers", specifier = ">=3.0" },
+    { name = "supermemory", specifier = ">=0.1" },
+    { name = "tiktoken", specifier = ">=0.12.0" },
+    { name = "typer", specifier = ">=0.12" },
+    { name = "uvicorn", specifier = ">=0.41.0" },
+]
+
+[[package]]
 name = "annotated-doc"
 version = "0.0.4"
 source = { registry = "https://pypi.org/simple" }
@@ -3627,51 +3672,6 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/fa/75/46a84342b6aa17edc4053c771c64dee5f780efa6cd5f7b7e56fe795d5cdb/obstore-0.9.1-pp311-pypy311_pp73-musllinux_1_2_armv7l.whl", hash = "sha256:41d4d56f28a1490deed2b51bdd5af17b08ddaf366bdf726273a5a128068b0b3c", size = 3815743 },
     { url = "https://files.pythonhosted.org/packages/4c/8b/e5876892388ff6ad67610ae94e96cb17c9dbae0b3b3c247c2618701325f1/obstore-0.9.1-pp311-pypy311_pp73-musllinux_1_2_i686.whl", hash = "sha256:10916c79342b82fe8364f4d2bd96e9831362a07762ba9fa0d5f057a06bdf8db0", size = 3928147 },
     { url = "https://files.pythonhosted.org/packages/5c/e2/112bfe74180dd8950616f986ba9bcad6444a6bd3d3c1f863d2028635c99f/obstore-0.9.1-pp311-pypy311_pp73-musllinux_1_2_x86_64.whl", hash = "sha256:85fcf79453dd526943295e3897fcf4809233627ee89151ecc67cd178e61c545d", size = 4116521 },
-]
-
-[[package]]
-name = "omb"
-version = "0.1.0"
-source = { editable = "." }
-dependencies = [
-    { name = "cognee" },
-    { name = "datasets" },
-    { name = "fastapi", extra = ["standard"] },
-    { name = "google-genai" },
-    { name = "groq" },
-    { name = "hindsight-all" },
-    { name = "httpx" },
-    { name = "mem0ai" },
-    { name = "python-dotenv" },
-    { name = "qdrant-client" },
-    { name = "rank-bm25" },
-    { name = "rich" },
-    { name = "sentence-transformers" },
-    { name = "supermemory" },
-    { name = "tiktoken" },
-    { name = "typer" },
-    { name = "uvicorn" },
-]
-
-[package.metadata]
-requires-dist = [
-    { name = "cognee", specifier = ">=0.5.4" },
-    { name = "datasets", specifier = ">=2.0" },
-    { name = "fastapi", extras = ["standard"], specifier = ">=0.135.1" },
-    { name = "google-genai", specifier = ">=1.66.0" },
-    { name = "groq", specifier = ">=1.1.1" },
-    { name = "hindsight-all", specifier = ">=0.4" },
-    { name = "httpx", specifier = ">=0.27" },
-    { name = "mem0ai", specifier = ">=1.0.5" },
-    { name = "python-dotenv", specifier = ">=1.0" },
-    { name = "qdrant-client", specifier = ">=1.13" },
-    { name = "rank-bm25", specifier = ">=0.2" },
-    { name = "rich", specifier = ">=13" },
-    { name = "sentence-transformers", specifier = ">=3.0" },
-    { name = "supermemory", specifier = ">=0.1" },
-    { name = "tiktoken", specifier = ">=0.12.0" },
-    { name = "typer", specifier = ">=0.12" },
-    { name = "uvicorn", specifier = ">=0.41.0" },
 ]
 
 [[package]]

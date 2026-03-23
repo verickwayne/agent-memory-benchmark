@@ -14,14 +14,14 @@ from fastapi.staticfiles import StaticFiles
 app = FastAPI()
 app.add_middleware(GZipMiddleware, minimum_size=1000)
 
-_root = Path(os.environ.get("OMB_ROOT", Path(__file__).parents[2]))
-_output_dir = Path(os.environ.get("OMB_OUTPUT_DIR", _root / "outputs"))
-_data_dir = Path(os.environ.get("OMB_DATA_DIR", _root / "data"))
+_root = Path(os.environ.get("AMB_ROOT", Path(__file__).parents[2]))
+_output_dir = Path(os.environ.get("AMB_OUTPUT_DIR", _root / "outputs"))
+_data_dir = Path(os.environ.get("AMB_DATA_DIR", _root / "data"))
 _ui_dist = _root / "ui" / "dist"
 
 # Optional Vercel Blob base URL for serving data/ files when not on disk
 _BLOB_BASE = os.environ.get(
-    "OMB_BLOB_BASE_URL",
+    "AMB_BLOB_BASE_URL",
     "https://l4cy6iaq2c4g2ldt.public.blob.vercel-storage.com",
 )
 
@@ -58,7 +58,7 @@ def _fetch_blob(relative_path: str) -> bytes:
     import hashlib
     url_hash = hashlib.md5(url.encode()).hexdigest()[:16]
     cache_name = Path(relative_path).name + "." + url_hash
-    cache_path = Path(tempfile.gettempdir()) / "omb_blob" / cache_name
+    cache_path = Path(tempfile.gettempdir()) / "amb_blob" / cache_name
     if cache_path.exists():
         return cache_path.read_bytes()
     cache_path.parent.mkdir(parents=True, exist_ok=True)

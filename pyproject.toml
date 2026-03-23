@@ -1,7 +1,7 @@
 [project]
-name = "omb"
+name = "amb"
 version = "0.1.0"
-description = "Open Memory Benchmark"
+description = "Agent Memory Benchmark"
 requires-python = ">=3.11"
 dependencies = [
     "datasets>=2.0",
@@ -24,7 +24,7 @@ dependencies = [
 ]
 
 [project.scripts]
-omb = "memory_bench.cli:app"
+amb = "memory_bench.cli:app"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/memory_bench"]
