@@ -6,6 +6,19 @@ from pathlib import Path
 from ..models import Document
 from .base import MemoryProvider
 
+# Workaround: hindsight-client passes async_= but the model expects var_async=
+# This monkey-patch fixes RetainRequest so async_=True actually works.
+try:
+    from hindsight_client_api.models.retain_request import RetainRequest as _RR
+    _orig_init = _RR.__init__
+    def _patched_init(self, *args, **kwargs):
+        if "async_" in kwargs and "var_async" not in kwargs:
+            kwargs["var_async"] = kwargs.pop("async_")
+        _orig_init(self, *args, **kwargs)
+    _RR.__init__ = _patched_init
+except Exception:
+    pass
+
 
 def _deduplicate_results(results):
     """Remove duplicate results by chunk_id, keeping first occurrence."""
@@ -211,20 +224,23 @@ class _HindsightBase(MemoryProvider):
                         seen_doc_ids.add(did)
             all_items = unique_items
 
+            _use_async = True
             for i in range(0, len(all_items), _BATCH_SIZE):
                 batch = all_items[i:i + _BATCH_SIZE]
+                doc_label = batch[0].get("document_id", "?") if len(batch) == 1 else f"batch {i // _BATCH_SIZE + 1}"
                 for attempt in range(5):
                     try:
                         resp = self._client.retain_batch(
                             bank_id=bank_id,
                             items=batch,
-                            retain_async=True,
+                            retain_async=_use_async,
                         )
-                        # Track async operation IDs so we can wait for completion below.
-                        if resp is not None and getattr(resp, "var_async", False):
+                        if _use_async and resp is not None and getattr(resp, "var_async", False):
                             op_id = getattr(resp, "operation_id", None)
                             if op_id:
                                 operation_ids.append((bank_id, op_id))
+                        if not _use_async:
+                            _log.info(f"[retain] {doc_label} done ({i+1}/{len(all_items)})")
                         break
                     except Exception as e:
                         err = str(e)
@@ -242,12 +258,12 @@ class _HindsightBase(MemoryProvider):
                                 _log.warning(f"retain_batch: daemon down after 5 attempts, skipping: {err[:200]}")
                                 break
                         elif "Timeout" in etype or "Timeout" in err or "CancelledError" in err:
-                            # Transient LLM/server timeout — retry once with backoff.
-                            if attempt < 1:
-                                _log.warning(f"retain_batch timeout (attempt {attempt+1}/2), retrying in 15s: {err[:100]}")
-                                time.sleep(15)
+                            # Transient LLM/server timeout — retry with backoff.
+                            if attempt < 3:
+                                _log.warning(f"retain_batch timeout (attempt {attempt+1}/4), retrying in 30s: {err[:100]}")
+                                time.sleep(30)
                             else:
-                                _log.warning(f"retain_batch: timeout after 2 attempts, skipping batch: {err[:200]}")
+                                _log.warning(f"retain_batch: timeout after 4 attempts, skipping batch: {err[:200]}")
                                 break
                         elif attempt < 4:
                             time.sleep(10)
@@ -261,31 +277,43 @@ class _HindsightBase(MemoryProvider):
         # the daemon extracts facts in the background. Without waiting, retrieval
         # right after ingest finds an empty bank.
         if operation_ids or items_by_bank:
-            # Determine which banks to check and poll until they have facts.
             banks_to_check = list(items_by_bank.keys())
-            max_wait_s = 300  # 5 minutes max
-            poll_interval = 3
+            max_wait_s = 1800  # 30 minutes max
+            poll_interval = 10
             start = time.monotonic()
             _log.info(f"Waiting for extraction to complete on {len(banks_to_check)} bank(s)…")
             for bank_id in banks_to_check:
                 deadline = start + max_wait_s
                 while time.monotonic() < deadline:
                     try:
-                        resp = self._client.recall(
-                            bank_id=bank_id,
-                            query="summary",
-                            budget="low",
-                            max_tokens=64,
-                        )
-                        n_results = len(resp.results) if resp is not None and resp.results else 0
-                        n_chunks = len(resp.chunks) if resp is not None and hasattr(resp, "chunks") and resp.chunks else 0
-                        if n_results or n_chunks:
-                            _log.info(f"Bank {bank_id}: extraction ready ({n_results} facts, {n_chunks} chunks)")
+                        import httpx as _httpx
+                        base_url = self._client._api_client.configuration.host
+                        # Check for failed operations first
+                        r_failed = _httpx.get(f"{base_url}/v1/default/banks/{bank_id}/operations?status=failed&limit=1", timeout=15)
+                        if r_failed.status_code == 200 and r_failed.json().get("total", 0) > 0:
+                            failed_count = r_failed.json()["total"]
+                            raise RuntimeError(
+                                f"Bank {bank_id}: {failed_count} failed operation(s) detected. "
+                                f"Aborting to avoid scoring with incomplete ingestion."
+                            )
+                        # Use lightweight operations query instead of full stats (which JOINs millions of links)
+                        r = _httpx.get(f"{base_url}/v1/default/banks/{bank_id}/operations?status=pending&limit=1", timeout=15)
+                        if r.status_code == 200:
+                            pending = r.json().get("total", 0)
+                        else:
+                            pending = -1  # unknown
+                        if pending == 0:
+                            r2 = _httpx.get(f"{base_url}/v1/default/banks/{bank_id}/memories/list?limit=1", timeout=15)
+                            total = r2.json().get("total", 0) if r2.status_code == 200 else 0
+                            _log.info(f"Bank {bank_id}: extraction complete ({total} facts, 0 pending)")
                             break
-                    except Exception:
-                        pass
-                    elapsed = time.monotonic() - start
-                    _log.info(f"Bank {bank_id}: still extracting… ({elapsed:.0f}s elapsed)")
+                        elapsed = time.monotonic() - start
+                        _log.info(f"Bank {bank_id}: {pending} pending ops ({elapsed:.0f}s)")
+                    except RuntimeError:
+                        raise
+                    except Exception as e:
+                        elapsed = time.monotonic() - start
+                        _log.info(f"Bank {bank_id}: still extracting… ({elapsed:.0f}s, {e.__class__.__name__})")
                     time.sleep(poll_interval)
                 else:
                     _log.warning(f"Bank {bank_id}: timed out waiting for extraction; proceeding anyway.")
@@ -411,6 +439,13 @@ class HindsightMemoryProvider(_HindsightBase):
 
     def prepare(self, store_dir: Path, unit_ids: set[str] | None = None, reset: bool = True) -> None:
         super().prepare(store_dir, unit_ids)
+        # Allow overriding the hindsight-api binary with a local project path
+        # e.g. HINDSIGHT_API_PATH=/path/to/hindsight-api
+        custom_api_path = os.environ.get("HINDSIGHT_API_PATH")
+        if custom_api_path:
+            from hindsight_embed.daemon_embed_manager import DaemonEmbedManager
+            _custom = custom_api_path
+            DaemonEmbedManager._find_api_command = lambda self: ["uv", "run", "--project", _custom, "hindsight-api"]
         from hindsight import HindsightEmbedded
         self._client = HindsightEmbedded(
             profile=f"omb-{self._bank_id}",
@@ -508,7 +543,7 @@ class HindsightCloudMemoryProvider(_HindsightBase):
         if not self._per_unit:
             await self._acreate_bank(client, self._bank_id)
 
-        _BATCH_SIZE = 20
+        _BATCH_SIZE = 5 if self._dataset == "beam" else 20
         created: set[str] = set()
         operation_ids: list[tuple[str, str]] = []
 

@@ -1,10 +1,26 @@
 [
   {
-    "path": "outputs/lifebench/hindsight/rag/en.json",
+    "path": "outputs/beam/hindsight/single-query/1m.json",
+    "dataset": "beam",
+    "run_name": "hindsight",
+    "memory": "hindsight",
+    "mode": "single-query",
+    "split": "1m",
+    "total_queries": 700,
+    "correct": 585,
+    "accuracy": 0.7386039171368353,
+    "ingestion_time_ms": 347733.5,
+    "ingested_docs": 51,
+    "avg_retrieve_time_ms": 5517.7,
+    "avg_context_tokens": 23901.7,
+    "category": null
+  },
+  {
+    "path": "outputs/lifebench/hindsight/single-query/en.json",
     "dataset": "lifebench",
     "run_name": "hindsight",
     "memory": "hindsight",
-    "mode": "rag",
+    "mode": "single-query",
     "split": "en",
     "total_queries": 2003,
     "correct": 1433,
@@ -16,11 +32,11 @@
     "category": null
   },
   {
-    "path": "outputs/lifebench/hybrid-search/rag/en.json",
+    "path": "outputs/lifebench/hybrid-search/single-query/en.json",
     "dataset": "lifebench",
     "run_name": "hybrid-search",
     "memory": "hybrid-search",
-    "mode": "rag",
+    "mode": "single-query",
     "split": "en",
     "total_queries": 2003,
     "correct": 1221,
@@ -32,11 +48,11 @@
     "category": null
   },
   {
-    "path": "outputs/locomo/cognee/rag/locomo10.json",
+    "path": "outputs/locomo/cognee/single-query/locomo10.json",
     "dataset": "locomo",
     "run_name": "cognee",
     "memory": "cognee",
-    "mode": "rag",
+    "mode": "single-query",
     "split": "locomo10",
     "total_queries": 152,
     "correct": 122,
@@ -48,11 +64,11 @@
     "category": null
   },
   {
-    "path": "outputs/locomo/hybrid-search/rag/locomo10.json",
+    "path": "outputs/locomo/hybrid-search/single-query/locomo10.json",
     "dataset": "locomo",
     "run_name": "hybrid-search",
     "memory": "hybrid-search",
-    "mode": "rag",
+    "mode": "single-query",
     "split": "locomo10",
     "total_queries": 1540,
     "correct": 1218,
@@ -64,11 +80,11 @@
     "category": null
   },
   {
-    "path": "outputs/locomo/locomo-hindsight/rag/locomo10.json",
+    "path": "outputs/locomo/locomo-hindsight/single-query/locomo10.json",
     "dataset": "locomo",
     "run_name": "locomo-hindsight",
     "memory": "hindsight",
-    "mode": "rag",
+    "mode": "single-query",
     "split": "locomo10",
     "total_queries": 1540,
     "correct": 1417,
@@ -80,11 +96,11 @@
     "category": null
   },
   {
-    "path": "outputs/longmemeval/hindsight/rag/s.json",
+    "path": "outputs/longmemeval/hindsight/single-query/s.json",
     "dataset": "longmemeval",
     "run_name": "hindsight",
     "memory": "hindsight",
-    "mode": "rag",
+    "mode": "single-query",
     "split": "s",
     "total_queries": 500,
     "correct": 473,
@@ -96,11 +112,11 @@
     "category": null
   },
   {
-    "path": "outputs/longmemeval/hybrid-search/rag/s.json",
+    "path": "outputs/longmemeval/hybrid-search/single-query/s.json",
     "dataset": "longmemeval",
     "run_name": "hybrid-search",
     "memory": "hybrid-search",
-    "mode": "rag",
+    "mode": "single-query",
     "split": "s",
     "total_queries": 500,
     "correct": 370,
@@ -112,11 +128,11 @@
     "category": null
   },
   {
-    "path": "outputs/personamem/cognee/rag/32k.json",
+    "path": "outputs/personamem/cognee/single-query/32k.json",
     "dataset": "personamem",
     "run_name": "cognee",
     "memory": "cognee",
-    "mode": "rag",
+    "mode": "single-query",
     "split": "32k",
     "total_queries": 589,
     "correct": 482,
@@ -128,11 +144,11 @@
     "category": null
   },
   {
-    "path": "outputs/personamem/hindsight/rag/32k.json",
+    "path": "outputs/personamem/hindsight/single-query/32k.json",
     "dataset": "personamem",
     "run_name": "hindsight",
     "memory": "hindsight",
-    "mode": "rag",
+    "mode": "single-query",
     "split": "32k",
     "total_queries": 589,
     "correct": 510,
@@ -144,11 +160,11 @@
     "category": null
   },
   {
-    "path": "outputs/personamem/hybrid-search/rag/32k.json",
+    "path": "outputs/personamem/hybrid-search/single-query/32k.json",
     "dataset": "personamem",
     "run_name": "hybrid-search",
     "memory": "hybrid-search",
-    "mode": "rag",
+    "mode": "single-query",
     "split": "32k",
     "total_queries": 589,
     "correct": 497,
