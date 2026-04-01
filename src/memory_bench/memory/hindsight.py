@@ -99,6 +99,7 @@ class _HindsightBase(MemoryProvider):
         self._client = None  # set by subclass
         self._async_client = None  # lazily created (cloud only)
         self._per_unit = False
+        self._resume = os.environ.get("AMB_RESUME", "").lower() in ("1", "true")
 
     def _bank_id_for(self, user_id: str | None) -> str:
         if self._per_unit and user_id is not None:
@@ -126,12 +127,13 @@ class _HindsightBase(MemoryProvider):
             kwargs["retain_mission"] = self._BEAM_RETAIN_MISSION
         return kwargs
 
-    def _create_bank(self, bank_id: str) -> None:
+    def _create_bank(self, bank_id: str, force_reset: bool = True) -> None:
         kwargs = self._bank_kwargs(bank_id=bank_id)
-        try:
-            self._client.banks.delete(bank_id=bank_id)
-        except Exception:
-            pass
+        if force_reset:
+            try:
+                self._client.banks.delete(bank_id=bank_id)
+            except Exception:
+                pass
         self._client.create_bank(bank_id=bank_id, name=f"Benchmark Bank ({bank_id})", **kwargs)
 
     async def _await_operation(self, client, bank_id: str, operation_id: str, max_wait_s: int = 300) -> None:
@@ -195,7 +197,7 @@ class _HindsightBase(MemoryProvider):
         _log = _logging.getLogger(__name__)
 
         if not self._per_unit:
-            self._create_bank(self._bank_id)
+            self._create_bank(self._bank_id, force_reset=not self._resume)
 
         _BATCH_SIZE = 20
         created: set[str] = set()
@@ -208,7 +210,7 @@ class _HindsightBase(MemoryProvider):
         for doc in documents:
             bank_id = self._bank_id_for(doc.user_id)
             if self._per_unit and bank_id not in created:
-                self._create_bank(bank_id)
+                self._create_bank(bank_id, force_reset=not self._resume)
                 created.add(bank_id)
             items_by_bank.setdefault(bank_id, []).extend(self._doc_to_items(doc))
 
@@ -278,7 +280,7 @@ class _HindsightBase(MemoryProvider):
         # right after ingest finds an empty bank.
         if operation_ids or items_by_bank:
             banks_to_check = list(items_by_bank.keys())
-            max_wait_s = 1800  # 30 minutes max
+            max_wait_s = 28800  # 8 hours max (10m docs have 17K+ chunks per doc)
             poll_interval = 10
             start = time.monotonic()
             _log.info(f"Waiting for extraction to complete on {len(banks_to_check)} bank(s)…")
@@ -316,7 +318,10 @@ class _HindsightBase(MemoryProvider):
                         _log.info(f"Bank {bank_id}: still extracting… ({elapsed:.0f}s, {e.__class__.__name__})")
                     time.sleep(poll_interval)
                 else:
-                    _log.warning(f"Bank {bank_id}: timed out waiting for extraction; proceeding anyway.")
+                    raise RuntimeError(
+                        f"Bank {bank_id}: timed out waiting for extraction after {max_wait_s}s. "
+                        f"Aborting to avoid scoring with incomplete ingestion."
+                    )
 
     # ── Recall kwargs ─────────────────────────────────────────────────────────
 
@@ -376,12 +381,19 @@ class _HindsightBase(MemoryProvider):
     # ── Sync retrieve ─────────────────────────────────────────────────────────
 
     def retrieve(self, query: str, k: int = 10, user_id: str | None = None, query_timestamp: str | None = None) -> tuple[list[Document], dict | None]:
-        try:
-            response = self._client.recall(**self._recall_kwargs(query, user_id, query_timestamp))
-        except Exception as e:
-            import logging
-            logging.getLogger(__name__).warning(f"recall failed (returning empty): {e}")
-            return [], None
+        import logging
+        _log = logging.getLogger(__name__)
+        for attempt in range(3):
+            try:
+                response = self._client.recall(**self._recall_kwargs(query, user_id, query_timestamp))
+                break
+            except Exception as e:
+                if attempt < 2:
+                    _log.warning(f"recall failed (attempt {attempt+1}/3, retrying in 10s): {e}")
+                    time.sleep(10)
+                else:
+                    _log.warning(f"recall failed after 3 attempts (returning empty): {e}")
+                    return [], None
         chunks = response.chunks or {}
         docs = _build_docs(_deduplicate_results(response.results), chunks)
         raw = response.model_dump() if hasattr(response, "model_dump") else None
@@ -497,8 +509,20 @@ class HindsightMemoryProvider(_HindsightBase):
             pass
 
     async def async_retrieve(self, query: str, k: int = 10, user_id: str | None = None, query_timestamp: str | None = None):
+        import logging
+        _log = logging.getLogger(__name__)
         kwargs = self._recall_kwargs(query, user_id, query_timestamp)
-        response = await self._client.arecall(**kwargs)
+        for attempt in range(3):
+            try:
+                response = await self._client.arecall(**kwargs)
+                break
+            except Exception as e:
+                if attempt < 2:
+                    _log.warning(f"async_recall failed (attempt {attempt+1}/3, retrying in 10s): {e}")
+                    await asyncio.sleep(10)
+                else:
+                    _log.warning(f"async_recall failed after 3 attempts (returning empty): {e}")
+                    return [], None
         chunks = response.chunks or {}
         docs = _build_docs(_deduplicate_results(response.results), chunks)
         raw = response.model_dump() if hasattr(response, "model_dump") else None
