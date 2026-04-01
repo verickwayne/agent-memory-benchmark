@@ -64,22 +64,6 @@
     "category": null
   },
   {
-    "path": "outputs/beam/hindsight-beam/single-query/100k.json",
-    "dataset": "beam",
-    "run_name": "hindsight-beam",
-    "memory": "hindsight",
-    "mode": "single-query",
-    "split": "100k",
-    "total_queries": 400,
-    "correct": 300,
-    "accuracy": 0.75,
-    "ingestion_time_ms": 3878564.2,
-    "ingested_docs": 170,
-    "avg_retrieve_time_ms": 5516.5,
-    "avg_context_tokens": 45463.7,
-    "category": null
-  },
-  {
     "path": "outputs/lifebench/hindsight/single-query/en.json",
     "dataset": "lifebench",
     "run_name": "hindsight",
