@@ -64,7 +64,7 @@
     "category": null
   },
   {
-    "path": "outputs/lifebench/hindsight/single-query/en.json",
+    "path": "outputs/lifebench/hindsight/rag/en.json.gz",
     "dataset": "lifebench",
     "run_name": "hindsight",
     "memory": "hindsight",
@@ -80,7 +80,7 @@
     "category": null
   },
   {
-    "path": "outputs/lifebench/hybrid-search/single-query/en.json",
+    "path": "outputs/lifebench/hybrid-search/rag/en.json.gz",
     "dataset": "lifebench",
     "run_name": "hybrid-search",
     "memory": "hybrid-search",
@@ -96,7 +96,7 @@
     "category": null
   },
   {
-    "path": "outputs/locomo/cognee/single-query/locomo10.json",
+    "path": "outputs/locomo/cognee/rag/locomo10.json.gz",
     "dataset": "locomo",
     "run_name": "cognee",
     "memory": "cognee",
@@ -112,7 +112,7 @@
     "category": null
   },
   {
-    "path": "outputs/locomo/hybrid-search/single-query/locomo10.json",
+    "path": "outputs/locomo/hybrid-search/rag/locomo10.json.gz",
     "dataset": "locomo",
     "run_name": "hybrid-search",
     "memory": "hybrid-search",
@@ -128,7 +128,7 @@
     "category": null
   },
   {
-    "path": "outputs/locomo/locomo-hindsight/single-query/locomo10.json",
+    "path": "outputs/locomo/locomo-hindsight/rag/locomo10.json.gz",
     "dataset": "locomo",
     "run_name": "locomo-hindsight",
     "memory": "hindsight",
@@ -144,7 +144,7 @@
     "category": null
   },
   {
-    "path": "outputs/longmemeval/hindsight/single-query/s.json",
+    "path": "outputs/longmemeval/hindsight/rag/s.json.gz",
     "dataset": "longmemeval",
     "run_name": "hindsight",
     "memory": "hindsight",
@@ -160,7 +160,7 @@
     "category": null
   },
   {
-    "path": "outputs/longmemeval/hybrid-search/single-query/s.json",
+    "path": "outputs/longmemeval/hybrid-search/rag/s.json.gz",
     "dataset": "longmemeval",
     "run_name": "hybrid-search",
     "memory": "hybrid-search",
@@ -176,7 +176,7 @@
     "category": null
   },
   {
-    "path": "outputs/personamem/cognee/single-query/32k.json",
+    "path": "outputs/personamem/cognee/rag/32k.json.gz",
     "dataset": "personamem",
     "run_name": "cognee",
     "memory": "cognee",
@@ -192,7 +192,7 @@
     "category": null
   },
   {
-    "path": "outputs/personamem/hindsight/single-query/32k.json",
+    "path": "outputs/personamem/hindsight/rag/32k.json.gz",
     "dataset": "personamem",
     "run_name": "hindsight",
     "memory": "hindsight",
@@ -208,7 +208,7 @@
     "category": null
   },
   {
-    "path": "outputs/personamem/hybrid-search/single-query/32k.json",
+    "path": "outputs/personamem/hybrid-search/rag/32k.json.gz",
     "dataset": "personamem",
     "run_name": "hybrid-search",
     "memory": "hybrid-search",
