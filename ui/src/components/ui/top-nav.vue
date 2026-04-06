@@ -15,7 +15,7 @@ const router = useRouter()
         Agent Memory Benchmark
       </button>
       <template v-for="(crumb, i) in crumbs" :key="i">
-        <span class="text-muted-foreground/40 shrink-0">/</span>
+        <span class="text-muted-foreground/70 shrink-0">/</span>
         <button v-if="crumb.to" @click="router.push(crumb.to)"
                 class="text-muted-foreground hover:text-foreground text-sm transition-colors truncate">
           {{ crumb.label }}
@@ -25,7 +25,7 @@ const router = useRouter()
       <div class="ml-auto flex items-center gap-4 shrink-0">
         <slot name="right" />
         <a href="https://github.com/vectorize-io/agent-memory-benchmark" target="_blank" rel="noopener"
-           class="text-xs text-muted-foreground hover:text-foreground transition-colors">GitHub ↗</a>
+           class="text-sm text-muted-foreground hover:text-foreground transition-colors">GitHub ↗</a>
       </div>
     </div>
   </nav>

@@ -309,7 +309,7 @@ function hasCategoryData(local, split) {
             {{ catalog.datasets[dataset].task === 'MCQ' ? 'Multiple Choice' : 'Open-ended' }}
           </Badge>
           <a v-for="link in datasetLinks" :key="link.label" :href="link.url" target="_blank" rel="noopener"
-             class="text-xs text-primary hover:text-primary/80 transition-colors border border-primary/30 rounded px-2 py-0.5" @click.stop>
+             class="text-sm text-primary hover:text-primary/80 transition-colors border border-primary/30 rounded px-2 py-0.5" @click.stop>
             {{ link.label }} ↗
           </a>
         </div>
@@ -340,11 +340,11 @@ function hasCategoryData(local, split) {
           <!-- Split header -->
           <div class="flex items-center justify-between mb-6">
             <div>
-              <p class="text-muted-foreground/60 text-xs">{{ fmtSplitStats(splitStats[split]) }}</p>
+              <p class="text-muted-foreground/85 text-sm">{{ fmtSplitStats(splitStats[split]) }}</p>
             </div>
             <div class="flex items-center gap-4">
               <!-- View mode toggle — always show if split has any category data (lazy-detected) -->
-              <div class="flex text-xs border border-border overflow-hidden rounded">
+              <div class="flex text-sm border border-border overflow-hidden rounded">
                 <button @click="setViewMode(split, 'overall')"
                         :class="getViewMode(split) === 'overall' ? 'bg-secondary text-foreground' : 'text-muted-foreground hover:text-foreground'"
                         class="px-3 py-1.5 transition-colors">Overall</button>
@@ -353,7 +353,7 @@ function hasCategoryData(local, split) {
                         class="px-3 py-1.5 transition-colors border-l border-border">By Category</button>
               </div>
               <button @click="router.push(`/dataset/${encodeURIComponent(dataset)}/${encodeURIComponent(split)}`)"
-                      class="text-primary hover:text-primary/80 text-xs transition-colors">Browse →</button>
+                      class="text-primary hover:text-primary/80 text-sm transition-colors">Browse →</button>
             </div>
           </div>
 
@@ -363,21 +363,21 @@ function hasCategoryData(local, split) {
             <!-- Charts -->
             <div v-if="local.length" class="grid grid-cols-1 md:grid-cols-3 gap-3 mb-4">
               <Card class="p-4">
-                <p class="font-display text-xs font-semibold uppercase tracking-wider text-muted-foreground/60 mb-4">Accuracy</p>
+                <p class="font-display text-sm font-semibold uppercase tracking-wider text-muted-foreground/85 mb-4">Accuracy</p>
                 <BarChart :rows="chartAccuracy(local).rows" :max="1"
                           :format="v => (v * 100).toFixed(1) + '%'"
                           variant="accuracy" />
               </Card>
               <Card class="p-4">
-                <p class="font-display text-xs font-semibold uppercase tracking-wider text-muted-foreground/60 mb-1">Recall speed</p>
-                <p class="text-muted-foreground/40 text-xs mb-4">lower is better</p>
+                <p class="font-display text-sm font-semibold uppercase tracking-wider text-muted-foreground/85 mb-1">Recall speed</p>
+                <p class="text-muted-foreground/70 text-sm mb-4">lower is better</p>
                 <BarChart :rows="chartRecall(local).rows"
                           :format="v => Math.round(v) + 'ms'"
                           variant="recall" :lower-better="true" />
               </Card>
               <Card class="p-4">
-                <p class="font-display text-xs font-semibold uppercase tracking-wider text-muted-foreground/60 mb-1">Context tokens</p>
-                <p class="text-muted-foreground/40 text-xs mb-4">lower is better</p>
+                <p class="font-display text-sm font-semibold uppercase tracking-wider text-muted-foreground/85 mb-1">Context tokens</p>
+                <p class="text-muted-foreground/70 text-sm mb-4">lower is better</p>
                 <BarChart :rows="chartTokens(local).rows"
                           :format="v => v >= 1000 ? (v / 1000).toFixed(1).replace(/\.0$/, '') + 'k' : Math.round(v)"
                           variant="tokens" :lower-better="true" />
@@ -421,7 +421,7 @@ function hasCategoryData(local, split) {
                     <TableCell :right="true">{{ (item.ingestion_time_ms != null && item.ingested_docs) ? Math.round(item.ingestion_time_ms / item.ingested_docs) + 'ms' : '—' }}</TableCell>
                     <TableCell :right="true">{{ item.avg_retrieve_time_ms != null ? Math.round(item.avg_retrieve_time_ms) + 'ms' : '—' }}</TableCell>
                     <TableCell :right="true">{{ item.avg_context_tokens != null ? Math.round(item.avg_context_tokens).toLocaleString() : '—' }}</TableCell>
-                    <TableCell :right="true" class="text-muted-foreground/40 text-xs">→</TableCell>
+                    <TableCell :right="true" class="text-muted-foreground/70 text-sm">→</TableCell>
                   </TableRow>
                 </TableBody>
               </UiTable>
@@ -436,12 +436,12 @@ function hasCategoryData(local, split) {
             <template v-else>
 
               <div v-for="section in categorySections(local, split)" :key="section.type" class="mb-10">
-                <p class="font-display text-xs font-semibold uppercase tracking-wider text-muted-foreground/60 mb-4">{{ section.label }}</p>
+                <p class="font-display text-sm font-semibold uppercase tracking-wider text-muted-foreground/85 mb-4">{{ section.label }}</p>
 
                 <!-- Per-category bar charts -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 mb-4">
                   <Card v-for="{ cat, rows } in section.charts" :key="cat" class="p-4">
-                    <p class="font-display text-xs font-semibold uppercase tracking-wider text-muted-foreground/60 mb-3">{{ cat }}</p>
+                    <p class="font-display text-sm font-semibold uppercase tracking-wider text-muted-foreground/85 mb-3">{{ cat }}</p>
                     <BarChart :rows="rows" :max="1"
                               :format="v => (v * 100).toFixed(1) + '%'"
                               variant="accuracy" />
@@ -485,15 +485,15 @@ function hasCategoryData(local, split) {
 
           <!-- Scoring note -->
           <div v-if="catalog.datasets?.[dataset]?.scoring_note" class="mt-6 mb-2 rounded-md bg-muted/50 px-4 py-3 max-w-3xl">
-            <p class="text-xs font-medium text-foreground/80 mb-1">How is this scored?</p>
-            <p class="text-xs text-muted-foreground leading-relaxed">{{ catalog.datasets[dataset].scoring_note }}</p>
+            <p class="text-sm font-medium text-foreground/80 mb-1">How is this scored?</p>
+            <p class="text-sm text-muted-foreground leading-relaxed">{{ catalog.datasets[dataset].scoring_note }}</p>
           </div>
 
           <!-- Unverified -->
           <template v-if="external.length">
             <div class="mb-3 mt-8">
-              <p class="font-display text-xs font-semibold uppercase tracking-wider text-ca mb-1">Unverified</p>
-              <p class="text-xs text-muted-foreground max-w-2xl leading-relaxed">Sourced from external papers or leaderboards — not independently reproduced here. Scores are <strong class="text-foreground">not directly comparable</strong>. Click a row to view the source.</p>
+              <p class="font-display text-sm font-semibold uppercase tracking-wider text-ca mb-1">Unverified</p>
+              <p class="text-sm text-muted-foreground max-w-2xl leading-relaxed">Sourced from external papers or leaderboards — not independently reproduced here. Scores are <strong class="text-foreground">not directly comparable</strong>. Click a row to view the source.</p>
             </div>
             <Card class="overflow-hidden border-ca/15">
               <UiTable>
@@ -514,12 +514,12 @@ function hasCategoryData(local, split) {
                         <span>{{ providerByKey[item.memory]?.family ?? item.memory }}</span>
                         <Badge v-if="providerByKey[item.memory]?.variant" variant="secondary">{{ providerByKey[item.memory].variant }}</Badge>
                       </div>
-                      <div v-if="item.comment" class="text-xs text-muted-foreground/60 mt-0.5">{{ item.comment }}</div>
+                      <div v-if="item.comment" class="text-sm text-muted-foreground/85 mt-0.5">{{ item.comment }}</div>
                     </TableCell>
                     <TableCell :right="true" class="font-semibold">
                       {{ item.accuracy != null ? (item.accuracy * 100).toFixed(1) + '%' : '—' }}
                     </TableCell>
-                    <TableCell class="text-ca text-xs">
+                    <TableCell class="text-ca text-sm">
                       <span v-if="item.source_label">{{ item.source_label }} ↗</span>
                       <span v-else class="text-muted-foreground">View source ↗</span>
                     </TableCell>

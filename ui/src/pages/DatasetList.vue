@@ -292,16 +292,16 @@ const vReveal = {
           </p>
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <div class="inset-section sm:col-span-2">
-              <p class="text-xs font-display font-semibold uppercase tracking-wider text-ca mb-2">The problem</p>
-              <p class="text-xs text-muted-foreground leading-relaxed">Every memory provider ships with its own paper, proprietary methodology, and internal benchmark — making apples-to-apples comparison nearly impossible. The goal of this project is to establish a shared, neutral ground where providers are evaluated under the same conditions.</p>
+              <p class="text-sm font-display font-semibold uppercase tracking-wider text-ca mb-2">The problem</p>
+              <p class="text-sm text-muted-foreground leading-relaxed">Every memory provider ships with its own paper, proprietary methodology, and internal benchmark — making apples-to-apples comparison nearly impossible. The goal of this project is to establish a shared, neutral ground where providers are evaluated under the same conditions.</p>
             </div>
             <div class="inset-section">
-              <p class="text-xs font-display font-semibold uppercase tracking-wider text-primary mb-2">Reproducible</p>
-              <p class="text-xs text-muted-foreground leading-relaxed">All datasets, prompts, and scoring logic are open source. Anyone can run the benchmark locally or extend it with new providers and datasets.</p>
+              <p class="text-sm font-display font-semibold uppercase tracking-wider text-primary mb-2">Reproducible</p>
+              <p class="text-sm text-muted-foreground leading-relaxed">All datasets, prompts, and scoring logic are open source. Anyone can run the benchmark locally or extend it with new providers and datasets.</p>
             </div>
             <div class="inset-section">
-              <p class="text-xs font-display font-semibold uppercase tracking-wider text-primary mb-2">Comprehensive</p>
-              <p class="text-xs text-muted-foreground leading-relaxed">Covers multiple-choice and open-ended tasks across multiple domains — from personal preference tracking to multi-hop agent trajectory reasoning.</p>
+              <p class="text-sm font-display font-semibold uppercase tracking-wider text-primary mb-2">Comprehensive</p>
+              <p class="text-sm text-muted-foreground leading-relaxed">Covers multiple-choice and open-ended tasks across multiple domains — from personal preference tracking to multi-hop agent trajectory reasoning.</p>
             </div>
           </div>
         </div>
@@ -309,14 +309,14 @@ const vReveal = {
 
       <!-- Results -->
       <section>
-        <p class="font-display text-xs font-semibold uppercase tracking-wider text-muted-foreground/60 mb-8">Results</p>
+        <p class="font-display text-sm font-semibold uppercase tracking-wider text-muted-foreground/85 mb-8">Results</p>
 
         <div v-if="loading" class="text-center mt-16">
           <p class="text-muted-foreground text-sm animate-pulse">Loading…</p>
         </div>
         <div v-else-if="error" class="text-destructive text-sm">{{ error }}</div>
         <div v-else-if="datasets.length === 0">
-          <p class="text-muted-foreground text-sm">No results yet. Run <code class="font-mono text-xs bg-secondary px-2 py-0.5 rounded">omb run …</code> to get started.</p>
+          <p class="text-muted-foreground text-sm">No results yet. Run <code class="font-mono text-sm bg-secondary px-2 py-0.5 rounded">omb run …</code> to get started.</p>
         </div>
         <div v-else class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           <Card
@@ -342,7 +342,7 @@ const vReveal = {
 
             <!-- Mini accuracy chart -->
             <div v-if="ds.chart.rows.length" class="mt-1">
-              <p class="text-xs font-display font-semibold uppercase tracking-wider text-muted-foreground/40 mb-2">Accuracy</p>
+              <p class="text-sm font-display font-semibold uppercase tracking-wider text-muted-foreground/70 mb-2">Accuracy</p>
               <BarChart :rows="ds.chart.rows" :max="1"
                         :format="v => (v * 100).toFixed(1) + '%'"
                         variant="accuracy" label-width="w-20" />
@@ -350,11 +350,11 @@ const vReveal = {
 
             <!-- Card footer -->
             <div class="flex items-center justify-between mt-auto pt-2 border-t border-border/50">
-              <span class="text-xs text-muted-foreground/50">
+              <span class="text-sm text-muted-foreground/80">
                 {{ ds.splits.size }} split{{ ds.splits.size !== 1 ? 's' : '' }} ·
                 {{ ds.runs }} run{{ ds.runs !== 1 ? 's' : '' }}
               </span>
-              <span class="text-primary text-xs font-medium">Explore →</span>
+              <span class="text-primary text-sm font-medium">Explore →</span>
             </div>
           </Card>
         </div>
@@ -363,9 +363,9 @@ const vReveal = {
       <!-- Comparison table -->
       <section v-if="!loading && !error && comparisonTable.providers.length">
         <div class="flex items-center justify-between mb-8">
-          <p class="font-display text-xs font-semibold uppercase tracking-wider text-muted-foreground/60">Comparison</p>
+          <p class="font-display text-sm font-semibold uppercase tracking-wider text-muted-foreground/85">Comparison</p>
           <label v-if="comparisonTable.hasExternal" class="flex items-center gap-2 cursor-pointer select-none">
-            <span class="text-xs text-muted-foreground">Show unverified</span>
+            <span class="text-sm text-muted-foreground">Show unverified</span>
             <button @click="showUnverified = !showUnverified"
                     class="relative w-8 h-4 rounded-full transition-colors"
                     :class="showUnverified ? 'bg-primary' : 'bg-border'">
@@ -436,10 +436,10 @@ const vReveal = {
         </Card>
 
         <div class="flex items-center justify-between mt-3">
-          <p v-if="showUnverified" class="text-xs text-muted-foreground/50"><span class="text-ca">*</span> Unverified — sourced from external papers, not independently reproduced.</p>
+          <p v-if="showUnverified" class="text-sm text-muted-foreground/80"><span class="text-ca">*</span> Unverified — sourced from external papers, not independently reproduced.</p>
           <span v-else></span>
           <a href="https://github.com/vectorize-io/open-memory-benchmark" target="_blank" rel="noopener"
-             class="text-xs text-muted-foreground hover:text-foreground transition-colors">
+             class="text-sm text-muted-foreground hover:text-foreground transition-colors">
             Want to add your memory system? Contribute on GitHub →
           </a>
         </div>
@@ -448,8 +448,8 @@ const vReveal = {
       <!-- About -->
       <section>
         <button @click="toggleAbout" class="flex items-center gap-2 mb-8 group">
-          <p class="font-display text-xs font-semibold uppercase tracking-wider text-muted-foreground/60 group-hover:text-muted-foreground transition-colors">About</p>
-          <span class="text-muted-foreground/40 text-xs transition-transform" :class="aboutOpen ? 'rotate-180' : ''">▼</span>
+          <p class="font-display text-sm font-semibold uppercase tracking-wider text-muted-foreground/85 group-hover:text-muted-foreground transition-colors">About</p>
+          <span class="text-muted-foreground/70 text-sm transition-transform" :class="aboutOpen ? 'rotate-180' : ''">▼</span>
         </button>
 
         <div v-if="aboutOpen" class="space-y-10">
@@ -463,28 +463,28 @@ const vReveal = {
           </div>
 
           <div v-reveal="80">
-            <p class="text-xs font-display font-semibold uppercase tracking-wider text-muted-foreground/60 mb-3">Splits</p>
-            <p class="text-xs text-muted-foreground leading-relaxed max-w-2xl">
+            <p class="text-sm font-display font-semibold uppercase tracking-wider text-muted-foreground/85 mb-3">Splits</p>
+            <p class="text-sm text-muted-foreground leading-relaxed max-w-2xl">
               A well-defined subset of a dataset — often by context-window size or QA type, giving a controlled axis for comparison.
-              e.g. <code class="bg-secondary px-1 rounded text-xs">32k</code> <code class="bg-secondary px-1 rounded text-xs">128k</code> in personamem;
-              <code class="bg-secondary px-1 rounded text-xs">bitcoin</code> in tempo.
+              e.g. <code class="bg-secondary px-1 rounded text-sm">32k</code> <code class="bg-secondary px-1 rounded text-sm">128k</code> in personamem;
+              <code class="bg-secondary px-1 rounded text-sm">bitcoin</code> in tempo.
             </p>
           </div>
 
           <div v-reveal="160">
-            <p class="text-xs font-display font-semibold uppercase tracking-wider text-muted-foreground/60 mb-3">Categories</p>
-            <p class="text-xs text-muted-foreground leading-relaxed max-w-2xl">
+            <p class="text-sm font-display font-semibold uppercase tracking-wider text-muted-foreground/85 mb-3">Categories</p>
+            <p class="text-sm text-muted-foreground leading-relaxed max-w-2xl">
               Optional sub-filters within a split — drill into a query type or document partition without re-running.
-              e.g. <code class="bg-secondary px-1 rounded text-xs">single-hop</code> vs <code class="bg-secondary px-1 rounded text-xs">temporal</code> in locomo.
+              e.g. <code class="bg-secondary px-1 rounded text-sm">single-hop</code> vs <code class="bg-secondary px-1 rounded text-sm">temporal</code> in locomo.
             </p>
           </div>
 
           <div v-reveal="240">
-            <p class="text-xs font-display font-semibold uppercase tracking-wider text-muted-foreground/60 mb-4">Modes</p>
+            <p class="text-sm font-display font-semibold uppercase tracking-wider text-muted-foreground/85 mb-4">Modes</p>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <div v-for="(m, mName) in catalog.modes" :key="mName" class="inset-section">
-                <span class="text-xs font-semibold text-primary block mb-1">{{ mName }}</span>
-                <p class="text-xs text-muted-foreground leading-relaxed">{{ m.description }}</p>
+                <span class="text-sm font-semibold text-primary block mb-1">{{ mName }}</span>
+                <p class="text-sm text-muted-foreground leading-relaxed">{{ m.description }}</p>
               </div>
             </div>
           </div>

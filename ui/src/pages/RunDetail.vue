@@ -205,11 +205,11 @@ function toggleCat(axis, cat) {
           <span class="font-display text-2xl font-bold tracking-tight" :style="{ color: accuracyColor(summary.pct) }">
             {{ (summary.pct * 100).toFixed(1) }}%
           </span>
-          <span class="text-muted-foreground text-xs">{{ summary.hasScores ? 'avg score' : summary.pass + ' / ' + summary.total + ' correct' }}</span>
+          <span class="text-muted-foreground text-sm">{{ summary.hasScores ? 'avg score' : summary.pass + ' / ' + summary.total + ' correct' }}</span>
           <Badge v-if="data?.oracle" variant="default" class="ml-auto">oracle</Badge>
         </div>
 
-        <div v-if="data?.answer_llm || data?.judge_llm" class="text-xs text-muted-foreground mb-2 space-y-0.5">
+        <div v-if="data?.answer_llm || data?.judge_llm" class="text-sm text-muted-foreground mb-2 space-y-0.5">
           <div v-if="data.answer_llm"><span class="text-foreground/70">Answer LLM</span> {{ data.answer_llm }}</div>
           <div v-if="data.judge_llm"><span class="text-foreground/70">Judge LLM</span> {{ data.judge_llm }}</div>
         </div>
@@ -220,8 +220,8 @@ function toggleCat(axis, cat) {
             ['Recall p50', pct50(perf.recTimes).toFixed(0) + 'ms'],
             ['Ctx tokens', Math.round(avg(perf.ctxTokens)).toLocaleString()],
           ]" :key="label" class="stat-box">
-            <p class="text-muted-foreground/60 text-xs mb-0.5">{{ label }}</p>
-            <p class="font-semibold text-foreground text-xs">{{ val }}</p>
+            <p class="text-muted-foreground/85 text-sm mb-0.5">{{ label }}</p>
+            <p class="font-semibold text-foreground text-sm">{{ val }}</p>
           </div>
         </div>
       </div>
@@ -229,14 +229,14 @@ function toggleCat(axis, cat) {
       <!-- Category filters -->
       <div v-if="allAxes.length" class="sidebar-section overflow-y-auto max-h-[25vh]">
         <div v-for="axis in allAxes" :key="axis" class="px-4 py-2.5 border-b border-border last:border-0">
-          <p class="font-display text-xs font-semibold uppercase tracking-wider text-muted-foreground/50 mb-1.5">{{ axis }}</p>
-          <table class="w-full text-xs">
+          <p class="font-display text-sm font-semibold uppercase tracking-wider text-muted-foreground/80 mb-1.5">{{ axis }}</p>
+          <table class="w-full text-sm">
             <tbody>
               <tr v-for="(stats, cat) in axisStats[axis]" :key="cat"
                   @click="toggleCat(axis, cat)"
                   :class="catFilter[axis]?.has(cat) ? 'cat-row-active' : 'cat-row'">
                 <td class="py-0.5 pr-2 text-muted-foreground truncate max-w-[110px]">{{ cat }}</td>
-                <td class="py-0.5 pr-2 text-right text-muted-foreground/50 w-10">{{ stats.total }}</td>
+                <td class="py-0.5 pr-2 text-right text-muted-foreground/80 w-10">{{ stats.total }}</td>
                 <td class="py-0.5 text-right font-semibold w-10" :style="{ color: accuracyColor(stats.scoreCount ? stats.scoreSum / stats.scoreCount : stats.correct / stats.total) }">
                   {{ ((stats.scoreCount ? stats.scoreSum / stats.scoreCount : stats.correct / stats.total) * 100).toFixed(1) }}%
                 </td>
@@ -245,43 +245,43 @@ function toggleCat(axis, cat) {
           </table>
         </div>
         <div v-if="Object.values(catFilter).some(v => v?.size)" class="px-4 py-2">
-          <button @click="catFilter = {}" class="text-xs text-muted-foreground hover:text-foreground transition-colors">✕ clear filters</button>
+          <button @click="catFilter = {}" class="text-sm text-muted-foreground hover:text-foreground transition-colors">✕ clear filters</button>
         </div>
       </div>
 
       <!-- Search + filter -->
       <div class="sidebar-section px-3 py-2.5 shrink-0">
-        <Input v-model="search" placeholder="Search queries…" class="mb-2 h-8 text-xs" />
+        <Input v-model="search" placeholder="Search queries…" class="mb-2 h-8 text-sm" />
         <div class="flex items-center justify-between">
           <div class="flex gap-1">
             <button v-for="[val, label, cls] in [['all','All','hover:bg-secondary'], ['correct','✓ Pass','hover:bg-cg/10 hover:text-cg'], ['wrong','✗ Fail','hover:bg-cr/10 hover:text-cr']]"
                     :key="val" @click="filter = val"
                     :class="[
-                      'px-2.5 py-1 rounded text-xs font-medium transition-colors',
+                      'px-2.5 py-1 rounded text-sm font-medium transition-colors',
                       filter === val && val === 'all'     && 'bg-secondary text-foreground',
                       filter === val && val === 'correct' && 'bg-cg/15 text-cg',
                       filter === val && val === 'wrong'   && 'bg-cr/15 text-cr',
                       filter !== val && 'text-muted-foreground ' + cls,
                     ]">{{ label }}</button>
           </div>
-          <span class="text-xs text-muted-foreground/50">{{ filtered.length }} / {{ results.length }}</span>
+          <span class="text-sm text-muted-foreground/80">{{ filtered.length }} / {{ results.length }}</span>
         </div>
       </div>
 
       <!-- Result list -->
       <div class="flex-1 overflow-y-auto">
-        <p v-if="!filtered.length" class="p-4 text-xs text-muted-foreground">No results match this filter.</p>
+        <p v-if="!filtered.length" class="p-4 text-sm text-muted-foreground">No results match this filter.</p>
         <button v-for="{ r, i } in filtered" :key="i"
                 @click="activeIndex = i"
                 :class="i === activeIndex ? 'item-active' : 'hover:bg-secondary/30'"
                 class="w-full text-left px-4 py-2.5 border-b border-border/50 last:border-0 transition-colors">
           <div class="flex items-start gap-2">
-            <span :class="r.correct ? 'text-cg' : 'text-cr'" class="font-bold text-xs shrink-0 mt-0.5">{{ r.score != null ? r.score.toFixed(2) : (r.correct ? '✓' : '✗') }}</span>
+            <span :class="r.correct ? 'text-cg' : 'text-cr'" class="font-bold text-sm shrink-0 mt-0.5">{{ r.score != null ? r.score.toFixed(2) : (r.correct ? '✓' : '✗') }}</span>
             <div class="min-w-0">
               <p class="text-sm text-foreground leading-snug line-clamp-2">{{ (r.query || '').split('\n')[0].trim().slice(0, 80) }}</p>
               <div class="flex items-center gap-1 mt-0.5 flex-wrap">
-                <span class="text-xs font-mono text-muted-foreground/50">{{ r.query_id.slice(0, 8) }}</span>
-                <Badge v-for="c in Object.values(r.category_axes ?? {}).flat()" :key="c" variant="default" class="text-xs">{{ c }}</Badge>
+                <span class="text-sm font-mono text-muted-foreground/80">{{ r.query_id.slice(0, 8) }}</span>
+                <Badge v-for="c in Object.values(r.category_axes ?? {}).flat()" :key="c" variant="default" class="text-sm">{{ c }}</Badge>
               </div>
             </div>
           </div>
@@ -295,7 +295,7 @@ function toggleCat(axis, cat) {
         <p v-if="!active" class="text-muted-foreground text-sm mt-20 text-center">← Select a query</p>
 
         <div v-else class="space-y-5 pb-10">
-          <div class="flex items-center justify-between text-xs text-muted-foreground">
+          <div class="flex items-center justify-between text-sm text-muted-foreground">
             <button @click="navigate(-1)" :disabled="activeIndex === 0"
                     class="hover:text-foreground transition-colors disabled:opacity-25 disabled:pointer-events-none">← prev</button>
             <span class="font-mono flex items-center gap-2.5">
@@ -308,10 +308,10 @@ function toggleCat(axis, cat) {
           </div>
 
           <section>
-            <p class="font-display text-xs font-semibold uppercase tracking-wider text-muted-foreground/50 mb-2 flex items-center gap-2">
+            <p class="font-display text-sm font-semibold uppercase tracking-wider text-muted-foreground/80 mb-2 flex items-center gap-2">
               Query
-              <span class="font-mono text-muted-foreground/40 font-normal normal-case tracking-normal">{{ active.query_id }}</span>
-              <button @click="copyId(active.query_id)" class="text-muted-foreground/40 hover:text-muted-foreground transition-colors" title="Copy ID">
+              <span class="font-mono text-muted-foreground/70 font-normal normal-case tracking-normal">{{ active.query_id }}</span>
+              <button @click="copyId(active.query_id)" class="text-muted-foreground/70 hover:text-muted-foreground transition-colors" title="Copy ID">
                 <svg v-if="!copied" xmlns="http://www.w3.org/2000/svg" class="inline w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
                 <svg v-else xmlns="http://www.w3.org/2000/svg" class="inline w-3 h-3 text-cg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
               </button>
@@ -324,14 +324,14 @@ function toggleCat(axis, cat) {
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <section class="flex flex-col">
-              <p class="font-display text-xs font-semibold uppercase tracking-wider text-muted-foreground/50 mb-2">System answer</p>
+              <p class="font-display text-sm font-semibold uppercase tracking-wider text-muted-foreground/80 mb-2">System answer</p>
               <Card class="p-4 flex-1 text-sm text-foreground leading-relaxed">
                 <span v-if="active.answer">{{ active.answer }}</span>
                 <em v-else class="text-muted-foreground">empty</em>
               </Card>
             </section>
             <section class="flex flex-col">
-              <p class="font-display text-xs font-semibold uppercase tracking-wider text-muted-foreground/50 mb-2">Gold answer</p>
+              <p class="font-display text-sm font-semibold uppercase tracking-wider text-muted-foreground/80 mb-2">Gold answer</p>
               <Card class="p-4 flex-1 text-sm text-foreground leading-relaxed">
                 {{ active.gold_answers?.[0] ?? '' }}
                 <Badge v-for="a in (active.gold_answers?.slice(1) ?? [])" :key="a" variant="secondary" class="ml-2 font-mono">{{ a }}</Badge>
@@ -340,12 +340,12 @@ function toggleCat(axis, cat) {
           </div>
 
           <section>
-            <p class="font-display text-xs font-semibold uppercase tracking-wider text-muted-foreground/50 mb-2">Judge verdict</p>
+            <p class="font-display text-sm font-semibold uppercase tracking-wider text-muted-foreground/80 mb-2">Judge verdict</p>
             <div :class="active.correct ? 'verdict-pass' : 'verdict-fail'" class="text-sm">
               <span class="font-semibold">{{ active.score != null ? 'Score: ' + active.score.toFixed(3) : (active.correct ? '✓ Correct' : '✗ Incorrect') }}</span>
               <span v-if="active.judge_reason" class="ml-2 opacity-75 font-normal">— {{ active.judge_reason }}</span>
             </div>
-            <details v-if="catalog.datasets?.[data?.dataset]?.scoring_note" class="mt-2 text-xs text-muted-foreground">
+            <details v-if="catalog.datasets?.[data?.dataset]?.scoring_note" class="mt-2 text-sm text-muted-foreground">
               <summary class="cursor-pointer hover:text-foreground/80 transition-colors">How is this scored?</summary>
               <p class="mt-1.5 leading-relaxed pl-3 border-l-2 border-muted">{{ catalog.datasets[data.dataset].scoring_note }}</p>
             </details>
@@ -354,18 +354,18 @@ function toggleCat(axis, cat) {
           <hr class="border-border/40" />
 
           <section v-if="active.reasoning">
-            <p class="font-display text-xs font-semibold uppercase tracking-wider text-muted-foreground/50 mb-2">Reasoning</p>
+            <p class="font-display text-sm font-semibold uppercase tracking-wider text-muted-foreground/80 mb-2">Reasoning</p>
             <Card class="p-4 text-sm text-muted-foreground leading-relaxed italic">{{ active.reasoning }}</Card>
           </section>
 
           <section>
-            <p class="font-display text-xs font-semibold uppercase tracking-wider text-muted-foreground/50 mb-2">Injected context</p>
+            <p class="font-display text-sm font-semibold uppercase tracking-wider text-muted-foreground/80 mb-2">Injected context</p>
             <div class="code-block"><pre>{{ active.context || '(no context)' }}</pre></div>
           </section>
 
           <section v-if="active.raw_response">
             <details>
-              <summary class="font-display text-xs font-semibold uppercase tracking-wider text-muted-foreground/50 cursor-pointer hover:text-muted-foreground transition-colors">Raw provider response</summary>
+              <summary class="font-display text-sm font-semibold uppercase tracking-wider text-muted-foreground/80 cursor-pointer hover:text-muted-foreground transition-colors">Raw provider response</summary>
               <div class="mt-2 code-block"><pre>{{ JSON.stringify(active.raw_response, null, 2) }}</pre></div>
             </details>
           </section>

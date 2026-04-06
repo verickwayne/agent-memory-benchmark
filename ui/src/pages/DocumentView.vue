@@ -80,7 +80,7 @@ watch(activeId, async id => {
       <div class="sidebar-section px-4 pt-4 pb-3 shrink-0 space-y-2.5">
         <div class="flex items-center gap-2">
           <div>
-            <p class="text-xs text-muted-foreground/60">Documents</p>
+            <p class="text-sm text-muted-foreground/85">Documents</p>
           </div>
         </div>
 
@@ -89,13 +89,13 @@ watch(activeId, async id => {
                   :class="category === cat
                     ? 'bg-primary/15 text-primary border-primary/30'
                     : 'bg-secondary/40 text-muted-foreground border-border hover:bg-secondary hover:text-foreground'"
-                  class="px-2.5 py-0.5 rounded-full text-xs font-medium border transition-colors">
+                  class="px-2.5 py-0.5 rounded-full text-sm font-medium border transition-colors">
             {{ cat || 'ALL' }}
           </button>
         </div>
 
-        <Input v-model="search" placeholder="Search document content…" class="h-8 text-xs" />
-        <p class="text-xs text-muted-foreground/60">{{ total.toLocaleString() }} documents</p>
+        <Input v-model="search" placeholder="Search document content…" class="h-8 text-sm" />
+        <p class="text-sm text-muted-foreground/85">{{ total.toLocaleString() }} documents</p>
       </div>
 
       <div class="flex-1 overflow-y-auto">
@@ -105,13 +105,13 @@ watch(activeId, async id => {
           <button v-for="doc in items" :key="doc.id" @click="activeId = doc.id"
                   :class="doc.id === activeId ? 'item-active' : 'hover:bg-secondary/30'"
                   class="w-full text-left px-4 py-3 border-b border-border/50 last:border-0 transition-colors">
-            <p class="text-xs font-mono text-muted-foreground/50 truncate mb-0.5">{{ doc.id }}</p>
-            <p v-if="doc.timestamp" class="text-xs text-muted-foreground/50 mb-0.5">{{ doc.timestamp }}</p>
+            <p class="text-sm font-mono text-muted-foreground/80 truncate mb-0.5">{{ doc.id }}</p>
+            <p v-if="doc.timestamp" class="text-sm text-muted-foreground/80 mb-0.5">{{ doc.timestamp }}</p>
             <p class="text-sm text-foreground line-clamp-2 leading-snug">{{ doc.content.slice(0, 120) }}</p>
           </button>
           <div v-if="hasMore" class="p-3 text-center">
             <button @click="load(false)" :disabled="loadingMore"
-                    class="text-xs text-primary hover:text-primary/80 disabled:opacity-40 transition-colors">
+                    class="text-sm text-primary hover:text-primary/80 disabled:opacity-40 transition-colors">
               {{ loadingMore ? 'Loading…' : 'Load more' }}
             </button>
           </div>
@@ -124,15 +124,15 @@ watch(activeId, async id => {
 
       <div v-else class="max-w-3xl mx-auto space-y-4 pb-10">
         <div class="flex items-baseline justify-between pt-1">
-          <span class="text-xs font-mono text-muted-foreground/50">{{ active.id }}</span>
-          <div class="flex gap-3 text-xs text-muted-foreground/50">
+          <span class="text-sm font-mono text-muted-foreground/80">{{ active.id }}</span>
+          <div class="flex gap-3 text-sm text-muted-foreground/80">
             <span v-if="active.user_id">user: {{ active.user_id }}</span>
             <span v-if="active.timestamp">{{ active.timestamp }}</span>
           </div>
         </div>
 
         <section>
-          <p class="font-display text-xs font-semibold uppercase tracking-wider text-muted-foreground/50 mb-2">Content</p>
+          <p class="font-display text-sm font-semibold uppercase tracking-wider text-muted-foreground/80 mb-2">Content</p>
           <div v-if="loadingDoc" class="rounded-lg border border-border bg-card p-4 text-sm text-muted-foreground animate-pulse">Loading…</div>
           <div v-else class="code-block font-mono text-sm leading-relaxed whitespace-pre-wrap">{{ active.content }}</div>
         </section>

@@ -65,14 +65,14 @@ function corpusLink(type, category = '') {
             [stats.avg_tokens_per_doc?.toLocaleString() ?? '—', 'Avg tok/doc'],
           ]" :key="label" class="p-5 text-center">
             <p class="font-display text-2xl font-bold text-foreground tracking-tight">{{ val }}</p>
-            <p class="text-xs text-muted-foreground mt-1.5">{{ label }}</p>
+            <p class="text-sm text-muted-foreground mt-1.5">{{ label }}</p>
           </Card>
         </div>
 
         <Card class="p-5 flex items-center justify-between">
           <div>
             <p class="font-display font-semibold text-foreground text-sm">All data</p>
-            <p class="text-xs text-muted-foreground mt-1">
+            <p class="text-sm text-muted-foreground mt-1">
               {{ stats.queries?.toLocaleString() }} queries · {{ stats.docs?.toLocaleString() }} docs
             </p>
           </div>
@@ -83,7 +83,7 @@ function corpusLink(type, category = '') {
         </Card>
 
         <div v-if="docCategories.length">
-          <p class="font-display text-xs font-semibold uppercase tracking-wider text-muted-foreground/60 mb-3">Document categories</p>
+          <p class="font-display text-sm font-semibold uppercase tracking-wider text-muted-foreground/85 mb-3">Document categories</p>
           <Card class="overflow-hidden">
             <UiTable>
               <TableHeader>
@@ -102,9 +102,9 @@ function corpusLink(type, category = '') {
                   <TableCell :right="true">{{ s.queries?.toLocaleString() }}</TableCell>
                   <TableCell :right="true">{{ s.docs?.toLocaleString() }}</TableCell>
                   <TableCell :right="true">{{ fmtTokens(s.total_tokens) }}</TableCell>
-                  <TableCell :right="true" class="text-muted-foreground/60 text-xs">{{ s.avg_tokens_per_doc?.toLocaleString() }}</TableCell>
+                  <TableCell :right="true" class="text-muted-foreground/85 text-sm">{{ s.avg_tokens_per_doc?.toLocaleString() }}</TableCell>
                   <TableCell :right="true">
-                    <div class="flex gap-4 justify-end text-xs">
+                    <div class="flex gap-4 justify-end text-sm">
                       <router-link :to="corpusLink('queries', cat)"   class="text-primary hover:text-primary/80 transition-colors">Queries →</router-link>
                       <router-link :to="corpusLink('documents', cat)" class="text-primary hover:text-primary/80 transition-colors">Docs →</router-link>
                     </div>
@@ -116,7 +116,7 @@ function corpusLink(type, category = '') {
         </div>
 
         <div v-if="queryCategories.length">
-          <p class="font-display text-xs font-semibold uppercase tracking-wider text-muted-foreground/60 mb-3">Query categories</p>
+          <p class="font-display text-sm font-semibold uppercase tracking-wider text-muted-foreground/85 mb-3">Query categories</p>
           <Card class="overflow-hidden">
             <UiTable>
               <TableHeader>
@@ -131,7 +131,7 @@ function corpusLink(type, category = '') {
                   <TableCell :primary="true">{{ cat }}</TableCell>
                   <TableCell :right="true">{{ s.queries?.toLocaleString() }}</TableCell>
                   <TableCell :right="true">
-                    <router-link :to="corpusLink('queries', cat)" class="text-primary hover:text-primary/80 text-xs transition-colors">Queries →</router-link>
+                    <router-link :to="corpusLink('queries', cat)" class="text-primary hover:text-primary/80 text-sm transition-colors">Queries →</router-link>
                   </TableCell>
                 </TableRow>
               </TableBody>

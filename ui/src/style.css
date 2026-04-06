@@ -15,12 +15,12 @@
   --secondary:               oklch(0.3743 0.0726 258.5213);
   --secondary-foreground:    oklch(0.9219 0 0);
   --muted:                   oklch(0.2850 0 0);
-  --muted-foreground:        oklch(0.5999 0 0);
+  --muted-foreground:        oklch(0.7600 0 0);
   --accent:                  oklch(0.3380 0.0589 267.5867);
   --accent-foreground:       oklch(0.8823 0.0571 254.1284);
   --destructive:             oklch(0.6368 0.2078 25.3313);
   --destructive-foreground:  oklch(1.0000 0 0);
-  --border:                  oklch(0.3290 0 0);
+  --border:                  oklch(0.3900 0 0);
   --input:                   oklch(0.3092 0 0);
   --ring:                    oklch(0.6397 0.1720 36.4421);
   --radius:                  0.5rem;

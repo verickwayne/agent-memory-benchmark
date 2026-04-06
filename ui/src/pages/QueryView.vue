@@ -115,28 +115,28 @@ const activeGoldDocs = computed(() => active.value ? (goldDocsMap.value[active.v
       <div class="sidebar-section px-4 pt-4 pb-3 shrink-0">
         <div class="flex items-center gap-2 mb-3">
           <div>
-            <p class="text-xs text-muted-foreground/60">Queries</p>
+            <p class="text-sm text-muted-foreground/85">Queries</p>
           </div>
         </div>
-        <Input v-model="search" placeholder="Search queries, answers, or IDs…" class="mb-2 h-8 text-xs" />
-        <p class="text-xs text-muted-foreground/60">{{ filtered.length.toLocaleString() }} / {{ allItems.length.toLocaleString() }} queries</p>
+        <Input v-model="search" placeholder="Search queries, answers, or IDs…" class="mb-2 h-8 text-sm" />
+        <p class="text-sm text-muted-foreground/85">{{ filtered.length.toLocaleString() }} / {{ allItems.length.toLocaleString() }} queries</p>
       </div>
 
       <div v-if="Object.keys(allAxes).length" class="sidebar-section overflow-y-auto max-h-56 shrink-0">
         <div v-for="(vals, axis) in allAxes" :key="axis" class="px-4 py-2.5 border-b border-border last:border-0">
-          <p class="font-display text-xs font-semibold uppercase tracking-wider text-muted-foreground/50 mb-1.5">{{ axis.replace(/_/g,' ') }}</p>
-          <table class="w-full text-xs">
+          <p class="font-display text-sm font-semibold uppercase tracking-wider text-muted-foreground/80 mb-1.5">{{ axis.replace(/_/g,' ') }}</p>
+          <table class="w-full text-sm">
             <tbody>
               <tr v-for="(count, val) in vals" :key="val" @click="toggleCat(axis, val)"
                   :class="catFilter[axis]?.has(val) ? 'cat-row-active' : 'cat-row'">
                 <td class="py-0.5 pr-2 text-muted-foreground truncate max-w-[160px]">{{ val }}</td>
-                <td class="py-0.5 text-right text-muted-foreground/50 w-10">{{ count }}</td>
+                <td class="py-0.5 text-right text-muted-foreground/80 w-10">{{ count }}</td>
               </tr>
             </tbody>
           </table>
         </div>
         <div v-if="hasFilters" class="px-4 py-1.5">
-          <button @click="catFilter = {}" class="text-xs text-muted-foreground hover:text-foreground transition-colors">✕ clear filters</button>
+          <button @click="catFilter = {}" class="text-sm text-muted-foreground hover:text-foreground transition-colors">✕ clear filters</button>
         </div>
       </div>
 
@@ -144,15 +144,15 @@ const activeGoldDocs = computed(() => active.value ? (goldDocsMap.value[active.v
         <div v-if="loading" class="p-6 text-center text-muted-foreground text-sm animate-pulse">Loading…</div>
         <div v-else-if="error" class="p-4 text-destructive text-sm">{{ error }}</div>
         <template v-else>
-          <p v-if="!filtered.length" class="p-4 text-xs text-muted-foreground">No queries match this filter.</p>
+          <p v-if="!filtered.length" class="p-4 text-sm text-muted-foreground">No queries match this filter.</p>
           <button v-for="q in filtered" :key="q.id" @click="activeId = q.id"
                   :class="q.id === activeId ? 'item-active' : 'hover:bg-secondary/30'"
                   class="w-full text-left px-4 py-3 border-b border-border/50 last:border-0 transition-colors">
-            <p class="text-xs font-mono text-muted-foreground/50 truncate mb-0.5">{{ q.id }}</p>
+            <p class="text-sm font-mono text-muted-foreground/80 truncate mb-0.5">{{ q.id }}</p>
             <p class="text-sm text-foreground line-clamp-2 leading-snug">{{ q.query.split('\n')[0].trim() }}</p>
             <div class="flex items-center gap-1 mt-0.5 flex-wrap">
-              <p v-if="q.gold_answers?.length" class="text-xs text-cg truncate">✓ {{ q.gold_answers[0] }}</p>
-              <Badge v-for="(v, k) in q.meta" :key="k" v-if="k in allAxes" variant="default" class="text-xs">{{ v }}</Badge>
+              <p v-if="q.gold_answers?.length" class="text-sm text-cg truncate">✓ {{ q.gold_answers[0] }}</p>
+              <Badge v-for="(v, k) in q.meta" :key="k" v-if="k in allAxes" variant="default" class="text-sm">{{ v }}</Badge>
             </div>
           </button>
         </template>
@@ -164,19 +164,19 @@ const activeGoldDocs = computed(() => active.value ? (goldDocsMap.value[active.v
 
       <div v-else class="max-w-3xl mx-auto space-y-5 pb-10">
         <div class="flex flex-wrap gap-2 pt-1">
-          <span class="text-xs font-mono text-muted-foreground/50">{{ active.id }}</span>
+          <span class="text-sm font-mono text-muted-foreground/80">{{ active.id }}</span>
           <Badge v-for="(v, k) in active.meta" :key="k" variant="default">
             <span class="opacity-60">{{ k.replace(/_/g,' ') }}:</span> {{ v }}
           </Badge>
         </div>
 
         <section>
-          <p class="font-display text-xs font-semibold uppercase tracking-wider text-muted-foreground/50 mb-2">Query</p>
+          <p class="font-display text-sm font-semibold uppercase tracking-wider text-muted-foreground/80 mb-2">Query</p>
           <Card class="p-4 text-sm text-foreground leading-relaxed whitespace-pre-wrap">{{ active.query }}</Card>
         </section>
 
         <section>
-          <p class="font-display text-xs font-semibold uppercase tracking-wider text-muted-foreground/50 mb-2">Gold answers</p>
+          <p class="font-display text-sm font-semibold uppercase tracking-wider text-muted-foreground/80 mb-2">Gold answers</p>
           <div class="flex flex-wrap gap-2">
             <Badge v-for="a in active.gold_answers" :key="a" variant="success" class="text-sm px-3 py-1">{{ a }}</Badge>
           </div>
@@ -184,7 +184,7 @@ const activeGoldDocs = computed(() => active.value ? (goldDocsMap.value[active.v
 
         <section v-if="active.gold_ids?.length">
           <div class="flex items-center justify-between mb-2">
-            <p class="font-display text-xs font-semibold uppercase tracking-wider text-muted-foreground/50">
+            <p class="font-display text-sm font-semibold uppercase tracking-wider text-muted-foreground/80">
               Gold documents
               <span v-if="activeGoldDocs" class="normal-case tracking-normal font-normal text-muted-foreground ml-1">
                 {{ activeGoldDocs.length }} doc{{ activeGoldDocs.length !== 1 ? 's' : '' }}
@@ -199,10 +199,10 @@ const activeGoldDocs = computed(() => active.value ? (goldDocsMap.value[active.v
             <details v-for="(doc, i) in activeGoldDocs" :key="doc.id" :open="i === 0" class="rounded-lg border border-border overflow-hidden">
               <summary class="doc-summary px-4 py-3 cursor-pointer flex items-center justify-between gap-3 select-none bg-card">
                 <div class="flex items-center gap-2 min-w-0">
-                  <span class="text-primary text-xs shrink-0">▶</span>
-                  <span class="text-xs font-mono text-foreground truncate">{{ doc.id }}</span>
+                  <span class="text-primary text-sm shrink-0">▶</span>
+                  <span class="text-sm font-mono text-foreground truncate">{{ doc.id }}</span>
                 </div>
-                <div class="flex items-center gap-3 shrink-0 text-xs text-muted-foreground">
+                <div class="flex items-center gap-3 shrink-0 text-sm text-muted-foreground">
                   <span v-if="doc.timestamp">{{ doc.timestamp }}</span>
                   <span>{{ doc.content.length.toLocaleString() }} chars</span>
                 </div>
