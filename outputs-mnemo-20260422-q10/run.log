@@ -1,0 +1,1213 @@
+
+[lifebench/en]
+
+Dataset: lifebench  Split: en  Memory: mnemo  Run: mnemo-openai-mini-q10  Mode: 
+rag
+
+Loading queries...
+  10 queries loaded
+Loading documents...
+  363 documents loaded
+Ingesting 1 units into mnemo (unit-sequential)...
+2026-04-22 20:04:43,591 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:04:43,856 [INFO] [query:于晓薇_q0] start — In January, during a break at the office, Yu Xiaowei used a mobile app to schedu
+2026-04-22 20:04:46,213 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:04:46,216 [INFO] [query:于晓薇_q0] answer done in 2.4s (retrieve=67ms)
+2026-04-22 20:04:47,296 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:04:47,297 [INFO] [query:于晓薇_q0] done in 3.4s — correct=True score=None
+2026-04-22 20:04:47,350 [INFO] [query:于晓薇_q1] start — In February, while dining with colleagues at Xiangfa Tea Restaurant, what arrang
+2026-04-22 20:04:49,299 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:04:49,311 [INFO] [query:于晓薇_q1] answer done in 2.0s (retrieve=113ms)
+2026-04-22 20:04:49,999 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:04:50,001 [INFO] [query:于晓薇_q1] done in 2.7s — correct=False score=None
+2026-04-22 20:04:50,002 [INFO] [query:于晓薇_q2] start — What specific actions related to family financial management did Yu Xiaowei carr
+2026-04-22 20:04:55,934 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:04:55,935 [INFO] [query:于晓薇_q2] answer done in 5.9s (retrieve=39ms)
+2026-04-22 20:04:57,267 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:04:57,267 [INFO] [query:于晓薇_q2] done in 7.3s — correct=False score=None
+2026-04-22 20:04:57,268 [INFO] [query:于晓薇_q3] start — In March, when Yu Xiaowei's family had a picnic at Kowloon Walled City Park, wha
+2026-04-22 20:05:00,400 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:05:00,400 [INFO] [query:于晓薇_q3] answer done in 3.1s (retrieve=47ms)
+2026-04-22 20:05:01,499 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:05:01,500 [INFO] [query:于晓薇_q3] done in 4.2s — correct=False score=None
+2026-04-22 20:05:01,500 [INFO] [query:于晓薇_q4] start — In March 2025, Yu Xiaowei discussed with her close friend Lin Jiaxin in a text m
+2026-04-22 20:05:03,944 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:05:03,949 [INFO] [query:于晓薇_q4] answer done in 2.4s (retrieve=72ms)
+2026-04-22 20:05:05,568 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:05:05,568 [INFO] [query:于晓薇_q4] done in 4.1s — correct=False score=None
+2026-04-22 20:05:05,568 [INFO] [query:于晓薇_q5] start — What did Yu Xiaowei mainly eat during the family dinner with her brother's famil
+2026-04-22 20:05:08,074 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:05:08,075 [INFO] [query:于晓薇_q5] answer done in 2.5s (retrieve=39ms)
+2026-04-22 20:05:09,019 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:05:09,019 [INFO] [query:于晓薇_q5] done in 3.5s — correct=False score=None
+2026-04-22 20:05:09,020 [INFO] [query:于晓薇_q6] start — After her first attempt at gentle home yoga on March 19th, how did Yu Xiaowei in
+2026-04-22 20:05:12,700 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:05:12,701 [INFO] [query:于晓薇_q6] answer done in 3.7s (retrieve=62ms)
+2026-04-22 20:05:14,643 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:05:14,643 [INFO] [query:于晓薇_q6] done in 5.6s — correct=True score=None
+2026-04-22 20:05:14,644 [INFO] [query:于晓薇_q7] start — On the last day of the Spring Festival holiday, which important personal routine
+2026-04-22 20:05:19,653 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:05:19,658 [INFO] [query:于晓薇_q7] answer done in 5.0s (retrieve=86ms)
+2026-04-22 20:05:20,990 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:05:20,990 [INFO] [query:于晓薇_q7] done in 6.3s — correct=False score=None
+2026-04-22 20:05:20,991 [INFO] [query:于晓薇_q8] start — After listening to the doctor's advice on balancing muscle strength and protecti
+2026-04-22 20:05:23,441 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:05:23,442 [INFO] [query:于晓薇_q8] answer done in 2.5s (retrieve=48ms)
+2026-04-22 20:05:24,615 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:05:24,644 [INFO] [query:于晓薇_q8] done in 3.7s — correct=False score=None
+2026-04-22 20:05:24,645 [INFO] [query:于晓薇_q9] start — What was the most direct reason for Yu Xiaowei's decision to increase the fixed 
+2026-04-22 20:05:28,880 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:05:28,881 [INFO] [query:于晓薇_q9] answer done in 4.2s (retrieve=378ms)
+2026-04-22 20:05:29,502 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:05:29,502 [INFO] [query:于晓薇_q9] done in 4.9s — correct=True score=None
+
+Saved → outputs-mnemo-20260422-q10/lifebench/mnemo-openai-mini-q10/rag/en.json
+  Evaluating ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% 0:00:45
+
+Saved → outputs-mnemo-20260422-q10/lifebench/mnemo-openai-mini-q10/rag/en.json
+Results — lifebench/en | 
+       mnemo | rag       
+┏━━━━━━━━━━━━━━━┳━━━━━━━┓
+┃ Metric        ┃ Value ┃
+┡━━━━━━━━━━━━━━━╇━━━━━━━┩
+│ Total queries │    10 │
+│ Correct       │     3 │
+│ Accuracy      │ 30.0% │
+└───────────────┴───────┘
+
+[locomo/locomo10]
+
+Dataset: locomo  Split: locomo10  Memory: mnemo  Run: mnemo-openai-mini-q10  
+Mode: rag
+
+Loading queries...
+  10 queries loaded
+Loading documents...
+╭───────────────────── Traceback (most recent call last) ──────────────────────╮
+│ /Users/verickwayne/agent-memory-benchmark/src/memory_bench/cli.py:64 in run  │
+│                                                                              │
+│    61 │   │   typer.echo(f"Error: unknown split '{split}'. Available: {', '. │
+│    62 │   │   raise typer.Exit(1)                                            │
+│    63 │                                                                      │
+│ ❱  64 │   summary = EvalRunner(output_dir=output_dir).run(                   │
+│    65 │   │   dataset=ds,                                                    │
+│    66 │   │   split=split,                                                   │
+│    67 │   │   memory=get_memory_provider(memory),                            │
+│                                                                              │
+│ /Users/verickwayne/agent-memory-benchmark/src/memory_bench/runner.py:128 in  │
+│ run                                                                          │
+│                                                                              │
+│   125 │   │   │   # For isolated datasets with a query limit, only load docs │
+│   126 │   │   │   # to avoid loading the entire dataset into memory unnecess │
+│   127 │   │   │   query_user_ids = {q.user_id for q in queries if q.user_id} │
+│ ❱ 128 │   │   │   documents = dataset.load_documents(split, category=doc_cat │
+│   129 │   │   │   console.print(f"  {len(documents)} documents loaded")      │
+│   130 │   │   else:                                                          │
+│   131 │   │   │   documents = dataset.load_documents(split, category=doc_cat │
+╰──────────────────────────────────────────────────────────────────────────────╯
+TypeError: LoComoDataset.load_documents() got an unexpected keyword argument 
+'user_ids'
+
+[longmemeval/s]
+
+Dataset: longmemeval  Split: s  Memory: mnemo  Run: mnemo-openai-mini-q10  Mode:
+rag
+
+Loading queries...
+  10 queries loaded
+Loading documents...
+  496 documents loaded
+Ingesting 10 units into mnemo (unit-sequential)...
+2026-04-22 20:05:43,190 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:05:43,216 [INFO] [query:e47becba] start — What degree did I graduate with?
+2026-04-22 20:05:45,076 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:05:45,178 [INFO] [query:e47becba] answer done in 2.0s (retrieve=18ms)
+2026-04-22 20:05:46,094 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:05:46,095 [INFO] [query:e47becba] done in 2.9s — correct=False score=None
+
+Saved → outputs-mnemo-20260422-q10/longmemeval/mnemo-openai-mini-q10/rag/s.json
+2026-04-22 20:05:46,172 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:05:46,198 [INFO] [query:118b2229] start — How long is my daily commute to work?
+2026-04-22 20:05:48,444 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:05:48,445 [INFO] [query:118b2229] answer done in 2.2s (retrieve=9ms)
+2026-04-22 20:05:49,368 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:05:49,371 [INFO] [query:118b2229] done in 3.2s — correct=False score=None
+
+Saved → outputs-mnemo-20260422-q10/longmemeval/mnemo-openai-mini-q10/rag/s.json
+2026-04-22 20:05:49,375 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:05:49,398 [INFO] [query:51a45a95] start — Where did I redeem a $5 coupon on coffee creamer?
+2026-04-22 20:05:51,443 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:05:51,443 [INFO] [query:51a45a95] answer done in 2.0s (retrieve=5ms)
+2026-04-22 20:05:52,375 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:05:52,378 [INFO] [query:51a45a95] done in 3.0s — correct=False score=None
+
+Saved → outputs-mnemo-20260422-q10/longmemeval/mnemo-openai-mini-q10/rag/s.json
+2026-04-22 20:05:52,381 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:05:52,404 [INFO] [query:58bf7951] start — What play did I attend at the local community theater?
+2026-04-22 20:05:58,390 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:05:58,390 [INFO] [query:58bf7951] answer done in 6.0s (retrieve=8ms)
+2026-04-22 20:05:59,417 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:05:59,418 [INFO] [query:58bf7951] done in 7.0s — correct=False score=None
+
+Saved → outputs-mnemo-20260422-q10/longmemeval/mnemo-openai-mini-q10/rag/s.json
+2026-04-22 20:05:59,420 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:05:59,446 [INFO] [query:1e043500] start — What is the name of the playlist I created on Spotify?
+2026-04-22 20:06:01,146 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:06:01,146 [INFO] [query:1e043500] answer done in 1.7s (retrieve=8ms)
+2026-04-22 20:06:01,845 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:06:01,849 [INFO] [query:1e043500] done in 2.4s — correct=False score=None
+
+Saved → outputs-mnemo-20260422-q10/longmemeval/mnemo-openai-mini-q10/rag/s.json
+2026-04-22 20:06:01,852 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:06:01,873 [INFO] [query:c5e8278d] start — What was my last name before I changed it?
+2026-04-22 20:06:03,632 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:06:03,633 [INFO] [query:c5e8278d] answer done in 1.8s (retrieve=7ms)
+2026-04-22 20:06:04,359 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:06:04,364 [INFO] [query:c5e8278d] done in 2.5s — correct=True score=None
+
+Saved → outputs-mnemo-20260422-q10/longmemeval/mnemo-openai-mini-q10/rag/s.json
+2026-04-22 20:06:04,367 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:06:04,388 [INFO] [query:6ade9755] start — Where do I take yoga classes?
+2026-04-22 20:06:06,175 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:06:06,175 [INFO] [query:6ade9755] answer done in 1.8s (retrieve=5ms)
+2026-04-22 20:06:06,873 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:06:06,874 [INFO] [query:6ade9755] done in 2.5s — correct=True score=None
+
+Saved → outputs-mnemo-20260422-q10/longmemeval/mnemo-openai-mini-q10/rag/s.json
+2026-04-22 20:06:06,877 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:06:06,897 [INFO] [query:6f9b354f] start — What color did I repaint my bedroom walls?
+2026-04-22 20:06:08,516 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:06:08,521 [INFO] [query:6f9b354f] answer done in 1.6s (retrieve=6ms)
+2026-04-22 20:06:09,487 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:06:09,488 [INFO] [query:6f9b354f] done in 2.6s — correct=False score=None
+
+Saved → outputs-mnemo-20260422-q10/longmemeval/mnemo-openai-mini-q10/rag/s.json
+2026-04-22 20:06:09,491 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:06:09,512 [INFO] [query:58ef2f1c] start — When did I volunteer at the local animal shelter's fundraising dinner?
+2026-04-22 20:06:11,449 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:06:11,449 [INFO] [query:58ef2f1c] answer done in 1.9s (retrieve=10ms)
+2026-04-22 20:06:12,302 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:06:12,302 [INFO] [query:58ef2f1c] done in 2.8s — correct=False score=None
+
+Saved → outputs-mnemo-20260422-q10/longmemeval/mnemo-openai-mini-q10/rag/s.json
+2026-04-22 20:06:12,305 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:06:12,332 [INFO] [query:f8c5f88b] start — Where did I buy my new tennis racket from?
+2026-04-22 20:06:14,148 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:06:14,148 [INFO] [query:f8c5f88b] answer done in 1.8s (retrieve=7ms)
+2026-04-22 20:06:15,119 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:06:15,125 [INFO] [query:f8c5f88b] done in 2.8s — correct=False score=None
+
+Saved → outputs-mnemo-20260422-q10/longmemeval/mnemo-openai-mini-q10/rag/s.json
+  Evaluating ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% 0:00:31
+
+Saved → outputs-mnemo-20260422-q10/longmemeval/mnemo-openai-mini-q10/rag/s.json
+Results — longmemeval/s |
+       mnemo | rag       
+┏━━━━━━━━━━━━━━━┳━━━━━━━┓
+┃ Metric        ┃ Value ┃
+┡━━━━━━━━━━━━━━━╇━━━━━━━┩
+│ Total queries │    10 │
+│ Correct       │     2 │
+│ Accuracy      │ 20.0% │
+└───────────────┴───────┘
+
+[personamem/32k]
+
+Dataset: personamem  Split: 32k  Memory: mnemo  Run: mnemo-openai-mini-q10  
+Mode: rag
+
+Task type: multiple-choice (exact letter match scoring)
+Loading queries...
+  10 queries loaded
+Loading documents...
+  195 documents loaded
+Ingesting into mnemo...
+2026-04-22 20:06:26,446 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:06:26,454 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:06:26,459 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:06:26,465 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:06:26,475 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:06:26,480 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:06:26,487 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:06:26,492 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:06:26,497 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:06:26,506 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:06:26,511 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:06:26,517 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:06:26,524 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:06:26,535 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:06:26,540 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:06:26,545 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:06:26,553 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:06:26,558 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:06:26,565 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:06:26,571 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:06:26,576 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:06:26,580 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:06:26,588 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:06:26,594 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:06:26,599 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:06:26,610 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:06:26,614 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:06:26,621 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:06:26,628 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:06:26,634 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:06:26,639 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:06:26,649 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:06:26,655 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:06:26,662 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:06:26,667 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:06:26,672 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:06:26,686 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+  ingested in 284ms (1.5ms/doc avg)
+
+2026-04-22 20:06:26,691 [INFO] [query:acd74206-37dc-4756-94a8-b99a395d9a21] start — User: Kanoa Manu
+
+I recently attended an event where there was a unique blend of
+2026-04-22 20:06:29,623 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:06:29,626 [INFO] [query:acd74206-37dc-4756-94a8-b99a395d9a21] answer done in 2.9s (retrieve=18ms)
+2026-04-22 20:06:29,626 [INFO] [query:acd74206-37dc-4756-94a8-b99a395d9a21] done in 2.9s — correct=True score=None
+2026-04-22 20:06:29,680 [INFO] [query:f546a74f-54de-40d0-9d88-8b0e30467d7b] start — User: Kanoa Manu
+
+I'm planning a weekend getaway and want to try something creat
+2026-04-22 20:06:31,567 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:06:31,568 [INFO] [query:f546a74f-54de-40d0-9d88-8b0e30467d7b] answer done in 1.9s (retrieve=7ms)
+2026-04-22 20:06:31,568 [INFO] [query:f546a74f-54de-40d0-9d88-8b0e30467d7b] done in 1.9s — correct=True score=None
+2026-04-22 20:06:31,568 [INFO] [query:b3588797-acdf-40d3-bcc5-951f81896f95] start — User: Kanoa Manu
+
+How can I find a more fulfilling way to express my love for mu
+2026-04-22 20:06:33,645 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:06:33,653 [INFO] [query:b3588797-acdf-40d3-bcc5-951f81896f95] answer done in 2.1s (retrieve=6ms)
+2026-04-22 20:06:33,653 [INFO] [query:b3588797-acdf-40d3-bcc5-951f81896f95] done in 2.1s — correct=False score=None
+2026-04-22 20:06:33,653 [INFO] [query:5370f186-0028-41f4-b436-c48575899fca] start — User: Kanoa Manu
+
+I'm exploring new creative outlets and would love some suggest
+2026-04-22 20:06:36,480 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:06:36,482 [INFO] [query:5370f186-0028-41f4-b436-c48575899fca] answer done in 2.8s (retrieve=9ms)
+2026-04-22 20:06:36,482 [INFO] [query:5370f186-0028-41f4-b436-c48575899fca] done in 2.8s — correct=False score=None
+2026-04-22 20:06:36,482 [INFO] [query:a40d5f67-8ec6-480b-a901-9709eecee9b9] start — User: Kanoa Manu
+
+I've decided I don't enjoy podcasting about music trends anymo
+2026-04-22 20:06:39,146 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:06:39,146 [INFO] [query:a40d5f67-8ec6-480b-a901-9709eecee9b9] answer done in 2.7s (retrieve=4ms)
+2026-04-22 20:06:39,146 [INFO] [query:a40d5f67-8ec6-480b-a901-9709eecee9b9] done in 2.7s — correct=False score=None
+2026-04-22 20:06:39,146 [INFO] [query:6142fba4-a233-405a-a4fe-a5b2e27374a7] start — User: Kanoa Manu
+
+User: I found that my reviews were often criticized for not be
+2026-04-22 20:06:41,485 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:06:41,486 [INFO] [query:6142fba4-a233-405a-a4fe-a5b2e27374a7] answer done in 2.3s (retrieve=91ms)
+2026-04-22 20:06:41,486 [INFO] [query:6142fba4-a233-405a-a4fe-a5b2e27374a7] done in 2.3s — correct=True score=None
+2026-04-22 20:06:41,486 [INFO] [query:2cef53ac-c165-41b5-a31f-c3064106471f] start — User: Kanoa Manu
+
+After several disagreements over the artistic direction, I fel
+2026-04-22 20:06:43,068 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:06:43,068 [INFO] [query:2cef53ac-c165-41b5-a31f-c3064106471f] answer done in 1.6s (retrieve=63ms)
+2026-04-22 20:06:43,068 [INFO] [query:2cef53ac-c165-41b5-a31f-c3064106471f] done in 1.6s — correct=True score=None
+2026-04-22 20:06:43,068 [INFO] [query:4afc48ca-e6a7-4467-abd2-911915199315] start — User: Kanoa Manu
+
+I found that my reviews were often criticized for not being ob
+2026-04-22 20:06:44,763 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:06:44,771 [INFO] [query:4afc48ca-e6a7-4467-abd2-911915199315] answer done in 1.7s (retrieve=94ms)
+2026-04-22 20:06:44,771 [INFO] [query:4afc48ca-e6a7-4467-abd2-911915199315] done in 1.7s — correct=False score=None
+2026-04-22 20:06:44,771 [INFO] [query:defecce2-ff39-438e-ae41-90f3bcf9cb48] start — User: Kanoa Manu
+
+I found a mentor who helped me make the connection between mus
+2026-04-22 20:06:46,254 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:06:46,254 [INFO] [query:defecce2-ff39-438e-ae41-90f3bcf9cb48] answer done in 1.5s (retrieve=83ms)
+2026-04-22 20:06:46,254 [INFO] [query:defecce2-ff39-438e-ae41-90f3bcf9cb48] done in 1.5s — correct=True score=None
+2026-04-22 20:06:46,254 [INFO] [query:fd81b480-5723-43fe-9fb1-d3efa0df8e49] start — User: Kanoa Manu
+
+I recently attended an event where there was a unique blend of
+2026-04-22 20:06:48,651 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:06:48,652 [INFO] [query:fd81b480-5723-43fe-9fb1-d3efa0df8e49] answer done in 2.4s (retrieve=6ms)
+2026-04-22 20:06:48,652 [INFO] [query:fd81b480-5723-43fe-9fb1-d3efa0df8e49] done in 2.4s — correct=True score=None
+  Evaluating ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% 0:00:21
+
+Saved → outputs-mnemo-20260422-q10/personamem/mnemo-openai-mini-q10/rag/32k.json
+Results — personamem/32k 
+      | mnemo | rag      
+┏━━━━━━━━━━━━━━━┳━━━━━━━┓
+┃ Metric        ┃ Value ┃
+┡━━━━━━━━━━━━━━━╇━━━━━━━┩
+│ Total queries │    10 │
+│ Correct       │     6 │
+│ Accuracy      │ 60.0% │
+└───────────────┴───────┘
+
+[membench/FirstAgentLowLevel]
+
+Dataset: membench  Split: FirstAgentLowLevel  Memory: mnemo  Run: 
+mnemo-openai-mini-q10  Mode: rag
+
+Task type: multiple-choice (exact letter match scoring)
+Loading queries...
+╭───────────────────── Traceback (most recent call last) ──────────────────────╮
+│ /Users/verickwayne/agent-memory-benchmark/src/memory_bench/cli.py:64 in run  │
+│                                                                              │
+│    61 │   │   typer.echo(f"Error: unknown split '{split}'. Available: {', '. │
+│    62 │   │   raise typer.Exit(1)                                            │
+│    63 │                                                                      │
+│ ❱  64 │   summary = EvalRunner(output_dir=output_dir).run(                   │
+│    65 │   │   dataset=ds,                                                    │
+│    66 │   │   split=split,                                                   │
+│    67 │   │   memory=get_memory_provider(memory),                            │
+│                                                                              │
+│ /Users/verickwayne/agent-memory-benchmark/src/memory_bench/runner.py:103 in  │
+│ run                                                                          │
+│                                                                              │
+│   100 │   │   │   # doc loading must not be filtered by category when combin │
+│   101 │   │   │   doc_category: str | None = None                            │
+│   102 │   │   else:                                                          │
+│ ❱ 103 │   │   │   queries = dataset.load_queries(split, category=cats[0], li │
+│   104 │   │   │   doc_category = cats[0]                                     │
+│   105 │   │                                                                  │
+│   106 │   │   if query_id:                                                   │
+│                                                                              │
+│ /Users/verickwayne/agent-memory-benchmark/src/memory_bench/dataset/membench. │
+│ py:100 in load_queries                                                       │
+│                                                                              │
+│    97 │   │   category: str | None = None,                                   │
+│    98 │   │   limit: int | None = None,                                      │
+│    99 │   ) -> list[Query]:                                                  │
+│ ❱ 100 │   │   trajectories = self._load_trajectories(split)                  │
+│   101 │   │   queries: list[Query] = []                                      │
+│   102 │   │                                                                  │
+│   103 │   │   for traj in trajectories:                                      │
+│                                                                              │
+│ /Users/verickwayne/agent-memory-benchmark/src/memory_bench/dataset/membench. │
+│ py:54 in _load_trajectories                                                  │
+│                                                                              │
+│    51 │   def _load_trajectories(self, split: str) -> list[dict]:            │
+│    52 │   │   path = self.data_path / _SPLIT_FILES[split]                    │
+│    53 │   │   if not path.exists():                                          │
+│ ❱  54 │   │   │   raise FileNotFoundError(                                   │
+│    55 │   │   │   │   f"MemBench data not found at {path}. "                 │
+│    56 │   │   │   │   f"Download the dataset and set MEMBENCH_DATA_PATH."    │
+│    57 │   │   │   )                                                          │
+╰──────────────────────────────────────────────────────────────────────────────╯
+FileNotFoundError: MemBench data not found at 
+MemData/FirstAgentDataLowLevel.json. Download the dataset and set 
+MEMBENCH_DATA_PATH.
+
+[membench/FirstAgentHighLevel]
+
+Dataset: membench  Split: FirstAgentHighLevel  Memory: mnemo  Run: 
+mnemo-openai-mini-q10  Mode: rag
+
+Task type: multiple-choice (exact letter match scoring)
+Loading queries...
+╭───────────────────── Traceback (most recent call last) ──────────────────────╮
+│ /Users/verickwayne/agent-memory-benchmark/src/memory_bench/cli.py:64 in run  │
+│                                                                              │
+│    61 │   │   typer.echo(f"Error: unknown split '{split}'. Available: {', '. │
+│    62 │   │   raise typer.Exit(1)                                            │
+│    63 │                                                                      │
+│ ❱  64 │   summary = EvalRunner(output_dir=output_dir).run(                   │
+│    65 │   │   dataset=ds,                                                    │
+│    66 │   │   split=split,                                                   │
+│    67 │   │   memory=get_memory_provider(memory),                            │
+│                                                                              │
+│ /Users/verickwayne/agent-memory-benchmark/src/memory_bench/runner.py:103 in  │
+│ run                                                                          │
+│                                                                              │
+│   100 │   │   │   # doc loading must not be filtered by category when combin │
+│   101 │   │   │   doc_category: str | None = None                            │
+│   102 │   │   else:                                                          │
+│ ❱ 103 │   │   │   queries = dataset.load_queries(split, category=cats[0], li │
+│   104 │   │   │   doc_category = cats[0]                                     │
+│   105 │   │                                                                  │
+│   106 │   │   if query_id:                                                   │
+│                                                                              │
+│ /Users/verickwayne/agent-memory-benchmark/src/memory_bench/dataset/membench. │
+│ py:100 in load_queries                                                       │
+│                                                                              │
+│    97 │   │   category: str | None = None,                                   │
+│    98 │   │   limit: int | None = None,                                      │
+│    99 │   ) -> list[Query]:                                                  │
+│ ❱ 100 │   │   trajectories = self._load_trajectories(split)                  │
+│   101 │   │   queries: list[Query] = []                                      │
+│   102 │   │                                                                  │
+│   103 │   │   for traj in trajectories:                                      │
+│                                                                              │
+│ /Users/verickwayne/agent-memory-benchmark/src/memory_bench/dataset/membench. │
+│ py:54 in _load_trajectories                                                  │
+│                                                                              │
+│    51 │   def _load_trajectories(self, split: str) -> list[dict]:            │
+│    52 │   │   path = self.data_path / _SPLIT_FILES[split]                    │
+│    53 │   │   if not path.exists():                                          │
+│ ❱  54 │   │   │   raise FileNotFoundError(                                   │
+│    55 │   │   │   │   f"MemBench data not found at {path}. "                 │
+│    56 │   │   │   │   f"Download the dataset and set MEMBENCH_DATA_PATH."    │
+│    57 │   │   │   )                                                          │
+╰──────────────────────────────────────────────────────────────────────────────╯
+FileNotFoundError: MemBench data not found at 
+MemData/FirstAgentDataHighLevel.json. Download the dataset and set 
+MEMBENCH_DATA_PATH.
+
+[membench/ThirdAgentLowLevel]
+
+Dataset: membench  Split: ThirdAgentLowLevel  Memory: mnemo  Run: 
+mnemo-openai-mini-q10  Mode: rag
+
+Task type: multiple-choice (exact letter match scoring)
+Loading queries...
+╭───────────────────── Traceback (most recent call last) ──────────────────────╮
+│ /Users/verickwayne/agent-memory-benchmark/src/memory_bench/cli.py:64 in run  │
+│                                                                              │
+│    61 │   │   typer.echo(f"Error: unknown split '{split}'. Available: {', '. │
+│    62 │   │   raise typer.Exit(1)                                            │
+│    63 │                                                                      │
+│ ❱  64 │   summary = EvalRunner(output_dir=output_dir).run(                   │
+│    65 │   │   dataset=ds,                                                    │
+│    66 │   │   split=split,                                                   │
+│    67 │   │   memory=get_memory_provider(memory),                            │
+│                                                                              │
+│ /Users/verickwayne/agent-memory-benchmark/src/memory_bench/runner.py:103 in  │
+│ run                                                                          │
+│                                                                              │
+│   100 │   │   │   # doc loading must not be filtered by category when combin │
+│   101 │   │   │   doc_category: str | None = None                            │
+│   102 │   │   else:                                                          │
+│ ❱ 103 │   │   │   queries = dataset.load_queries(split, category=cats[0], li │
+│   104 │   │   │   doc_category = cats[0]                                     │
+│   105 │   │                                                                  │
+│   106 │   │   if query_id:                                                   │
+│                                                                              │
+│ /Users/verickwayne/agent-memory-benchmark/src/memory_bench/dataset/membench. │
+│ py:100 in load_queries                                                       │
+│                                                                              │
+│    97 │   │   category: str | None = None,                                   │
+│    98 │   │   limit: int | None = None,                                      │
+│    99 │   ) -> list[Query]:                                                  │
+│ ❱ 100 │   │   trajectories = self._load_trajectories(split)                  │
+│   101 │   │   queries: list[Query] = []                                      │
+│   102 │   │                                                                  │
+│   103 │   │   for traj in trajectories:                                      │
+│                                                                              │
+│ /Users/verickwayne/agent-memory-benchmark/src/memory_bench/dataset/membench. │
+│ py:54 in _load_trajectories                                                  │
+│                                                                              │
+│    51 │   def _load_trajectories(self, split: str) -> list[dict]:            │
+│    52 │   │   path = self.data_path / _SPLIT_FILES[split]                    │
+│    53 │   │   if not path.exists():                                          │
+│ ❱  54 │   │   │   raise FileNotFoundError(                                   │
+│    55 │   │   │   │   f"MemBench data not found at {path}. "                 │
+│    56 │   │   │   │   f"Download the dataset and set MEMBENCH_DATA_PATH."    │
+│    57 │   │   │   )                                                          │
+╰──────────────────────────────────────────────────────────────────────────────╯
+FileNotFoundError: MemBench data not found at 
+MemData/ThirdAgentDataLowLevel.json. Download the dataset and set 
+MEMBENCH_DATA_PATH.
+
+[membench/ThirdAgentHighLevel]
+
+Dataset: membench  Split: ThirdAgentHighLevel  Memory: mnemo  Run: 
+mnemo-openai-mini-q10  Mode: rag
+
+Task type: multiple-choice (exact letter match scoring)
+Loading queries...
+╭───────────────────── Traceback (most recent call last) ──────────────────────╮
+│ /Users/verickwayne/agent-memory-benchmark/src/memory_bench/cli.py:64 in run  │
+│                                                                              │
+│    61 │   │   typer.echo(f"Error: unknown split '{split}'. Available: {', '. │
+│    62 │   │   raise typer.Exit(1)                                            │
+│    63 │                                                                      │
+│ ❱  64 │   summary = EvalRunner(output_dir=output_dir).run(                   │
+│    65 │   │   dataset=ds,                                                    │
+│    66 │   │   split=split,                                                   │
+│    67 │   │   memory=get_memory_provider(memory),                            │
+│                                                                              │
+│ /Users/verickwayne/agent-memory-benchmark/src/memory_bench/runner.py:103 in  │
+│ run                                                                          │
+│                                                                              │
+│   100 │   │   │   # doc loading must not be filtered by category when combin │
+│   101 │   │   │   doc_category: str | None = None                            │
+│   102 │   │   else:                                                          │
+│ ❱ 103 │   │   │   queries = dataset.load_queries(split, category=cats[0], li │
+│   104 │   │   │   doc_category = cats[0]                                     │
+│   105 │   │                                                                  │
+│   106 │   │   if query_id:                                                   │
+│                                                                              │
+│ /Users/verickwayne/agent-memory-benchmark/src/memory_bench/dataset/membench. │
+│ py:100 in load_queries                                                       │
+│                                                                              │
+│    97 │   │   category: str | None = None,                                   │
+│    98 │   │   limit: int | None = None,                                      │
+│    99 │   ) -> list[Query]:                                                  │
+│ ❱ 100 │   │   trajectories = self._load_trajectories(split)                  │
+│   101 │   │   queries: list[Query] = []                                      │
+│   102 │   │                                                                  │
+│   103 │   │   for traj in trajectories:                                      │
+│                                                                              │
+│ /Users/verickwayne/agent-memory-benchmark/src/memory_bench/dataset/membench. │
+│ py:54 in _load_trajectories                                                  │
+│                                                                              │
+│    51 │   def _load_trajectories(self, split: str) -> list[dict]:            │
+│    52 │   │   path = self.data_path / _SPLIT_FILES[split]                    │
+│    53 │   │   if not path.exists():                                          │
+│ ❱  54 │   │   │   raise FileNotFoundError(                                   │
+│    55 │   │   │   │   f"MemBench data not found at {path}. "                 │
+│    56 │   │   │   │   f"Download the dataset and set MEMBENCH_DATA_PATH."    │
+│    57 │   │   │   )                                                          │
+╰──────────────────────────────────────────────────────────────────────────────╯
+FileNotFoundError: MemBench data not found at 
+MemData/ThirdAgentDataHighLevel.json. Download the dataset and set 
+MEMBENCH_DATA_PATH.
+
+[memsim/simple]
+
+Dataset: memsim  Split: simple  Memory: mnemo  Run: mnemo-openai-mini-q10  Mode:
+rag
+
+Task type: multiple-choice (exact letter match scoring)
+Loading queries...
+Downloading MemSim data → /Users/verickwayne/agent-memory-benchmark/.datasets/memsim/memdaily.json …
+  10 queries loaded
+Loading documents...
+  4215 documents loaded
+Ingesting into mnemo...
+2026-04-22 20:07:15,211 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+  ingested in 673ms (0.2ms/doc avg)
+
+2026-04-22 20:07:15,851 [INFO] [query:0_0] start — 那我的上司是哪个学校毕业的呢？
+
+A. 本科
+B. 专科
+C. 硕士
+D. 高中
+2026-04-22 20:07:19,330 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:07:19,342 [INFO] [query:0_0] answer done in 3.5s (retrieve=49ms)
+2026-04-22 20:07:19,342 [INFO] [query:0_0] done in 3.5s — correct=False score=None
+2026-04-22 20:07:19,412 [INFO] [query:1_0] start — 我表弟现在多大了呀？
+
+A. 35岁
+B. 37岁
+C. 34岁
+D. 36岁
+2026-04-22 20:07:22,623 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:07:22,629 [INFO] [query:1_0] answer done in 3.2s (retrieve=38ms)
+2026-04-22 20:07:22,629 [INFO] [query:1_0] done in 3.2s — correct=False score=None
+2026-04-22 20:07:22,630 [INFO] [query:2_0] start — 我上司的生日到底是啥时候呢？
+
+A. 12月12日
+B. 11月10日
+C. 12月10日
+D. 12月5日
+2026-04-22 20:07:25,225 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:07:25,226 [INFO] [query:2_0] answer done in 2.6s (retrieve=36ms)
+2026-04-22 20:07:25,226 [INFO] [query:2_0] done in 2.6s — correct=False score=None
+2026-04-22 20:07:25,226 [INFO] [query:3_0] start — 我婶婶的生日是啥时候来着？
+
+A. 05月28日
+B. 06月29日
+C. 05月29日
+D. 05月30日
+2026-04-22 20:07:27,684 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:07:27,684 [INFO] [query:3_0] answer done in 2.5s (retrieve=34ms)
+2026-04-22 20:07:27,684 [INFO] [query:3_0] done in 2.5s — correct=False score=None
+2026-04-22 20:07:27,685 [INFO] [query:4_0] start — 我表哥的邮箱地址是多少来着？
+
+A. ming_li1108@westlakesales.com
+B. li_ming1180@westlakesales.co
+2026-04-22 20:07:29,629 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:07:29,630 [INFO] [query:4_0] answer done in 1.9s (retrieve=35ms)
+2026-04-22 20:07:29,630 [INFO] [query:4_0] done in 1.9s — correct=False score=None
+2026-04-22 20:07:29,630 [INFO] [query:5_0] start — 我上司是做什么工作的呢？
+
+A. 工程师
+B. 建筑工人
+C. 建筑师
+D. 施工员
+2026-04-22 20:07:32,406 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:07:32,414 [INFO] [query:5_0] answer done in 2.8s (retrieve=36ms)
+2026-04-22 20:07:32,414 [INFO] [query:5_0] done in 2.8s — correct=False score=None
+2026-04-22 20:07:32,414 [INFO] [query:6_0] start — 我的上司叫什么名字来着？
+
+A. 王思源
+B. 李思琪
+C. 王思琪
+D. 张思静
+2026-04-22 20:07:34,275 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:07:34,279 [INFO] [query:6_0] answer done in 1.9s (retrieve=37ms)
+2026-04-22 20:07:34,279 [INFO] [query:6_0] done in 1.9s — correct=False score=None
+2026-04-22 20:07:34,279 [INFO] [query:7_0] start — 我叔叔他们单位叫什么名字来着？
+
+A. 青岛博爱医院
+B. 青岛仁心医院
+C. 青岛仁爱医院
+D. 青岛市立仁爱医院
+2026-04-22 20:07:37,003 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:07:37,003 [INFO] [query:7_0] answer done in 2.7s (retrieve=35ms)
+2026-04-22 20:07:37,003 [INFO] [query:7_0] done in 2.7s — correct=False score=None
+2026-04-22 20:07:37,003 [INFO] [query:8_0] start — 我同事的身高到底是多少来着？
+
+A. 160cm
+B. 161mm
+C. 162cm
+D. 161cm
+2026-04-22 20:07:40,769 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:07:40,769 [INFO] [query:8_0] answer done in 3.8s (retrieve=34ms)
+2026-04-22 20:07:40,769 [INFO] [query:8_0] done in 3.8s — correct=False score=None
+2026-04-22 20:07:40,769 [INFO] [query:9_0] start — 同事是做什么工作的呢？
+
+A. 设计师
+B. 建筑师
+C. 美工师
+D. 视觉师
+2026-04-22 20:07:44,990 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:07:44,991 [INFO] [query:9_0] answer done in 4.2s (retrieve=34ms)
+2026-04-22 20:07:44,991 [INFO] [query:9_0] done in 4.2s — correct=False score=None
+  Evaluating ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% 0:00:29
+
+Saved → outputs-mnemo-20260422-q10/memsim/mnemo-openai-mini-q10/rag/simple.json
+Results — memsim/simple |
+       mnemo | rag       
+┏━━━━━━━━━━━━━━━┳━━━━━━━┓
+┃ Metric        ┃ Value ┃
+┡━━━━━━━━━━━━━━━╇━━━━━━━┩
+│ Total queries │    10 │
+│ Correct       │     0 │
+│ Accuracy      │  0.0% │
+└───────────────┴───────┘
+
+[memsim/conditional]
+
+Dataset: memsim  Split: conditional  Memory: mnemo  Run: mnemo-openai-mini-q10  
+Mode: rag
+
+Task type: multiple-choice (exact letter match scoring)
+Loading queries...
+  10 queries loaded
+Loading documents...
+  4195 documents loaded
+Ingesting into mnemo...
+2026-04-22 20:07:50,451 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+  ingested in 689ms (0.2ms/doc avg)
+
+2026-04-22 20:07:51,102 [INFO] [query:0_0] start — 那个只有高中学历的人，他们现在是在哪儿上班来着？
+
+A. 广东珠海
+B. 广东深圳
+C. 深圳广州
+D. 福建厦门
+2026-04-22 20:07:53,285 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:07:53,288 [INFO] [query:0_0] answer done in 2.2s (retrieve=47ms)
+2026-04-22 20:07:53,288 [INFO] [query:0_0] done in 2.2s — correct=True score=None
+2026-04-22 20:07:53,343 [INFO] [query:1_0] start — 那个来自重庆的人叫什么名字啊？
+
+A. 赵雅琪
+B. 赵雅婧
+C. 赵雅琳
+D. 赵雅璇
+2026-04-22 20:07:55,369 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:07:55,369 [INFO] [query:1_0] answer done in 2.0s (retrieve=35ms)
+2026-04-22 20:07:55,369 [INFO] [query:1_0] done in 2.0s — correct=False score=None
+2026-04-22 20:07:55,369 [INFO] [query:2_0] start — 那个61岁的人是在哪里工作的呢？
+
+A. 广东广州
+B. 广东深圳
+C. 福建福州
+D. 浙江杭州
+2026-04-22 20:07:58,207 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:07:58,208 [INFO] [query:2_0] answer done in 2.8s (retrieve=32ms)
+2026-04-22 20:07:58,208 [INFO] [query:2_0] done in 2.8s — correct=False score=None
+2026-04-22 20:07:58,208 [INFO] [query:3_0] start — 那个45岁的家伙叫什么名字来着？
+
+A. 王思敏
+B. 王思琪
+C. 李思琪
+D. 张思静
+2026-04-22 20:08:02,316 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:08:02,317 [INFO] [query:3_0] answer done in 4.1s (retrieve=35ms)
+2026-04-22 20:08:02,317 [INFO] [query:3_0] done in 4.1s — correct=False score=None
+2026-04-22 20:08:02,317 [INFO] [query:4_0] start — 那个只上了专科的家伙，他老家是哪儿的啊？
+
+A. 广东广州
+B. 广东深圳
+C. 深圳东莞
+D. 广东珠海
+2026-04-22 20:08:06,909 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:08:06,909 [INFO] [query:4_0] answer done in 4.6s (retrieve=33ms)
+2026-04-22 20:08:06,909 [INFO] [query:4_0] done in 4.6s — correct=True score=None
+2026-04-22 20:08:06,909 [INFO] [query:5_0] start — 那谁是销售经理啊，他们职业是什么呢？
+
+A. 营销专家
+B. 销售主管
+C. 销售人员
+D. 市场经理
+2026-04-22 20:08:10,448 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:08:10,449 [INFO] [query:5_0] answer done in 3.5s (retrieve=35ms)
+2026-04-22 20:08:10,449 [INFO] [query:5_0] done in 3.5s — correct=False score=None
+2026-04-22 20:08:10,449 [INFO] [query:6_0] start — 那个山西太原的家乡人，他们生日是啥时候啊？
+
+A. 09月13日
+B. 09月23日
+C. 08月13日
+D. 09月03日
+2026-04-22 20:08:13,978 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:08:13,978 [INFO] [query:6_0] answer done in 3.5s (retrieve=36ms)
+2026-04-22 20:08:13,978 [INFO] [query:6_0] done in 3.5s — correct=False score=None
+2026-04-22 20:08:13,978 [INFO] [query:7_0] start — 那个教育背景是硕士的人有多高啊？
+
+A. 172cm
+B. 173cm
+C. 174cm
+D. 170cm
+2026-04-22 20:08:16,755 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:08:16,756 [INFO] [query:7_0] answer done in 2.8s (retrieve=35ms)
+2026-04-22 20:08:16,756 [INFO] [query:7_0] done in 2.8s — correct=False score=None
+2026-04-22 20:08:16,756 [INFO] [query:8_0] start — 那个6月8日过生日的人，他们是做什么职位的来着？
+
+A. 董事长
+B. 总裁
+C. 总经理
+D. 执行长
+2026-04-22 20:08:20,542 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:08:20,547 [INFO] [query:8_0] answer done in 3.8s (retrieve=34ms)
+2026-04-22 20:08:20,547 [INFO] [query:8_0] done in 3.8s — correct=False score=None
+2026-04-22 20:08:20,547 [INFO] [query:9_0] start — 那个邮箱地址是zhangjingyi0825@gzfinance.com的人，身高是多少呢？
+
+A. 160cm
+B. 162cm
+C. 163cm
+D. 16
+2026-04-22 20:08:23,425 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:08:23,426 [INFO] [query:9_0] answer done in 2.9s (retrieve=35ms)
+2026-04-22 20:08:23,426 [INFO] [query:9_0] done in 2.9s — correct=False score=None
+  Evaluating ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% 0:00:32
+
+Saved → 
+outputs-mnemo-20260422-q10/memsim/mnemo-openai-mini-q10/rag/conditional.json
+        Results —        
+  memsim/conditional |   
+       mnemo | rag       
+┏━━━━━━━━━━━━━━━┳━━━━━━━┓
+┃ Metric        ┃ Value ┃
+┡━━━━━━━━━━━━━━━╇━━━━━━━┩
+│ Total queries │    10 │
+│ Correct       │     2 │
+│ Accuracy      │ 20.0% │
+└───────────────┴───────┘
+
+[memsim/comparative]
+
+Dataset: memsim  Split: comparative  Memory: mnemo  Run: mnemo-openai-mini-q10  
+Mode: rag
+
+Task type: multiple-choice (exact letter match scoring)
+Loading queries...
+  10 queries loaded
+Loading documents...
+  3144 documents loaded
+Ingesting into mnemo...
+2026-04-22 20:08:30,142 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+  ingested in 524ms (0.2ms/doc avg)
+
+2026-04-22 20:08:30,627 [INFO] [query:0_0] start — 赵雅琳和张伟谁年龄更大？
+
+A. 赵雅琳
+B. 张伟
+C. 两者一样
+D. 都不正确
+2026-04-22 20:08:33,118 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:08:33,122 [INFO] [query:0_0] answer done in 2.5s (retrieve=54ms)
+2026-04-22 20:08:33,122 [INFO] [query:0_0] done in 2.5s — correct=False score=None
+2026-04-22 20:08:33,178 [INFO] [query:1_0] start — 孙志宏和赵雅琳谁的生日更靠近春节？
+
+A. 孙志宏
+B. 两者一样
+C. 赵雅琳
+D. 都不正确
+2026-04-22 20:08:35,789 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:08:35,789 [INFO] [query:1_0] answer done in 2.6s (retrieve=28ms)
+2026-04-22 20:08:35,789 [INFO] [query:1_0] done in 2.6s — correct=True score=None
+2026-04-22 20:08:35,789 [INFO] [query:2_0] start — 李强和张雅静谁的身高更高？
+
+A. 李强
+B. 两者一样
+C. 都不正确
+D. 张雅静
+2026-04-22 20:08:39,129 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:08:39,130 [INFO] [query:2_0] answer done in 3.3s (retrieve=27ms)
+2026-04-22 20:08:39,130 [INFO] [query:2_0] done in 3.3s — correct=True score=None
+2026-04-22 20:08:39,130 [INFO] [query:3_0] start — 李强和张雅静谁的生日在前？
+
+A. 张雅静
+B. 两者一样
+C. 都不正确
+D. 李强
+2026-04-22 20:08:42,982 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:08:42,982 [INFO] [query:3_0] answer done in 3.9s (retrieve=28ms)
+2026-04-22 20:08:42,982 [INFO] [query:3_0] done in 3.9s — correct=False score=None
+2026-04-22 20:08:42,982 [INFO] [query:4_0] start — 王志鹏和李明谁的教育背景更高？
+
+A. 王志鹏
+B. 两者一样
+C. 李明
+D. 无法判断
+2026-04-22 20:08:46,290 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:08:46,290 [INFO] [query:4_0] answer done in 3.3s (retrieve=27ms)
+2026-04-22 20:08:46,290 [INFO] [query:4_0] done in 3.3s — correct=False score=None
+2026-04-22 20:08:46,291 [INFO] [query:5_0] start — 李明和王志鹏谁的生日更早？
+
+A. 王志鹏
+B. 两者一样
+C. 李明
+D. 都不正确
+2026-04-22 20:08:48,408 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:08:48,421 [INFO] [query:5_0] answer done in 2.1s (retrieve=27ms)
+2026-04-22 20:08:48,421 [INFO] [query:5_0] done in 2.1s — correct=False score=None
+2026-04-22 20:08:48,421 [INFO] [query:6_0] start — 王思琪和刘宇轩谁的生日更早？
+
+A. 刘宇轩
+B. 两者一样
+C. 王思琪
+D. 都不正确
+2026-04-22 20:08:50,723 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:08:50,732 [INFO] [query:6_0] answer done in 2.3s (retrieve=28ms)
+2026-04-22 20:08:50,732 [INFO] [query:6_0] done in 2.3s — correct=False score=None
+2026-04-22 20:08:50,733 [INFO] [query:7_0] start — 王思琪和张翰林谁更年轻？
+
+A. 王思琪
+B. 张翰林
+C. 两者一样
+D. 都不正确
+2026-04-22 20:08:53,368 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:08:53,374 [INFO] [query:7_0] answer done in 2.6s (retrieve=27ms)
+2026-04-22 20:08:53,374 [INFO] [query:7_0] done in 2.6s — correct=False score=None
+2026-04-22 20:08:53,374 [INFO] [query:8_0] start — 孙逸飞和李梓轩谁的身高更高？
+
+A. 孙逸飞
+B. 两者一样
+C. 李梓轩
+D. 都不正确
+2026-04-22 20:08:55,829 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:08:55,836 [INFO] [query:8_0] answer done in 2.5s (retrieve=27ms)
+2026-04-22 20:08:55,837 [INFO] [query:8_0] done in 2.5s — correct=False score=None
+2026-04-22 20:08:55,837 [INFO] [query:9_0] start — 李梓轩和张静怡谁的教育背景更高？
+
+A. 张静怡
+B. 李梓轩
+C. 两者一样
+D. 都不正确
+2026-04-22 20:08:58,590 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:08:58,592 [INFO] [query:9_0] answer done in 2.8s (retrieve=27ms)
+2026-04-22 20:08:58,592 [INFO] [query:9_0] done in 2.8s — correct=False score=None
+  Evaluating ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% 0:00:27
+
+Saved → 
+outputs-mnemo-20260422-q10/memsim/mnemo-openai-mini-q10/rag/comparative.json
+        Results —        
+  memsim/comparative |   
+       mnemo | rag       
+┏━━━━━━━━━━━━━━━┳━━━━━━━┓
+┃ Metric        ┃ Value ┃
+┡━━━━━━━━━━━━━━━╇━━━━━━━┩
+│ Total queries │    10 │
+│ Correct       │     2 │
+│ Accuracy      │ 20.0% │
+└───────────────┴───────┘
+
+[memsim/aggregative]
+
+Dataset: memsim  Split: aggregative  Memory: mnemo  Run: mnemo-openai-mini-q10  
+Mode: rag
+
+Task type: multiple-choice (exact letter match scoring)
+Loading queries...
+  10 queries loaded
+Loading documents...
+  5536 documents loaded
+Ingesting into mnemo...
+2026-04-22 20:09:03,727 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+  ingested in 924ms (0.2ms/doc avg)
+
+2026-04-22 20:09:04,614 [INFO] [query:0_0] start — 有几个人和我一样是北方人（北京）？
+
+A. 1人
+B. 3人
+C. 2人
+D. 4人
+2026-04-22 20:09:07,507 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:09:07,511 [INFO] [query:0_0] answer done in 2.9s (retrieve=57ms)
+2026-04-22 20:09:07,511 [INFO] [query:0_0] done in 2.9s — correct=False score=None
+2026-04-22 20:09:07,566 [INFO] [query:1_0] start — 有几个人的教育背景是高中及以下呢？
+
+A. 3人
+B. 1人
+C. 4人
+D. 2人
+2026-04-22 20:09:10,545 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:09:10,551 [INFO] [query:1_0] answer done in 3.0s (retrieve=42ms)
+2026-04-22 20:09:10,551 [INFO] [query:1_0] done in 3.0s — correct=False score=None
+2026-04-22 20:09:10,551 [INFO] [query:2_0] start — 有几个人具有硕士及以上的教育背景？
+
+A. 3人
+B. 1人
+C. 2人
+D. 4人
+2026-04-22 20:09:14,055 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:09:14,056 [INFO] [query:2_0] answer done in 3.5s (retrieve=40ms)
+2026-04-22 20:09:14,056 [INFO] [query:2_0] done in 3.5s — correct=False score=None
+2026-04-22 20:09:14,056 [INFO] [query:3_0] start — 有几个人和我同一天生日？
+
+A. 1人
+B. 无人
+C. 0人
+D. 2人
+2026-04-22 20:09:17,562 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:09:17,562 [INFO] [query:3_0] answer done in 3.5s (retrieve=52ms)
+2026-04-22 20:09:17,562 [INFO] [query:3_0] done in 3.5s — correct=False score=None
+2026-04-22 20:09:17,563 [INFO] [query:4_0] start — 有几个人在广东深圳工作？
+
+A. 2人
+B. 3人  
+C. 1人  
+D. 4人
+2026-04-22 20:09:18,934 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:09:18,934 [INFO] [query:4_0] answer done in 1.4s (retrieve=50ms)
+2026-04-22 20:09:18,934 [INFO] [query:4_0] done in 1.4s — correct=False score=None
+2026-04-22 20:09:18,934 [INFO] [query:5_0] start — 有几个人的工作地在广东深圳呀？
+
+A. 3人
+B. 1人
+C. 2人
+D. 4人
+2026-04-22 20:09:20,512 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:09:20,513 [INFO] [query:5_0] answer done in 1.6s (retrieve=52ms)
+2026-04-22 20:09:20,513 [INFO] [query:5_0] done in 1.6s — correct=False score=None
+2026-04-22 20:09:20,513 [INFO] [query:6_0] start — 有几个人的年龄在60岁以上呢？
+
+A. 1人
+B. 3人
+C. 2人
+D. 4人
+2026-04-22 20:09:24,054 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:09:24,079 [INFO] [query:6_0] answer done in 3.6s (retrieve=46ms)
+2026-04-22 20:09:24,079 [INFO] [query:6_0] done in 3.6s — correct=False score=None
+2026-04-22 20:09:24,079 [INFO] [query:7_0] start — 有几个人和我一样是来自山西太原的？
+
+A. 3人
+B. 1人
+C. 2人
+D. 4人
+2026-04-22 20:09:26,881 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:09:26,882 [INFO] [query:7_0] answer done in 2.8s (retrieve=39ms)
+2026-04-22 20:09:26,882 [INFO] [query:7_0] done in 2.8s — correct=False score=None
+2026-04-22 20:09:26,882 [INFO] [query:8_0] start — 有几个人拥有博士学历呢？
+
+A. 3人
+B. 1人
+C. 4人
+D. 2人
+2026-04-22 20:09:28,926 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:09:28,926 [INFO] [query:8_0] answer done in 2.0s (retrieve=40ms)
+2026-04-22 20:09:28,926 [INFO] [query:8_0] done in 2.0s — correct=False score=None
+2026-04-22 20:09:28,926 [INFO] [query:9_0] start — 有几个人年龄在50岁以上呢？
+
+A. 1人
+B. 3人
+C. 4人
+D. 2人
+2026-04-22 20:09:30,865 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:09:30,902 [INFO] [query:9_0] answer done in 2.0s (retrieve=44ms)
+2026-04-22 20:09:30,902 [INFO] [query:9_0] done in 2.0s — correct=False score=None
+  Evaluating ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% 0:00:26
+
+Saved → 
+outputs-mnemo-20260422-q10/memsim/mnemo-openai-mini-q10/rag/aggregative.json
+        Results —        
+  memsim/aggregative |   
+       mnemo | rag       
+┏━━━━━━━━━━━━━━━┳━━━━━━━┓
+┃ Metric        ┃ Value ┃
+┡━━━━━━━━━━━━━━━╇━━━━━━━┩
+│ Total queries │    10 │
+│ Correct       │     0 │
+│ Accuracy      │  0.0% │
+└───────────────┴───────┘
+
+[memsim/post_processing]
+
+Dataset: memsim  Split: post_processing  Memory: mnemo  Run: 
+mnemo-openai-mini-q10  Mode: rag
+
+Task type: multiple-choice (exact letter match scoring)
+Loading queries...
+  10 queries loaded
+Loading documents...
+  4438 documents loaded
+Ingesting into mnemo...
+2026-04-22 20:09:37,010 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+  ingested in 764ms (0.2ms/doc avg)
+
+2026-04-22 20:09:37,734 [INFO] [query:0_0] start — 那个生日是07月15日的人，以下哪一项符合其工作地的描述？
+
+A. 首都，政治文化中心
+B. 国际都市，经济金融中心
+C. 西湖风景秀丽，互联网产业发达的城市
+
+2026-04-22 20:09:41,973 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:09:41,980 [INFO] [query:0_0] answer done in 4.2s (retrieve=58ms)
+2026-04-22 20:09:41,980 [INFO] [query:0_0] done in 4.2s — correct=False score=None
+2026-04-22 20:09:42,037 [INFO] [query:1_0] start — 那个职位是银行行长的人，其联系电话的后5位之和是多少？
+
+A. 19
+B. 18
+C. 20
+D. 17
+2026-04-22 20:09:45,058 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:09:45,074 [INFO] [query:1_0] answer done in 3.0s (retrieve=39ms)
+2026-04-22 20:09:45,074 [INFO] [query:1_0] done in 3.0s — correct=False score=None
+2026-04-22 20:09:45,074 [INFO] [query:2_0] start — 那个工作地是上海的人，其职业的主要职责是什么？
+
+A. 编写代码，开发软件
+B. 报道新闻，传播信息
+C. 办理金融业务，服务客户
+D. 设计、建造和维护工程项
+2026-04-22 20:09:47,268 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:09:47,269 [INFO] [query:2_0] answer done in 2.2s (retrieve=38ms)
+2026-04-22 20:09:47,269 [INFO] [query:2_0] done in 2.2s — correct=False score=None
+2026-04-22 20:09:47,269 [INFO] [query:3_0] start — 那个姓名是张雅静的人，其联系电话的后6位之和是多少？
+
+A. 28
+B. 30
+C. 34
+D. 32
+2026-04-22 20:09:50,502 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:09:50,503 [INFO] [query:3_0] answer done in 3.2s (retrieve=37ms)
+2026-04-22 20:09:50,503 [INFO] [query:3_0] done in 3.2s — correct=False score=None
+2026-04-22 20:09:50,503 [INFO] [query:4_0] start — 那个联系电话是18564897773的人，其姓名的有几个字？
+
+A. 2个字
+B. 1个字
+C. 3个字
+D. 4个字
+2026-04-22 20:09:53,295 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:09:53,295 [INFO] [query:4_0] answer done in 2.8s (retrieve=37ms)
+2026-04-22 20:09:53,295 [INFO] [query:4_0] done in 2.8s — correct=False score=None
+2026-04-22 20:09:53,295 [INFO] [query:5_0] start — 那个联系电话是15591513828的人，以下哪一项符合其工作地的描述？
+
+A. 西湖风景秀丽，互联网产业发达的城市
+B. 珠三角省会城市，历史悠久的商贸中心
+
+2026-04-22 20:09:58,928 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:09:58,929 [INFO] [query:5_0] answer done in 5.6s (retrieve=37ms)
+2026-04-22 20:09:58,929 [INFO] [query:5_0] done in 5.6s — correct=False score=None
+2026-04-22 20:09:58,929 [INFO] [query:6_0] start — 那个职位是总裁/高级合伙人的人，其生日是在哪个季节？
+
+A. 春季
+B. 夏季
+C. 冬季
+D. 秋季
+2026-04-22 20:10:01,943 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:10:01,943 [INFO] [query:6_0] answer done in 3.0s (retrieve=38ms)
+2026-04-22 20:10:01,943 [INFO] [query:6_0] done in 3.0s — correct=False score=None
+2026-04-22 20:10:01,944 [INFO] [query:7_0] start — 那个职业是律师的人，其生日是在哪个季节？
+
+A. 春季
+B. 夏季
+C. 冬季
+D. 秋季
+2026-04-22 20:10:03,794 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:10:03,809 [INFO] [query:7_0] answer done in 1.9s (retrieve=37ms)
+2026-04-22 20:10:03,809 [INFO] [query:7_0] done in 1.9s — correct=False score=None
+2026-04-22 20:10:03,809 [INFO] [query:8_0] start — 那个职位是总裁的人，其姓名的有几个字？
+
+A. 2个字
+B. 3个字
+C. 4个字
+D. 5个字
+2026-04-22 20:10:05,423 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:10:05,430 [INFO] [query:8_0] answer done in 1.6s (retrieve=38ms)
+2026-04-22 20:10:05,430 [INFO] [query:8_0] done in 1.6s — correct=False score=None
+2026-04-22 20:10:05,430 [INFO] [query:9_0] start — 那个年龄是51岁的人，其职业的主要职责是什么？
+
+A. 创新设计，美化生活
+B. 管理财务，确保企业经济活动合规
+C. 推广产品，实现销售目标
+D. 维护法律尊
+2026-04-22 20:10:11,170 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:10:11,181 [INFO] [query:9_0] answer done in 5.8s (retrieve=39ms)
+2026-04-22 20:10:11,181 [INFO] [query:9_0] done in 5.8s — correct=False score=None
+  Evaluating ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% 0:00:33
+
+Saved → 
+outputs-mnemo-20260422-q10/memsim/mnemo-openai-mini-q10/rag/post_processing.json
+        Results —        
+memsim/post_processing | 
+       mnemo | rag       
+┏━━━━━━━━━━━━━━━┳━━━━━━━┓
+┃ Metric        ┃ Value ┃
+┡━━━━━━━━━━━━━━━╇━━━━━━━┩
+│ Total queries │    10 │
+│ Correct       │     0 │
+│ Accuracy      │  0.0% │
+└───────────────┴───────┘
+
+[memsim/noisy]
+
+Dataset: memsim  Split: noisy  Memory: mnemo  Run: mnemo-openai-mini-q10  Mode: 
+rag
+
+Task type: multiple-choice (exact letter match scoring)
+Loading queries...
+  10 queries loaded
+Loading documents...
+  4475 documents loaded
+Ingesting into mnemo...
+2026-04-22 20:10:17,583 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+  ingested in 783ms (0.2ms/doc avg)
+
+2026-04-22 20:10:18,325 [INFO] [query:0_0] start — 哎呀，最近天气变化真是让人捉摸不透，昨天还热得穿短袖，今天就得穿上外套了。说起来，我最喜欢的季节还是秋天，不冷也不热，出去散步最舒服了。对了，上次朋友推荐的那个
+2026-04-22 20:10:21,357 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:10:21,411 [INFO] [query:0_0] answer done in 3.1s (retrieve=59ms)
+2026-04-22 20:10:21,411 [INFO] [query:0_0] done in 3.1s — correct=False score=None
+2026-04-22 20:10:21,566 [INFO] [query:1_0] start — 今天天气真好，阳光明媚，突然想起小时候过生日的场景，那时候真的好开心啊。也不知道我那位中学的老师现在怎么样了，好像很久没联系了。说起来，我竟然不记得家里宠物的名
+2026-04-22 20:10:24,880 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:10:24,880 [INFO] [query:1_0] answer done in 3.3s (retrieve=49ms)
+2026-04-22 20:10:24,880 [INFO] [query:1_0] done in 3.3s — correct=False score=None
+2026-04-22 20:10:24,881 [INFO] [query:2_0] start — 今天天气真好，适合出去散步。昨天看的电影真是太好看了，推荐给朋友们。哎呀，我得去超市买点水果回来。不知道周末要不要加班呢。等等，诶，等等，那个联系电话是1848
+2026-04-22 20:10:27,598 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:10:27,599 [INFO] [query:2_0] answer done in 2.7s (retrieve=38ms)
+2026-04-22 20:10:27,599 [INFO] [query:2_0] done in 2.7s — correct=False score=None
+2026-04-22 20:10:27,599 [INFO] [query:3_0] start — 哎呀，今天天气真是奇怪，早上还阳光明媚，这会儿又下起小雨来了。说起来，我昨天在超市买的那杯咖啡味道还不错，不知道今天还有没有。对了，我得记着给家里的绿植浇水，不
+2026-04-22 20:10:30,965 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:10:30,966 [INFO] [query:3_0] answer done in 3.4s (retrieve=46ms)
+2026-04-22 20:10:30,966 [INFO] [query:3_0] done in 3.4s — correct=False score=None
+2026-04-22 20:10:30,966 [INFO] [query:4_0] start — 哎呀，今天天气真是不错，早上我还看到了一只可爱的小猫。最近工作效率好像提高了不少，但晚上睡觉总是做梦，也不知道是怎么回事。明天要不要试试新开的咖啡馆呢？停一下，
+2026-04-22 20:10:33,266 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:10:33,267 [INFO] [query:4_0] answer done in 2.3s (retrieve=40ms)
+2026-04-22 20:10:33,267 [INFO] [query:4_0] done in 2.3s — correct=False score=None
+2026-04-22 20:10:33,267 [INFO] [query:5_0] start — 今天天气真好，阳光明媚，突然想起小时候在家乡的田野里奔跑的情景。那时候的日子真是无忧无虑，不像现在每天都要忙碌于各种琐事。哎，也不知道家乡的亲朋好友们现在怎么样
+2026-04-22 20:10:36,120 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:10:36,126 [INFO] [query:5_0] answer done in 2.9s (retrieve=50ms)
+2026-04-22 20:10:36,127 [INFO] [query:5_0] done in 2.9s — correct=False score=None
+2026-04-22 20:10:36,127 [INFO] [query:6_0] start — 今天天气真好，阳光明媚，突然想起上次在书店遇见的那个人，他跟我分享了很多有趣的书籍。哎呀，我好像忘记问他多大了，不过感觉应该是比我大一些吧。说到年龄，我竟然忘记
+2026-04-22 20:10:40,096 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:10:40,097 [INFO] [query:6_0] answer done in 4.0s (retrieve=41ms)
+2026-04-22 20:10:40,097 [INFO] [query:6_0] done in 4.0s — correct=False score=None
+2026-04-22 20:10:40,097 [INFO] [query:7_0] start — 今天天气真是不错，想起来小时候在田野里跑来跑去的时光。也不知道那时候的同学们现在都在做什么，有的人可能都已经退休了吧。哎呀，我得去看看我那盆花是不是该浇水了。等
+2026-04-22 20:10:43,767 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:10:43,767 [INFO] [query:7_0] answer done in 3.7s (retrieve=37ms)
+2026-04-22 20:10:43,767 [INFO] [query:7_0] done in 3.7s — correct=False score=None
+2026-04-22 20:10:43,767 [INFO] [query:8_0] start — 今天天气真好，阳光明媚，让人心情愉悦。下班后我去公园散步，看到一群鸽子在飞翔，真是美好的画面。突然想到小时候，经常跟小伙伴们在田野里玩耍，那时候的快乐真是简单纯
+2026-04-22 20:10:46,842 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:10:46,843 [INFO] [query:8_0] answer done in 3.1s (retrieve=35ms)
+2026-04-22 20:10:46,843 [INFO] [query:8_0] done in 3.1s — correct=False score=None
+2026-04-22 20:10:46,843 [INFO] [query:9_0] start — 哇，今天天气真好，真想去公园散散步。说起公园，上次遇到的那只可爱的小猫不知道还在不在。对了，昨天看的那个电视剧真是太好看了，我都想熬夜追完。哎，工作的事情还是放
+2026-04-22 20:10:53,484 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:10:53,485 [INFO] [query:9_0] answer done in 6.6s (retrieve=38ms)
+2026-04-22 20:10:53,485 [INFO] [query:9_0] done in 6.6s — correct=False score=None
+  Evaluating ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% 0:00:35
+
+Saved → outputs-mnemo-20260422-q10/memsim/mnemo-openai-mini-q10/rag/noisy.json
+Results — memsim/noisy | 
+       mnemo | rag       
+┏━━━━━━━━━━━━━━━┳━━━━━━━┓
+┃ Metric        ┃ Value ┃
+┡━━━━━━━━━━━━━━━╇━━━━━━━┩
+│ Total queries │    10 │
+│ Correct       │     0 │
+│ Accuracy      │  0.0% │
+└───────────────┴───────┘

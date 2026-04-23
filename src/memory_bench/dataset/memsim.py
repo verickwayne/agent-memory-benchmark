@@ -40,6 +40,7 @@ class MemSimDataset(Dataset):
     description = "Chinese daily-life memory simulation with diverse QA types."
     splits = SPLITS
     task_type = "mcq"
+    isolation_unit = "trajectory"
     links = [
         {"label": "GitHub", "url": "https://github.com/nuster1128/MemSim"},
     ]
@@ -127,6 +128,8 @@ class MemSimDataset(Dataset):
                 query=query_text,
                 gold_ids=gold_ids,
                 gold_answers=gold_answers,
+                user_id=str(tid),
+                meta={"trajectory_id": str(tid), "scenario": traj.get("_scenario", "")},
             ))
 
         if limit:
@@ -139,18 +142,25 @@ class MemSimDataset(Dataset):
         category: str | None = None,
         limit: int | None = None,
         ids: set[str] | None = None,
+        user_ids: set[str] | None = None,
     ) -> list[Document]:
         trajectories = self._load_trajectories(split)
         documents: list[Document] = []
 
         for traj in trajectories:
             tid = traj["tid"]
+            if user_ids is not None and str(tid) not in user_ids:
+                continue
             for msg in traj.get("message_list", []):
                 mid = msg.get("mid", len(documents)) if isinstance(msg, dict) else len(documents)
                 doc_id = f"{tid}_{mid}"
                 if ids is not None and doc_id not in ids:
                     continue
-                documents.append(Document(id=doc_id, content=self._format_message(msg)))
+                documents.append(Document(
+                    id=doc_id,
+                    content=self._format_message(msg),
+                    user_id=str(tid),
+                ))
 
         if limit and ids is None:
             documents = documents[:limit]

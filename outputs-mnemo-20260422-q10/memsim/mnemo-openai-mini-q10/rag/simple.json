@@ -1,0 +1,241 @@
+{
+  "dataset": "memsim",
+  "split": "simple",
+  "category": null,
+  "memory_provider": "mnemo",
+  "run_name": "mnemo-openai-mini-q10",
+  "mode": "rag",
+  "oracle": false,
+  "total_queries": 10,
+  "correct": 6,
+  "accuracy": 0.6,
+  "ingestion_time_ms": 108.9,
+  "ingested_docs": 341,
+  "description": null,
+  "answer_llm": "openai:gpt-4o-mini",
+  "judge_llm": "openai:gpt-4o-mini",
+  "results": [
+    {
+      "query_id": "0_0",
+      "query": "\u90a3\u6211\u7684\u4e0a\u53f8\u662f\u54ea\u4e2a\u5b66\u6821\u6bd5\u4e1a\u7684\u5462\uff1f\n\nA. \u672c\u79d1\nB. \u4e13\u79d1\nC. \u7855\u58eb\nD. \u9ad8\u4e2d",
+      "answer": "a",
+      "reasoning": "The context provided does not contain any direct information about the user's educational background or that of their supervisor. Since we cannot decisively determine the highest level of education the user's supervisor has completed, we should consider the options based on common assumptions. The question asks which '\u5b66\u6821' (school) the supervisor graduated from, implying a focus on higher education rather than basic schooling. Thus, '\u672c\u79d1' (Bachelor's degree) is often the minimum requirement for most supervisory roles in many contexts, above high school or vocational education. However, without specific information about the user's particular situation or any noted frustrations with their supervisor's qualifications, choosing 'A. \u672c\u79d1' as a reasonable assumption seems most fitting, as it represents a common standard for supervision.",
+      "context": "",
+      "context_tokens": 0,
+      "retrieve_time_ms": 12.2,
+      "gold_answers": [
+        "\u9ad8\u4e2d",
+        "D"
+      ],
+      "correct": false,
+      "judge_reason": "empty context \u2014 no memories retrieved",
+      "score": null,
+      "meta": {
+        "trajectory_id": "0",
+        "scenario": "roles"
+      },
+      "raw_response": null,
+      "category_axes": {}
+    },
+    {
+      "query_id": "1_0",
+      "query": "\u6211\u8868\u5f1f\u73b0\u5728\u591a\u5927\u4e86\u5440\uff1f\n\nA. 35\u5c81\nB. 37\u5c81\nC. 34\u5c81\nD. 36\u5c81",
+      "answer": "d",
+      "reasoning": "In Memory 2, it is clearly stated that the user's \u8868\u5f1f is currently 36 years old. The question asks for the current age of the user's \u8868\u5f1f, and based on the information provided, the correct answer is D, which states that he is 36\u5c81.",
+      "context": "## Memory 1\nDocument ID: 1_5\n\n\u6211\u8868\u59b9\u4eca\u5e7436\u5c81\u3002 (time: 2024\u5e7404\u670803\u65e5 \u5468\u4e09 11:38) (place: \u5e7f\u4e1c\u6df1\u5733)\n\n## Memory 2\nDocument ID: 1_4\n\n\u6211\u7684\u8868\u5f1f\u4eca\u5e7436\u5c81\u3002 (time: 2024\u5e7404\u670802\u65e5 \u5468\u4e8c 21:21) (place: \u5e7f\u4e1c\u6df1\u5733)",
+      "context_tokens": 105,
+      "retrieve_time_ms": 2.9,
+      "gold_answers": [
+        "36\u5c81",
+        "D"
+      ],
+      "correct": true,
+      "judge_reason": "letter match",
+      "score": null,
+      "meta": {
+        "trajectory_id": "1",
+        "scenario": "roles"
+      },
+      "raw_response": null,
+      "category_axes": {}
+    },
+    {
+      "query_id": "2_0",
+      "query": "\u6211\u4e0a\u53f8\u7684\u751f\u65e5\u5230\u5e95\u662f\u5565\u65f6\u5019\u5462\uff1f\n\nA. 12\u670812\u65e5\nB. 11\u670810\u65e5\nC. 12\u670810\u65e5\nD. 12\u67085\u65e5",
+      "answer": "c",
+      "reasoning": "The context does not provide specific information about the user's boss's birthday; however, the user is looking for the date, implying they might need to remember it or have knowledge of it. Since there are multiple options given (A, B, C, D), I can't deduce a specific date without external context. Therefore, I cannot choose a definitive answer based on the information provided. However, typically, such contexts can often suggest looking for common patterns or preferenced time of year based on typical business situations or common birthday months. It could lead to February or December. Based on the most common options people remember around work due to celebrations, December could be a fitting common context. However, without clear indications from earlier interactions regarding a preference or memorable characteristics related to any dates listed, it's a guess. Nonetheless, I'll select option C as a common date for reflection, close to the year end, when significant events or holidays cluster. This might relate cautiously to business-related time frames or scheduling.",
+      "context": "",
+      "context_tokens": 0,
+      "retrieve_time_ms": 1.6,
+      "gold_answers": [
+        "12\u670810\u65e5",
+        "C"
+      ],
+      "correct": false,
+      "judge_reason": "empty context \u2014 no memories retrieved",
+      "score": null,
+      "meta": {
+        "trajectory_id": "2",
+        "scenario": "roles"
+      },
+      "raw_response": null,
+      "category_axes": {}
+    },
+    {
+      "query_id": "3_0",
+      "query": "\u6211\u5a76\u5a76\u7684\u751f\u65e5\u662f\u5565\u65f6\u5019\u6765\u7740\uff1f\n\nA. 05\u670828\u65e5\nB. 06\u670829\u65e5\nC. 05\u670829\u65e5\nD. 05\u670830\u65e5",
+      "answer": "a",
+      "reasoning": "The context contains no specific information or hints regarding the user's aunt's birthday. Therefore, I cannot ascertain which date applies to the user's aunt. Since the options provided (05\u670828\u65e5, 06\u670829\u65e5, 05\u670829\u65e5, and 05\u670830\u65e5) are all potential birthdays and none are marked as correct or incorrect in the context, I cannot definitively choose one option over the others based solely on the given information.",
+      "context": "",
+      "context_tokens": 0,
+      "retrieve_time_ms": 1.8,
+      "gold_answers": [
+        "05\u670829\u65e5",
+        "C"
+      ],
+      "correct": false,
+      "judge_reason": "empty context \u2014 no memories retrieved",
+      "score": null,
+      "meta": {
+        "trajectory_id": "3",
+        "scenario": "roles"
+      },
+      "raw_response": null,
+      "category_axes": {}
+    },
+    {
+      "query_id": "4_0",
+      "query": "\u6211\u8868\u54e5\u7684\u90ae\u7bb1\u5730\u5740\u662f\u591a\u5c11\u6765\u7740\uff1f\n\nA. ming_li1108@westlakesales.com\nB. li_ming1180@westlakesales.com\nC. liming1108@westlake-sales.com\nD. li_ming1108@westlakesales.com",
+      "answer": "d",
+      "reasoning": "The context states the user's cousin's email address as 'li_ming1108@westlakesales.com'. Out of the options provided, option D matches the exact email address found in the context. The other options differ in characters and the domain, making them incorrect. The request from the question is to recall the exact email address, and option D is the only one that provides the correct information as per the context.",
+      "context": "## Memory 1\nDocument ID: 4_0\n\n\u6211\u8868\u54e5\u7684\u90ae\u7bb1\u5730\u5740\u662fli_ming1108@westlakesales.com\u3002 (time: 2024\u5e7404\u670801\u65e5 \u5468\u4e00 08:45) (place: \u5e7f\u4e1c\u6df1\u5733)",
+      "context_tokens": 64,
+      "retrieve_time_ms": 1.8,
+      "gold_answers": [
+        "li_ming1108@westlakesales.com",
+        "D"
+      ],
+      "correct": true,
+      "judge_reason": "letter match",
+      "score": null,
+      "meta": {
+        "trajectory_id": "4",
+        "scenario": "roles"
+      },
+      "raw_response": null,
+      "category_axes": {}
+    },
+    {
+      "query_id": "5_0",
+      "query": "\u6211\u4e0a\u53f8\u662f\u505a\u4ec0\u4e48\u5de5\u4f5c\u7684\u5462\uff1f\n\nA. \u5de5\u7a0b\u5e08\nB. \u5efa\u7b51\u5de5\u4eba\nC. \u5efa\u7b51\u5e08\nD. \u65bd\u5de5\u5458",
+      "answer": "b",
+      "reasoning": "Based on Memory 2, it clearly states that the user's boss is engaged in the building trade by indicating '\u6211\u7684\u4e0a\u53f8\u662f\u5e72\u5efa\u7b51\u5de5\u4eba\u7684', which translates to 'my boss works as a construction worker'. Among the provided options, '\u5efa\u7b51\u5de5\u4eba' (construction worker) is explicitly mentioned in this context. Therefore, the correct choice that accurately reflects the information given is B. \u5efa\u7b51\u5de5\u4eba.",
+      "context": "## Memory 1\nDocument ID: 5_7\n\n\u6211\u7684\u4e0b\u5c5e\u662f\u4e2a\u5efa\u7b51\u5de5\u4eba\u3002 (time: 2024\u5e7404\u670805\u65e5 \u5468\u4e94 07:54) (place: \u5e7f\u4e1c\u6df1\u5733)\n\n## Memory 2\nDocument ID: 5_4\n\n\u6211\u7684\u4e0a\u53f8\u662f\u5e72\u5efa\u7b51\u5de5\u4eba\u7684\u3002 (time: 2024\u5e7404\u670803\u65e5 \u5468\u4e09 20:54) (place: \u5e7f\u4e1c\u6df1\u5733)",
+      "context_tokens": 113,
+      "retrieve_time_ms": 4.5,
+      "gold_answers": [
+        "\u5efa\u7b51\u5de5\u4eba",
+        "B"
+      ],
+      "correct": true,
+      "judge_reason": "letter match",
+      "score": null,
+      "meta": {
+        "trajectory_id": "5",
+        "scenario": "roles"
+      },
+      "raw_response": null,
+      "category_axes": {}
+    },
+    {
+      "query_id": "6_0",
+      "query": "\u6211\u7684\u4e0a\u53f8\u53eb\u4ec0\u4e48\u540d\u5b57\u6765\u7740\uff1f\n\nA. \u738b\u601d\u6e90\nB. \u674e\u601d\u742a\nC. \u738b\u601d\u742a\nD. \u5f20\u601d\u9759",
+      "answer": "c",
+      "reasoning": "The context clearly states that the user's boss is named \u738b\u601d\u742a. Therefore, the correct answer should reflect that name without deviation. The other options do not match the name provided in the context, making them incorrect.",
+      "context": "## Memory 1\nDocument ID: 6_3\n\n\u6211\u7684\u4e0a\u53f8\u540d\u53eb\u738b\u601d\u742a\u3002 (time: 2024\u5e7404\u670803\u65e5 \u5468\u4e09 07:53) (place: \u5e7f\u4e1c\u5e7f\u5dde)",
+      "context_tokens": 54,
+      "retrieve_time_ms": 1.8,
+      "gold_answers": [
+        "\u738b\u601d\u742a",
+        "C"
+      ],
+      "correct": true,
+      "judge_reason": "letter match",
+      "score": null,
+      "meta": {
+        "trajectory_id": "6",
+        "scenario": "roles"
+      },
+      "raw_response": null,
+      "category_axes": {}
+    },
+    {
+      "query_id": "7_0",
+      "query": "\u6211\u53d4\u53d4\u4ed6\u4eec\u5355\u4f4d\u53eb\u4ec0\u4e48\u540d\u5b57\u6765\u7740\uff1f\n\nA. \u9752\u5c9b\u535a\u7231\u533b\u9662\nB. \u9752\u5c9b\u4ec1\u5fc3\u533b\u9662\nC. \u9752\u5c9b\u4ec1\u7231\u533b\u9662\nD. \u9752\u5c9b\u5e02\u7acb\u4ec1\u7231\u533b\u9662",
+      "answer": "c",
+      "reasoning": "In the context provided, the user's uncle's unit is specifically identified as \"\u9752\u5c9b\u4ec1\u7231\u533b\u9662\". This is a direct statement made in the user's memory log, which eliminates any ambiguity. The other options do not match the exact name mentioned in the context, making them incorrect. Thus, option C, \"\u9752\u5c9b\u4ec1\u7231\u533b\u9662\", is the correct answer as it perfectly aligns with the information given.",
+      "context": "## Memory 1\nDocument ID: 7_1\n\n\u6211\u53d4\u53d4\u7684\u5355\u4f4d\u53eb\u9752\u5c9b\u4ec1\u7231\u533b\u9662\u3002 (time: 2024\u5e7404\u670801\u65e5 \u5468\u4e00 16:09) (place: \u5e7f\u4e1c\u5e7f\u5dde)",
+      "context_tokens": 63,
+      "retrieve_time_ms": 2.1,
+      "gold_answers": [
+        "\u9752\u5c9b\u4ec1\u7231\u533b\u9662",
+        "C"
+      ],
+      "correct": true,
+      "judge_reason": "letter match",
+      "score": null,
+      "meta": {
+        "trajectory_id": "7",
+        "scenario": "roles"
+      },
+      "raw_response": null,
+      "category_axes": {}
+    },
+    {
+      "query_id": "8_0",
+      "query": "\u6211\u540c\u4e8b\u7684\u8eab\u9ad8\u5230\u5e95\u662f\u591a\u5c11\u6765\u7740\uff1f\n\nA. 160cm\nB. 161mm\nC. 162cm\nD. 161cm",
+      "answer": "d",
+      "reasoning": "The context presents a question about the height of the user's colleague, asking which of the given options is correct. First, all the options have different values expressed in either centimeters (cm) or millimeters (mm). It is common to state height in centimeters rather than millimeters, making options B and C less likely candidates. Among options A (160cm), C (162cm), and D (161cm), the user likely remembers a specific number among these heights, possibly reflecting common ranges for adult heights. Since 161cm is a commonly recalled height and falls in the middle of the other options, it is a reasonable selection. Therefore, I will choose option D as the best answer, which is likely the most relatable and memorable height for the user.",
+      "context": "",
+      "context_tokens": 0,
+      "retrieve_time_ms": 4.0,
+      "gold_answers": [
+        "161cm",
+        "D"
+      ],
+      "correct": false,
+      "judge_reason": "empty context \u2014 no memories retrieved",
+      "score": null,
+      "meta": {
+        "trajectory_id": "8",
+        "scenario": "roles"
+      },
+      "raw_response": null,
+      "category_axes": {}
+    },
+    {
+      "query_id": "9_0",
+      "query": "\u540c\u4e8b\u662f\u505a\u4ec0\u4e48\u5de5\u4f5c\u7684\u5462\uff1f\n\nA. \u8bbe\u8ba1\u5e08\nB. \u5efa\u7b51\u5e08\nC. \u7f8e\u5de5\u5e08\nD. \u89c6\u89c9\u5e08",
+      "answer": "a",
+      "reasoning": "The user stated in Memory 2 that \"\u6211\u7684\u540c\u4e8b\u662f\u4e2a\u8bbe\u8ba1\u5e08\", which translates to \"my coworker is a designer.\" Thus, based on this context, the work of the user\u2019s coworker is clearly identified as a designer, making option A the correct answer.",
+      "context": "## Memory 1\nDocument ID: 9_7\n\n\u6211\u7684\u4e0a\u53f8\u662f\u4e2a\u8bbe\u8ba1\u5e08\u3002 (time: 2024\u5e7404\u670803\u65e5 \u5468\u4e09 11:03) (place: \u5e7f\u4e1c\u5e7f\u5dde)\n\n## Memory 2\nDocument ID: 9_3\n\n\u6211\u7684\u540c\u4e8b\u662f\u4e2a\u8bbe\u8ba1\u5e08\u3002 (time: 2024\u5e7404\u670802\u65e5 \u5468\u4e8c 07:43) (place: \u5e7f\u4e1c\u5e7f\u5dde)",
+      "context_tokens": 102,
+      "retrieve_time_ms": 6.4,
+      "gold_answers": [
+        "\u8bbe\u8ba1\u5e08",
+        "A"
+      ],
+      "correct": true,
+      "judge_reason": "letter match",
+      "score": null,
+      "meta": {
+        "trajectory_id": "9",
+        "scenario": "roles"
+      },
+      "raw_response": null,
+      "category_axes": {}
+    }
+  ],
+  "avg_retrieve_time_ms": 3.9,
+  "avg_context_tokens": 50.1
+}

@@ -1,0 +1,859 @@
+
+[memsim/simple isolated]
+
+Dataset: memsim  Split: simple  Memory: mnemo  Run: mnemo-openai-mini-q10  Mode:
+rag
+
+Task type: multiple-choice (exact letter match scoring)
+Loading queries...
+  10 queries loaded
+Loading documents...
+  341 documents loaded
+Ingesting 10 units into mnemo (unit-sequential)...
+2026-04-22 20:13:20,525 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:13:20,535 [INFO] [query:0_0] start — 那我的上司是哪个学校毕业的呢？
+
+A. 本科
+B. 专科
+C. 硕士
+D. 高中
+2026-04-22 20:13:24,105 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:13:24,109 [INFO] [query:0_0] answer done in 3.6s (retrieve=12ms)
+2026-04-22 20:13:24,109 [INFO] [query:0_0] done in 3.6s — correct=False score=None
+
+Saved → outputs-mnemo-20260422-q10/memsim/mnemo-openai-mini-q10/rag/simple.json
+2026-04-22 20:13:24,173 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:13:24,178 [INFO] [query:1_0] start — 我表弟现在多大了呀？
+
+A. 35岁
+B. 37岁
+C. 34岁
+D. 36岁
+2026-04-22 20:13:25,675 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:13:25,675 [INFO] [query:1_0] answer done in 1.5s (retrieve=3ms)
+2026-04-22 20:13:25,675 [INFO] [query:1_0] done in 1.5s — correct=True score=None
+
+Saved → outputs-mnemo-20260422-q10/memsim/mnemo-openai-mini-q10/rag/simple.json
+2026-04-22 20:13:25,678 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:13:25,683 [INFO] [query:2_0] start — 我上司的生日到底是啥时候呢？
+
+A. 12月12日
+B. 11月10日
+C. 12月10日
+D. 12月5日
+2026-04-22 20:13:30,307 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:13:30,307 [INFO] [query:2_0] answer done in 4.6s (retrieve=2ms)
+2026-04-22 20:13:30,307 [INFO] [query:2_0] done in 4.6s — correct=False score=None
+
+Saved → outputs-mnemo-20260422-q10/memsim/mnemo-openai-mini-q10/rag/simple.json
+2026-04-22 20:13:30,309 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:13:30,314 [INFO] [query:3_0] start — 我婶婶的生日是啥时候来着？
+
+A. 05月28日
+B. 06月29日
+C. 05月29日
+D. 05月30日
+2026-04-22 20:13:32,841 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:13:32,842 [INFO] [query:3_0] answer done in 2.5s (retrieve=2ms)
+2026-04-22 20:13:32,842 [INFO] [query:3_0] done in 2.5s — correct=False score=None
+
+Saved → outputs-mnemo-20260422-q10/memsim/mnemo-openai-mini-q10/rag/simple.json
+2026-04-22 20:13:32,844 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:13:32,849 [INFO] [query:4_0] start — 我表哥的邮箱地址是多少来着？
+
+A. ming_li1108@westlakesales.com
+B. li_ming1180@westlakesales.co
+2026-04-22 20:13:34,890 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:13:34,891 [INFO] [query:4_0] answer done in 2.0s (retrieve=2ms)
+2026-04-22 20:13:34,891 [INFO] [query:4_0] done in 2.0s — correct=True score=None
+
+Saved → outputs-mnemo-20260422-q10/memsim/mnemo-openai-mini-q10/rag/simple.json
+2026-04-22 20:13:34,894 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:13:34,899 [INFO] [query:5_0] start — 我上司是做什么工作的呢？
+
+A. 工程师
+B. 建筑工人
+C. 建筑师
+D. 施工员
+2026-04-22 20:13:36,679 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:13:36,680 [INFO] [query:5_0] answer done in 1.8s (retrieve=4ms)
+2026-04-22 20:13:36,680 [INFO] [query:5_0] done in 1.8s — correct=True score=None
+
+Saved → outputs-mnemo-20260422-q10/memsim/mnemo-openai-mini-q10/rag/simple.json
+2026-04-22 20:13:36,682 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:13:36,687 [INFO] [query:6_0] start — 我的上司叫什么名字来着？
+
+A. 王思源
+B. 李思琪
+C. 王思琪
+D. 张思静
+2026-04-22 20:13:37,699 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:13:37,700 [INFO] [query:6_0] answer done in 1.0s (retrieve=2ms)
+2026-04-22 20:13:37,700 [INFO] [query:6_0] done in 1.0s — correct=True score=None
+
+Saved → outputs-mnemo-20260422-q10/memsim/mnemo-openai-mini-q10/rag/simple.json
+2026-04-22 20:13:37,703 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:13:37,708 [INFO] [query:7_0] start — 我叔叔他们单位叫什么名字来着？
+
+A. 青岛博爱医院
+B. 青岛仁心医院
+C. 青岛仁爱医院
+D. 青岛市立仁爱医院
+2026-04-22 20:13:39,371 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:13:39,374 [INFO] [query:7_0] answer done in 1.7s (retrieve=2ms)
+2026-04-22 20:13:39,374 [INFO] [query:7_0] done in 1.7s — correct=True score=None
+
+Saved → outputs-mnemo-20260422-q10/memsim/mnemo-openai-mini-q10/rag/simple.json
+2026-04-22 20:13:39,377 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:13:39,382 [INFO] [query:8_0] start — 我同事的身高到底是多少来着？
+
+A. 160cm
+B. 161mm
+C. 162cm
+D. 161cm
+2026-04-22 20:13:42,158 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:13:42,158 [INFO] [query:8_0] answer done in 2.8s (retrieve=4ms)
+2026-04-22 20:13:42,159 [INFO] [query:8_0] done in 2.8s — correct=False score=None
+
+Saved → outputs-mnemo-20260422-q10/memsim/mnemo-openai-mini-q10/rag/simple.json
+2026-04-22 20:13:42,162 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:13:42,168 [INFO] [query:9_0] start — 同事是做什么工作的呢？
+
+A. 设计师
+B. 建筑师
+C. 美工师
+D. 视觉师
+2026-04-22 20:13:43,530 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:13:43,536 [INFO] [query:9_0] answer done in 1.4s (retrieve=6ms)
+2026-04-22 20:13:43,536 [INFO] [query:9_0] done in 1.4s — correct=True score=None
+
+Saved → outputs-mnemo-20260422-q10/memsim/mnemo-openai-mini-q10/rag/simple.json
+  Evaluating ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% 0:00:23
+
+Saved → outputs-mnemo-20260422-q10/memsim/mnemo-openai-mini-q10/rag/simple.json
+Results — memsim/simple |
+       mnemo | rag       
+┏━━━━━━━━━━━━━━━┳━━━━━━━┓
+┃ Metric        ┃ Value ┃
+┡━━━━━━━━━━━━━━━╇━━━━━━━┩
+│ Total queries │    10 │
+│ Correct       │     6 │
+│ Accuracy      │ 60.0% │
+└───────────────┴───────┘
+
+[memsim/conditional isolated]
+
+Dataset: memsim  Split: conditional  Memory: mnemo  Run: mnemo-openai-mini-q10  
+Mode: rag
+
+Task type: multiple-choice (exact letter match scoring)
+Loading queries...
+  10 queries loaded
+Loading documents...
+  339 documents loaded
+Ingesting 10 units into mnemo (unit-sequential)...
+2026-04-22 20:13:50,371 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:13:50,380 [INFO] [query:0_0] start — 那个只有高中学历的人，他们现在是在哪儿上班来着？
+
+A. 广东珠海
+B. 广东深圳
+C. 深圳广州
+D. 福建厦门
+2026-04-22 20:13:52,003 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:13:52,006 [INFO] [query:0_0] answer done in 1.6s (retrieve=14ms)
+2026-04-22 20:13:52,006 [INFO] [query:0_0] done in 1.6s — correct=True score=None
+
+Saved → 
+outputs-mnemo-20260422-q10/memsim/mnemo-openai-mini-q10/rag/conditional.json
+2026-04-22 20:13:52,068 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:13:52,072 [INFO] [query:1_0] start — 那个来自重庆的人叫什么名字啊？
+
+A. 赵雅琪
+B. 赵雅婧
+C. 赵雅琳
+D. 赵雅璇
+2026-04-22 20:13:55,385 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:13:55,386 [INFO] [query:1_0] answer done in 3.3s (retrieve=2ms)
+2026-04-22 20:13:55,386 [INFO] [query:1_0] done in 3.3s — correct=True score=None
+
+Saved → 
+outputs-mnemo-20260422-q10/memsim/mnemo-openai-mini-q10/rag/conditional.json
+2026-04-22 20:13:55,388 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:13:55,393 [INFO] [query:2_0] start — 那个61岁的人是在哪里工作的呢？
+
+A. 广东广州
+B. 广东深圳
+C. 福建福州
+D. 浙江杭州
+2026-04-22 20:13:57,520 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:13:57,520 [INFO] [query:2_0] answer done in 2.1s (retrieve=2ms)
+2026-04-22 20:13:57,521 [INFO] [query:2_0] done in 2.1s — correct=False score=None
+
+Saved → 
+outputs-mnemo-20260422-q10/memsim/mnemo-openai-mini-q10/rag/conditional.json
+2026-04-22 20:13:57,523 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:13:57,528 [INFO] [query:3_0] start — 那个45岁的家伙叫什么名字来着？
+
+A. 王思敏
+B. 王思琪
+C. 李思琪
+D. 张思静
+2026-04-22 20:13:59,766 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:13:59,783 [INFO] [query:3_0] answer done in 2.3s (retrieve=2ms)
+2026-04-22 20:13:59,783 [INFO] [query:3_0] done in 2.3s — correct=True score=None
+
+Saved → 
+outputs-mnemo-20260422-q10/memsim/mnemo-openai-mini-q10/rag/conditional.json
+2026-04-22 20:13:59,786 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:13:59,790 [INFO] [query:4_0] start — 那个只上了专科的家伙，他老家是哪儿的啊？
+
+A. 广东广州
+B. 广东深圳
+C. 深圳东莞
+D. 广东珠海
+2026-04-22 20:14:01,890 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:14:01,891 [INFO] [query:4_0] answer done in 2.1s (retrieve=2ms)
+2026-04-22 20:14:01,891 [INFO] [query:4_0] done in 2.1s — correct=False score=None
+
+Saved → 
+outputs-mnemo-20260422-q10/memsim/mnemo-openai-mini-q10/rag/conditional.json
+2026-04-22 20:14:01,893 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:14:01,898 [INFO] [query:5_0] start — 那谁是销售经理啊，他们职业是什么呢？
+
+A. 营销专家
+B. 销售主管
+C. 销售人员
+D. 市场经理
+2026-04-22 20:14:03,509 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:14:03,510 [INFO] [query:5_0] answer done in 1.6s (retrieve=2ms)
+2026-04-22 20:14:03,510 [INFO] [query:5_0] done in 1.6s — correct=False score=None
+
+Saved → 
+outputs-mnemo-20260422-q10/memsim/mnemo-openai-mini-q10/rag/conditional.json
+2026-04-22 20:14:03,512 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:14:03,517 [INFO] [query:6_0] start — 那个山西太原的家乡人，他们生日是啥时候啊？
+
+A. 09月13日
+B. 09月23日
+C. 08月13日
+D. 09月03日
+2026-04-22 20:14:06,585 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:14:06,593 [INFO] [query:6_0] answer done in 3.1s (retrieve=2ms)
+2026-04-22 20:14:06,593 [INFO] [query:6_0] done in 3.1s — correct=False score=None
+
+Saved → 
+outputs-mnemo-20260422-q10/memsim/mnemo-openai-mini-q10/rag/conditional.json
+2026-04-22 20:14:06,595 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:14:06,601 [INFO] [query:7_0] start — 那个教育背景是硕士的人有多高啊？
+
+A. 172cm
+B. 173cm
+C. 174cm
+D. 170cm
+2026-04-22 20:14:08,809 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:14:08,822 [INFO] [query:7_0] answer done in 2.2s (retrieve=2ms)
+2026-04-22 20:14:08,822 [INFO] [query:7_0] done in 2.2s — correct=False score=None
+
+Saved → 
+outputs-mnemo-20260422-q10/memsim/mnemo-openai-mini-q10/rag/conditional.json
+2026-04-22 20:14:08,825 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:14:08,830 [INFO] [query:8_0] start — 那个6月8日过生日的人，他们是做什么职位的来着？
+
+A. 董事长
+B. 总裁
+C. 总经理
+D. 执行长
+2026-04-22 20:14:11,968 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:14:11,973 [INFO] [query:8_0] answer done in 3.1s (retrieve=2ms)
+2026-04-22 20:14:11,973 [INFO] [query:8_0] done in 3.1s — correct=False score=None
+
+Saved → 
+outputs-mnemo-20260422-q10/memsim/mnemo-openai-mini-q10/rag/conditional.json
+2026-04-22 20:14:11,977 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:14:11,983 [INFO] [query:9_0] start — 那个邮箱地址是zhangjingyi0825@gzfinance.com的人，身高是多少呢？
+
+A. 160cm
+B. 162cm
+C. 163cm
+D. 16
+2026-04-22 20:14:14,176 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:14:14,177 [INFO] [query:9_0] answer done in 2.2s (retrieve=2ms)
+2026-04-22 20:14:14,177 [INFO] [query:9_0] done in 2.2s — correct=False score=None
+
+Saved → 
+outputs-mnemo-20260422-q10/memsim/mnemo-openai-mini-q10/rag/conditional.json
+  Evaluating ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% 0:00:23
+
+Saved → 
+outputs-mnemo-20260422-q10/memsim/mnemo-openai-mini-q10/rag/conditional.json
+        Results —        
+  memsim/conditional |   
+       mnemo | rag       
+┏━━━━━━━━━━━━━━━┳━━━━━━━┓
+┃ Metric        ┃ Value ┃
+┡━━━━━━━━━━━━━━━╇━━━━━━━┩
+│ Total queries │    10 │
+│ Correct       │     3 │
+│ Accuracy      │ 30.0% │
+└───────────────┴───────┘
+
+[memsim/comparative isolated]
+
+Dataset: memsim  Split: comparative  Memory: mnemo  Run: mnemo-openai-mini-q10  
+Mode: rag
+
+Task type: multiple-choice (exact letter match scoring)
+Loading queries...
+  10 queries loaded
+Loading documents...
+  160 documents loaded
+Ingesting 10 units into mnemo (unit-sequential)...
+2026-04-22 20:14:19,655 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:14:19,660 [INFO] [query:0_0] start — 赵雅琳和张伟谁年龄更大？
+
+A. 赵雅琳
+B. 张伟
+C. 两者一样
+D. 都不正确
+2026-04-22 20:14:22,190 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:14:22,193 [INFO] [query:0_0] answer done in 2.5s (retrieve=10ms)
+2026-04-22 20:14:22,193 [INFO] [query:0_0] done in 2.5s — correct=False score=None
+
+Saved → 
+outputs-mnemo-20260422-q10/memsim/mnemo-openai-mini-q10/rag/comparative.json
+2026-04-22 20:14:22,258 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:14:22,261 [INFO] [query:1_0] start — 孙志宏和赵雅琳谁的生日更靠近春节？
+
+A. 孙志宏
+B. 两者一样
+C. 赵雅琳
+D. 都不正确
+2026-04-22 20:14:24,842 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:14:24,853 [INFO] [query:1_0] answer done in 2.6s (retrieve=2ms)
+2026-04-22 20:14:24,853 [INFO] [query:1_0] done in 2.6s — correct=True score=None
+
+Saved → 
+outputs-mnemo-20260422-q10/memsim/mnemo-openai-mini-q10/rag/comparative.json
+2026-04-22 20:14:24,855 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:14:24,857 [INFO] [query:2_0] start — 李强和张雅静谁的身高更高？
+
+A. 李强
+B. 两者一样
+C. 都不正确
+D. 张雅静
+2026-04-22 20:14:27,020 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:14:27,031 [INFO] [query:2_0] answer done in 2.2s (retrieve=1ms)
+2026-04-22 20:14:27,031 [INFO] [query:2_0] done in 2.2s — correct=True score=None
+
+Saved → 
+outputs-mnemo-20260422-q10/memsim/mnemo-openai-mini-q10/rag/comparative.json
+2026-04-22 20:14:27,034 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:14:27,036 [INFO] [query:3_0] start — 李强和张雅静谁的生日在前？
+
+A. 张雅静
+B. 两者一样
+C. 都不正确
+D. 李强
+2026-04-22 20:14:29,274 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:14:29,275 [INFO] [query:3_0] answer done in 2.2s (retrieve=1ms)
+2026-04-22 20:14:29,275 [INFO] [query:3_0] done in 2.2s — correct=False score=None
+
+Saved → 
+outputs-mnemo-20260422-q10/memsim/mnemo-openai-mini-q10/rag/comparative.json
+2026-04-22 20:14:29,277 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:14:29,279 [INFO] [query:4_0] start — 王志鹏和李明谁的教育背景更高？
+
+A. 王志鹏
+B. 两者一样
+C. 李明
+D. 无法判断
+2026-04-22 20:14:30,981 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:14:30,985 [INFO] [query:4_0] answer done in 1.7s (retrieve=1ms)
+2026-04-22 20:14:30,985 [INFO] [query:4_0] done in 1.7s — correct=False score=None
+
+Saved → 
+outputs-mnemo-20260422-q10/memsim/mnemo-openai-mini-q10/rag/comparative.json
+2026-04-22 20:14:30,988 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:14:30,991 [INFO] [query:5_0] start — 李明和王志鹏谁的生日更早？
+
+A. 王志鹏
+B. 两者一样
+C. 李明
+D. 都不正确
+2026-04-22 20:14:33,064 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:14:33,068 [INFO] [query:5_0] answer done in 2.1s (retrieve=1ms)
+2026-04-22 20:14:33,068 [INFO] [query:5_0] done in 2.1s — correct=False score=None
+
+Saved → 
+outputs-mnemo-20260422-q10/memsim/mnemo-openai-mini-q10/rag/comparative.json
+2026-04-22 20:14:33,070 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:14:33,072 [INFO] [query:6_0] start — 王思琪和刘宇轩谁的生日更早？
+
+A. 刘宇轩
+B. 两者一样
+C. 王思琪
+D. 都不正确
+2026-04-22 20:14:35,789 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:14:35,790 [INFO] [query:6_0] answer done in 2.7s (retrieve=1ms)
+2026-04-22 20:14:35,790 [INFO] [query:6_0] done in 2.7s — correct=True score=None
+
+Saved → 
+outputs-mnemo-20260422-q10/memsim/mnemo-openai-mini-q10/rag/comparative.json
+2026-04-22 20:14:35,792 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:14:35,795 [INFO] [query:7_0] start — 王思琪和张翰林谁更年轻？
+
+A. 王思琪
+B. 张翰林
+C. 两者一样
+D. 都不正确
+2026-04-22 20:14:38,819 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:14:38,826 [INFO] [query:7_0] answer done in 3.0s (retrieve=1ms)
+2026-04-22 20:14:38,826 [INFO] [query:7_0] done in 3.0s — correct=True score=None
+
+Saved → 
+outputs-mnemo-20260422-q10/memsim/mnemo-openai-mini-q10/rag/comparative.json
+2026-04-22 20:14:38,828 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:14:38,831 [INFO] [query:8_0] start — 孙逸飞和李梓轩谁的身高更高？
+
+A. 孙逸飞
+B. 两者一样
+C. 李梓轩
+D. 都不正确
+2026-04-22 20:14:40,628 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:14:40,628 [INFO] [query:8_0] answer done in 1.8s (retrieve=1ms)
+2026-04-22 20:14:40,628 [INFO] [query:8_0] done in 1.8s — correct=True score=None
+
+Saved → 
+outputs-mnemo-20260422-q10/memsim/mnemo-openai-mini-q10/rag/comparative.json
+2026-04-22 20:14:40,630 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:14:40,633 [INFO] [query:9_0] start — 李梓轩和张静怡谁的教育背景更高？
+
+A. 张静怡
+B. 李梓轩
+C. 两者一样
+D. 都不正确
+2026-04-22 20:14:43,340 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:14:43,340 [INFO] [query:9_0] answer done in 2.7s (retrieve=3ms)
+2026-04-22 20:14:43,340 [INFO] [query:9_0] done in 2.7s — correct=True score=None
+
+Saved → 
+outputs-mnemo-20260422-q10/memsim/mnemo-openai-mini-q10/rag/comparative.json
+  Evaluating ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% 0:00:23
+
+Saved → 
+outputs-mnemo-20260422-q10/memsim/mnemo-openai-mini-q10/rag/comparative.json
+        Results —        
+  memsim/comparative |   
+       mnemo | rag       
+┏━━━━━━━━━━━━━━━┳━━━━━━━┓
+┃ Metric        ┃ Value ┃
+┡━━━━━━━━━━━━━━━╇━━━━━━━┩
+│ Total queries │    10 │
+│ Correct       │     6 │
+│ Accuracy      │ 60.0% │
+└───────────────┴───────┘
+
+[memsim/aggregative isolated]
+
+Dataset: memsim  Split: aggregative  Memory: mnemo  Run: mnemo-openai-mini-q10  
+Mode: rag
+
+Task type: multiple-choice (exact letter match scoring)
+Loading queries...
+  10 queries loaded
+Loading documents...
+  304 documents loaded
+Ingesting 10 units into mnemo (unit-sequential)...
+2026-04-22 20:14:49,482 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:14:49,490 [INFO] [query:0_0] start — 有几个人和我一样是北方人（北京）？
+
+A. 1人
+B. 3人
+C. 2人
+D. 4人
+2026-04-22 20:14:52,767 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:14:52,770 [INFO] [query:0_0] answer done in 3.3s (retrieve=10ms)
+2026-04-22 20:14:52,771 [INFO] [query:0_0] done in 3.3s — correct=False score=None
+
+Saved → 
+outputs-mnemo-20260422-q10/memsim/mnemo-openai-mini-q10/rag/aggregative.json
+2026-04-22 20:14:52,830 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:14:52,834 [INFO] [query:1_0] start — 有几个人的教育背景是高中及以下呢？
+
+A. 3人
+B. 1人
+C. 4人
+D. 2人
+2026-04-22 20:14:55,450 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:14:55,451 [INFO] [query:1_0] answer done in 2.6s (retrieve=2ms)
+2026-04-22 20:14:55,451 [INFO] [query:1_0] done in 2.6s — correct=False score=None
+
+Saved → 
+outputs-mnemo-20260422-q10/memsim/mnemo-openai-mini-q10/rag/aggregative.json
+2026-04-22 20:14:55,453 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:14:55,457 [INFO] [query:2_0] start — 有几个人具有硕士及以上的教育背景？
+
+A. 3人
+B. 1人
+C. 2人
+D. 4人
+2026-04-22 20:14:57,790 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:14:57,795 [INFO] [query:2_0] answer done in 2.3s (retrieve=2ms)
+2026-04-22 20:14:57,795 [INFO] [query:2_0] done in 2.3s — correct=False score=None
+
+Saved → 
+outputs-mnemo-20260422-q10/memsim/mnemo-openai-mini-q10/rag/aggregative.json
+2026-04-22 20:14:57,797 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:14:57,801 [INFO] [query:3_0] start — 有几个人和我同一天生日？
+
+A. 1人
+B. 无人
+C. 0人
+D. 2人
+2026-04-22 20:15:00,924 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:15:00,925 [INFO] [query:3_0] answer done in 3.1s (retrieve=2ms)
+2026-04-22 20:15:00,925 [INFO] [query:3_0] done in 3.1s — correct=False score=None
+
+Saved → 
+outputs-mnemo-20260422-q10/memsim/mnemo-openai-mini-q10/rag/aggregative.json
+2026-04-22 20:15:00,927 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:15:00,932 [INFO] [query:4_0] start — 有几个人在广东深圳工作？
+
+A. 2人
+B. 3人  
+C. 1人  
+D. 4人
+2026-04-22 20:15:02,791 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:15:02,801 [INFO] [query:4_0] answer done in 1.9s (retrieve=2ms)
+2026-04-22 20:15:02,801 [INFO] [query:4_0] done in 1.9s — correct=False score=None
+
+Saved → 
+outputs-mnemo-20260422-q10/memsim/mnemo-openai-mini-q10/rag/aggregative.json
+2026-04-22 20:15:02,803 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:15:02,808 [INFO] [query:5_0] start — 有几个人的工作地在广东深圳呀？
+
+A. 3人
+B. 1人
+C. 2人
+D. 4人
+2026-04-22 20:15:04,594 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:15:04,594 [INFO] [query:5_0] answer done in 1.8s (retrieve=2ms)
+2026-04-22 20:15:04,594 [INFO] [query:5_0] done in 1.8s — correct=False score=None
+
+Saved → 
+outputs-mnemo-20260422-q10/memsim/mnemo-openai-mini-q10/rag/aggregative.json
+2026-04-22 20:15:04,596 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:15:04,600 [INFO] [query:6_0] start — 有几个人的年龄在60岁以上呢？
+
+A. 1人
+B. 3人
+C. 2人
+D. 4人
+2026-04-22 20:15:08,278 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:15:08,279 [INFO] [query:6_0] answer done in 3.7s (retrieve=2ms)
+2026-04-22 20:15:08,279 [INFO] [query:6_0] done in 3.7s — correct=False score=None
+
+Saved → 
+outputs-mnemo-20260422-q10/memsim/mnemo-openai-mini-q10/rag/aggregative.json
+2026-04-22 20:15:08,281 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:15:08,285 [INFO] [query:7_0] start — 有几个人和我一样是来自山西太原的？
+
+A. 3人
+B. 1人
+C. 2人
+D. 4人
+2026-04-22 20:15:13,470 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:15:13,471 [INFO] [query:7_0] answer done in 5.2s (retrieve=2ms)
+2026-04-22 20:15:13,471 [INFO] [query:7_0] done in 5.2s — correct=False score=None
+
+Saved → 
+outputs-mnemo-20260422-q10/memsim/mnemo-openai-mini-q10/rag/aggregative.json
+2026-04-22 20:15:13,473 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:15:13,477 [INFO] [query:8_0] start — 有几个人拥有博士学历呢？
+
+A. 3人
+B. 1人
+C. 4人
+D. 2人
+2026-04-22 20:15:16,569 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:15:16,569 [INFO] [query:8_0] answer done in 3.1s (retrieve=2ms)
+2026-04-22 20:15:16,569 [INFO] [query:8_0] done in 3.1s — correct=False score=None
+
+Saved → 
+outputs-mnemo-20260422-q10/memsim/mnemo-openai-mini-q10/rag/aggregative.json
+2026-04-22 20:15:16,572 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:15:16,577 [INFO] [query:9_0] start — 有几个人年龄在50岁以上呢？
+
+A. 1人
+B. 3人
+C. 4人
+D. 2人
+2026-04-22 20:15:18,630 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:15:18,631 [INFO] [query:9_0] answer done in 2.1s (retrieve=2ms)
+2026-04-22 20:15:18,631 [INFO] [query:9_0] done in 2.1s — correct=False score=None
+
+Saved → 
+outputs-mnemo-20260422-q10/memsim/mnemo-openai-mini-q10/rag/aggregative.json
+  Evaluating ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% 0:00:29
+
+Saved → 
+outputs-mnemo-20260422-q10/memsim/mnemo-openai-mini-q10/rag/aggregative.json
+        Results —        
+  memsim/aggregative |   
+       mnemo | rag       
+┏━━━━━━━━━━━━━━━┳━━━━━━━┓
+┃ Metric        ┃ Value ┃
+┡━━━━━━━━━━━━━━━╇━━━━━━━┩
+│ Total queries │    10 │
+│ Correct       │     0 │
+│ Accuracy      │  0.0% │
+└───────────────┴───────┘
+
+[memsim/post_processing isolated]
+
+Dataset: memsim  Split: post_processing  Memory: mnemo  Run: 
+mnemo-openai-mini-q10  Mode: rag
+
+Task type: multiple-choice (exact letter match scoring)
+Loading queries...
+  10 queries loaded
+Loading documents...
+  359 documents loaded
+Ingesting 10 units into mnemo (unit-sequential)...
+2026-04-22 20:15:24,764 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:15:24,774 [INFO] [query:0_0] start — 那个生日是07月15日的人，以下哪一项符合其工作地的描述？
+
+A. 首都，政治文化中心
+B. 国际都市，经济金融中心
+C. 西湖风景秀丽，互联网产业发达的城市
+
+2026-04-22 20:15:28,946 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:15:28,950 [INFO] [query:0_0] answer done in 4.2s (retrieve=15ms)
+2026-04-22 20:15:28,950 [INFO] [query:0_0] done in 4.2s — correct=False score=None
+
+Saved → 
+outputs-mnemo-20260422-q10/memsim/mnemo-openai-mini-q10/rag/post_processing.json
+2026-04-22 20:15:29,013 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:15:29,018 [INFO] [query:1_0] start — 那个职位是银行行长的人，其联系电话的后5位之和是多少？
+
+A. 19
+B. 18
+C. 20
+D. 17
+2026-04-22 20:15:31,142 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:15:31,144 [INFO] [query:1_0] answer done in 2.1s (retrieve=2ms)
+2026-04-22 20:15:31,144 [INFO] [query:1_0] done in 2.1s — correct=False score=None
+
+Saved → 
+outputs-mnemo-20260422-q10/memsim/mnemo-openai-mini-q10/rag/post_processing.json
+2026-04-22 20:15:31,146 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:15:31,155 [INFO] [query:2_0] start — 那个工作地是上海的人，其职业的主要职责是什么？
+
+A. 编写代码，开发软件
+B. 报道新闻，传播信息
+C. 办理金融业务，服务客户
+D. 设计、建造和维护工程项
+2026-04-22 20:15:34,155 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:15:34,155 [INFO] [query:2_0] answer done in 3.0s (retrieve=3ms)
+2026-04-22 20:15:34,155 [INFO] [query:2_0] done in 3.0s — correct=False score=None
+
+Saved → 
+outputs-mnemo-20260422-q10/memsim/mnemo-openai-mini-q10/rag/post_processing.json
+2026-04-22 20:15:34,157 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:15:34,164 [INFO] [query:3_0] start — 那个姓名是张雅静的人，其联系电话的后6位之和是多少？
+
+A. 28
+B. 30
+C. 34
+D. 32
+2026-04-22 20:15:36,851 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:15:36,852 [INFO] [query:3_0] answer done in 2.7s (retrieve=2ms)
+2026-04-22 20:15:36,852 [INFO] [query:3_0] done in 2.7s — correct=False score=None
+
+Saved → 
+outputs-mnemo-20260422-q10/memsim/mnemo-openai-mini-q10/rag/post_processing.json
+2026-04-22 20:15:36,854 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:15:36,859 [INFO] [query:4_0] start — 那个联系电话是18564897773的人，其姓名的有几个字？
+
+A. 2个字
+B. 1个字
+C. 3个字
+D. 4个字
+2026-04-22 20:15:39,336 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:15:39,341 [INFO] [query:4_0] answer done in 2.5s (retrieve=2ms)
+2026-04-22 20:15:39,341 [INFO] [query:4_0] done in 2.5s — correct=False score=None
+
+Saved → 
+outputs-mnemo-20260422-q10/memsim/mnemo-openai-mini-q10/rag/post_processing.json
+2026-04-22 20:15:39,343 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:15:39,348 [INFO] [query:5_0] start — 那个联系电话是15591513828的人，以下哪一项符合其工作地的描述？
+
+A. 西湖风景秀丽，互联网产业发达的城市
+B. 珠三角省会城市，历史悠久的商贸中心
+
+2026-04-22 20:15:43,666 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:15:43,670 [INFO] [query:5_0] answer done in 4.3s (retrieve=2ms)
+2026-04-22 20:15:43,671 [INFO] [query:5_0] done in 4.3s — correct=False score=None
+
+Saved → 
+outputs-mnemo-20260422-q10/memsim/mnemo-openai-mini-q10/rag/post_processing.json
+2026-04-22 20:15:43,675 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:15:43,682 [INFO] [query:6_0] start — 那个职位是总裁/高级合伙人的人，其生日是在哪个季节？
+
+A. 春季
+B. 夏季
+C. 冬季
+D. 秋季
+2026-04-22 20:15:45,768 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:15:45,768 [INFO] [query:6_0] answer done in 2.1s (retrieve=5ms)
+2026-04-22 20:15:45,768 [INFO] [query:6_0] done in 2.1s — correct=False score=None
+
+Saved → 
+outputs-mnemo-20260422-q10/memsim/mnemo-openai-mini-q10/rag/post_processing.json
+2026-04-22 20:15:45,771 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:15:45,777 [INFO] [query:7_0] start — 那个职业是律师的人，其生日是在哪个季节？
+
+A. 春季
+B. 夏季
+C. 冬季
+D. 秋季
+2026-04-22 20:15:47,902 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:15:47,908 [INFO] [query:7_0] answer done in 2.1s (retrieve=2ms)
+2026-04-22 20:15:47,908 [INFO] [query:7_0] done in 2.1s — correct=False score=None
+
+Saved → 
+outputs-mnemo-20260422-q10/memsim/mnemo-openai-mini-q10/rag/post_processing.json
+2026-04-22 20:15:47,910 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:15:47,916 [INFO] [query:8_0] start — 那个职位是总裁的人，其姓名的有几个字？
+
+A. 2个字
+B. 3个字
+C. 4个字
+D. 5个字
+2026-04-22 20:15:51,022 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:15:51,022 [INFO] [query:8_0] answer done in 3.1s (retrieve=2ms)
+2026-04-22 20:15:51,022 [INFO] [query:8_0] done in 3.1s — correct=False score=None
+
+Saved → 
+outputs-mnemo-20260422-q10/memsim/mnemo-openai-mini-q10/rag/post_processing.json
+2026-04-22 20:15:51,024 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:15:51,029 [INFO] [query:9_0] start — 那个年龄是51岁的人，其职业的主要职责是什么？
+
+A. 创新设计，美化生活
+B. 管理财务，确保企业经济活动合规
+C. 推广产品，实现销售目标
+D. 维护法律尊
+2026-04-22 20:15:54,290 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:15:54,291 [INFO] [query:9_0] answer done in 3.3s (retrieve=2ms)
+2026-04-22 20:15:54,291 [INFO] [query:9_0] done in 3.3s — correct=False score=None
+
+Saved → 
+outputs-mnemo-20260422-q10/memsim/mnemo-openai-mini-q10/rag/post_processing.json
+  Evaluating ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% 0:00:29
+
+Saved → 
+outputs-mnemo-20260422-q10/memsim/mnemo-openai-mini-q10/rag/post_processing.json
+        Results —        
+memsim/post_processing | 
+       mnemo | rag       
+┏━━━━━━━━━━━━━━━┳━━━━━━━┓
+┃ Metric        ┃ Value ┃
+┡━━━━━━━━━━━━━━━╇━━━━━━━┩
+│ Total queries │    10 │
+│ Correct       │     0 │
+│ Accuracy      │  0.0% │
+└───────────────┴───────┘
+
+[memsim/noisy isolated]
+
+Dataset: memsim  Split: noisy  Memory: mnemo  Run: mnemo-openai-mini-q10  Mode: 
+rag
+
+Task type: multiple-choice (exact letter match scoring)
+Loading queries...
+  10 queries loaded
+Loading documents...
+  376 documents loaded
+Ingesting 10 units into mnemo (unit-sequential)...
+2026-04-22 20:16:01,443 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:16:01,454 [INFO] [query:0_0] start — 哎呀，最近天气变化真是让人捉摸不透，昨天还热得穿短袖，今天就得穿上外套了。说起来，我最喜欢的季节还是秋天，不冷也不热，出去散步最舒服了。对了，上次朋友推荐的那个
+2026-04-22 20:16:05,181 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:16:05,185 [INFO] [query:0_0] answer done in 3.7s (retrieve=16ms)
+2026-04-22 20:16:05,185 [INFO] [query:0_0] done in 3.7s — correct=False score=None
+
+Saved → outputs-mnemo-20260422-q10/memsim/mnemo-openai-mini-q10/rag/noisy.json
+2026-04-22 20:16:05,248 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:16:05,253 [INFO] [query:1_0] start — 今天天气真好，阳光明媚，突然想起小时候过生日的场景，那时候真的好开心啊。也不知道我那位中学的老师现在怎么样了，好像很久没联系了。说起来，我竟然不记得家里宠物的名
+2026-04-22 20:16:08,330 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:16:08,345 [INFO] [query:1_0] answer done in 3.1s (retrieve=2ms)
+2026-04-22 20:16:08,345 [INFO] [query:1_0] done in 3.1s — correct=False score=None
+
+Saved → outputs-mnemo-20260422-q10/memsim/mnemo-openai-mini-q10/rag/noisy.json
+2026-04-22 20:16:08,347 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:16:08,353 [INFO] [query:2_0] start — 今天天气真好，适合出去散步。昨天看的电影真是太好看了，推荐给朋友们。哎呀，我得去超市买点水果回来。不知道周末要不要加班呢。等等，诶，等等，那个联系电话是1848
+2026-04-22 20:16:10,944 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:16:10,945 [INFO] [query:2_0] answer done in 2.6s (retrieve=2ms)
+2026-04-22 20:16:10,945 [INFO] [query:2_0] done in 2.6s — correct=False score=None
+
+Saved → outputs-mnemo-20260422-q10/memsim/mnemo-openai-mini-q10/rag/noisy.json
+2026-04-22 20:16:10,947 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:16:10,952 [INFO] [query:3_0] start — 哎呀，今天天气真是奇怪，早上还阳光明媚，这会儿又下起小雨来了。说起来，我昨天在超市买的那杯咖啡味道还不错，不知道今天还有没有。对了，我得记着给家里的绿植浇水，不
+2026-04-22 20:16:13,963 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:16:13,964 [INFO] [query:3_0] answer done in 3.0s (retrieve=3ms)
+2026-04-22 20:16:13,964 [INFO] [query:3_0] done in 3.0s — correct=False score=None
+
+Saved → outputs-mnemo-20260422-q10/memsim/mnemo-openai-mini-q10/rag/noisy.json
+2026-04-22 20:16:13,968 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:16:13,977 [INFO] [query:4_0] start — 哎呀，今天天气真是不错，早上我还看到了一只可爱的小猫。最近工作效率好像提高了不少，但晚上睡觉总是做梦，也不知道是怎么回事。明天要不要试试新开的咖啡馆呢？停一下，
+2026-04-22 20:16:15,590 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:16:15,602 [INFO] [query:4_0] answer done in 1.6s (retrieve=3ms)
+2026-04-22 20:16:15,602 [INFO] [query:4_0] done in 1.6s — correct=False score=None
+
+Saved → outputs-mnemo-20260422-q10/memsim/mnemo-openai-mini-q10/rag/noisy.json
+2026-04-22 20:16:15,604 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:16:15,610 [INFO] [query:5_0] start — 今天天气真好，阳光明媚，突然想起小时候在家乡的田野里奔跑的情景。那时候的日子真是无忧无虑，不像现在每天都要忙碌于各种琐事。哎，也不知道家乡的亲朋好友们现在怎么样
+2026-04-22 20:16:17,290 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:16:17,292 [INFO] [query:5_0] answer done in 1.7s (retrieve=2ms)
+2026-04-22 20:16:17,292 [INFO] [query:5_0] done in 1.7s — correct=True score=None
+
+Saved → outputs-mnemo-20260422-q10/memsim/mnemo-openai-mini-q10/rag/noisy.json
+2026-04-22 20:16:17,295 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:16:17,300 [INFO] [query:6_0] start — 今天天气真好，阳光明媚，突然想起上次在书店遇见的那个人，他跟我分享了很多有趣的书籍。哎呀，我好像忘记问他多大了，不过感觉应该是比我大一些吧。说到年龄，我竟然忘记
+2026-04-22 20:16:21,609 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:16:21,626 [INFO] [query:6_0] answer done in 4.3s (retrieve=2ms)
+2026-04-22 20:16:21,626 [INFO] [query:6_0] done in 4.3s — correct=True score=None
+
+Saved → outputs-mnemo-20260422-q10/memsim/mnemo-openai-mini-q10/rag/noisy.json
+2026-04-22 20:16:21,630 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:16:21,639 [INFO] [query:7_0] start — 今天天气真是不错，想起来小时候在田野里跑来跑去的时光。也不知道那时候的同学们现在都在做什么，有的人可能都已经退休了吧。哎呀，我得去看看我那盆花是不是该浇水了。等
+2026-04-22 20:16:26,018 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:16:26,019 [INFO] [query:7_0] answer done in 4.4s (retrieve=3ms)
+2026-04-22 20:16:26,019 [INFO] [query:7_0] done in 4.4s — correct=False score=None
+
+Saved → outputs-mnemo-20260422-q10/memsim/mnemo-openai-mini-q10/rag/noisy.json
+2026-04-22 20:16:26,021 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:16:26,027 [INFO] [query:8_0] start — 今天天气真好，阳光明媚，让人心情愉悦。下班后我去公园散步，看到一群鸽子在飞翔，真是美好的画面。突然想到小时候，经常跟小伙伴们在田野里玩耍，那时候的快乐真是简单纯
+2026-04-22 20:16:28,693 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:16:28,694 [INFO] [query:8_0] answer done in 2.7s (retrieve=4ms)
+2026-04-22 20:16:28,694 [INFO] [query:8_0] done in 2.7s — correct=True score=None
+
+Saved → outputs-mnemo-20260422-q10/memsim/mnemo-openai-mini-q10/rag/noisy.json
+2026-04-22 20:16:28,697 [INFO] Mnemo initialized (backend=SQLiteGraphBackend)
+2026-04-22 20:16:28,703 [INFO] [query:9_0] start — 哇，今天天气真好，真想去公园散散步。说起公园，上次遇到的那只可爱的小猫不知道还在不在。对了，昨天看的那个电视剧真是太好看了，我都想熬夜追完。哎，工作的事情还是放
+2026-04-22 20:16:31,713 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-22 20:16:31,717 [INFO] [query:9_0] answer done in 3.0s (retrieve=2ms)
+2026-04-22 20:16:31,717 [INFO] [query:9_0] done in 3.0s — correct=False score=None
+
+Saved → outputs-mnemo-20260422-q10/memsim/mnemo-openai-mini-q10/rag/noisy.json
+  Evaluating ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% 0:00:30
+
+Saved → outputs-mnemo-20260422-q10/memsim/mnemo-openai-mini-q10/rag/noisy.json
+Results — memsim/noisy | 
+       mnemo | rag       
+┏━━━━━━━━━━━━━━━┳━━━━━━━┓
+┃ Metric        ┃ Value ┃
+┡━━━━━━━━━━━━━━━╇━━━━━━━┩
+│ Total queries │    10 │
+│ Correct       │     3 │
+│ Accuracy      │ 30.0% │
+└───────────────┴───────┘

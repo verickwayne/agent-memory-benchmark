@@ -1,0 +1,241 @@
+{
+  "dataset": "memsim",
+  "split": "comparative",
+  "category": null,
+  "memory_provider": "mnemo",
+  "run_name": "mnemo-openai-mini-q10",
+  "mode": "rag",
+  "oracle": false,
+  "total_queries": 10,
+  "correct": 6,
+  "accuracy": 0.6,
+  "ingestion_time_ms": 78.9,
+  "ingested_docs": 160,
+  "description": null,
+  "answer_llm": "openai:gpt-4o-mini",
+  "judge_llm": "openai:gpt-4o-mini",
+  "results": [
+    {
+      "query_id": "0_0",
+      "query": "\u8d75\u96c5\u7433\u548c\u5f20\u4f1f\u8c01\u5e74\u9f84\u66f4\u5927\uff1f\n\nA. \u8d75\u96c5\u7433\nB. \u5f20\u4f1f\nC. \u4e24\u8005\u4e00\u6837\nD. \u90fd\u4e0d\u6b63\u786e",
+      "answer": "d",
+      "reasoning": "In the context provided, there is specific information about the age of \u8d75\u96c5\u7433, which is stated as 44 years old. However, there is no information given about \u5f20\u4f1f's age. Without any comparable age data for \u5f20\u4f1f, we cannot determine if \u8d75\u96c5\u7433 is older, younger, or the same age as \u5f20\u4f1f. Therefore, the correct answer is not definitively A (\u8d75\u96c5\u7433 is older) or B (\u5f20\u4f1f is older). The most accurate choice, considering we can't compare the ages, is D (\u90fd\u4e0d\u6b63\u786e).",
+      "context": "## Memory 1\nDocument ID: 0_0\n\n\u8d75\u96c5\u7433\u662f\u6211\u7684\u4e0a\u53f8\uff0c\u5176\u5e74\u9f84\u662f44\u5c81\u3002 (time: 2024\u5e7404\u670801\u65e5 \u5468\u4e00 08:20) (place: \u5e7f\u4e1c\u6df1\u5733)\n\n## Memory 2\nDocument ID: 0_1\n\n\u8d75\u96c5\u7433\u662f\u6211\u7684\u4e0a\u53f8\uff0c\u5176\u8eab\u9ad8\u662f165cm\u3002 (time: 2024\u5e7404\u670801\u65e5 \u5468\u4e00 15:12) (place: \u5e7f\u4e1c\u6df1\u5733)",
+      "context_tokens": 123,
+      "retrieve_time_ms": 9.8,
+      "gold_answers": [
+        "\u8d75\u96c5\u7433",
+        "A"
+      ],
+      "correct": false,
+      "judge_reason": "expected one of ['\u8d75\u96c5\u7433', 'A'], got 'd'",
+      "score": null,
+      "meta": {
+        "trajectory_id": "0",
+        "scenario": "roles"
+      },
+      "raw_response": null,
+      "category_axes": {}
+    },
+    {
+      "query_id": "1_0",
+      "query": "\u5b59\u5fd7\u5b8f\u548c\u8d75\u96c5\u7433\u8c01\u7684\u751f\u65e5\u66f4\u9760\u8fd1\u6625\u8282\uff1f\n\nA. \u5b59\u5fd7\u5b8f\nB. \u4e24\u8005\u4e00\u6837\nC. \u8d75\u96c5\u7433\nD. \u90fd\u4e0d\u6b63\u786e",
+      "answer": "c",
+      "reasoning": "\u6625\u8282\u901a\u5e38\u662f\u5728\u519c\u5386\u6b63\u6708\u521d\u4e00\uff0c\u897f\u5386\u7684\u65e5\u671f\u6bcf\u5e74\u90fd\u4e0d\u540c\u3002\u6839\u636e2024\u5e74\u7684\u65e5\u5386\uff0c\u6625\u8282\u843d\u57282\u670810\u65e5\u3002\u5b59\u5fd7\u5b8f\u7684\u751f\u65e5\u662f04\u670821\u65e5\uff0c\u800c\u8d75\u96c5\u7433\u7684\u751f\u65e5\u662f02\u670805\u65e5\u3002\u7ed3\u5408\u8fd9\u4e9b\u4fe1\u606f\uff0c\u6bd4\u8f83\u4e24\u4eba\u7684\u751f\u65e5\uff1a\n\n- \u5b59\u5fd7\u5b8f\u7684\u751f\u65e5\uff0804\u670821\u65e5\uff09\u662f\u5728\u6625\u8282\u4e4b\u540e\u3002\n- \u8d75\u96c5\u7433\u7684\u751f\u65e5\uff0802\u670805\u65e5\uff09\u662f\u5728\u6625\u8282\u4e4b\u524d\uff08\u4e24\u5929\u524d\uff09\u3002\n\n\u56e0\u6b64\uff0c\u8d75\u96c5\u7433\u7684\u751f\u65e5\u66f4\u9760\u8fd1\u6625\u8282\u3002",
+      "context": "## Memory 1\nDocument ID: 1_0\n\n\u5b59\u5fd7\u5b8f\u662f\u6211\u7684\u540c\u4e8b\uff0c\u5176\u751f\u65e5\u662f04\u670821\u65e5\u3002 (time: 2024\u5e7404\u670801\u65e5 \u5468\u4e00 08:07) (place: \u5e7f\u4e1c\u6df1\u5733)\n\n## Memory 2\nDocument ID: 1_1\n\n\u8d75\u96c5\u7433\u662f\u6211\u7684\u4e0a\u53f8\uff0c\u5176\u751f\u65e5\u662f02\u670805\u65e5\u3002 (time: 2024\u5e7404\u670801\u65e5 \u5468\u4e00 21:41) (place: \u5e7f\u4e1c\u6df1\u5733)\n\n## Memory 3\nDocument ID: 1_4\n\n\u5b59\u5fd7\u5b8f\u662f\u6211\u7684\u540c\u4e8b\uff0c\u5176\u6559\u80b2\u80cc\u666f\u662f\u9ad8\u4e2d\u3002 (time: 2024\u5e7404\u670803\u65e5 \u5468\u4e09 11:44) (place: \u5e7f\u4e1c\u6df1\u5733)\n\n## Memory 4\nDocument ID: 1_5\n\n\u8d75\u96c5\u7433\u662f\u6211\u7684\u4e0a\u53f8\uff0c\u5176\u6559\u80b2\u80cc\u666f\u662f\u9ad8\u4e2d\u3002 (time: 2024\u5e7404\u670803\u65e5 \u5468\u4e09 19:45) (place: \u5e7f\u4e1c\u6df1\u5733)",
+      "context_tokens": 258,
+      "retrieve_time_ms": 1.6,
+      "gold_answers": [
+        "\u8d75\u96c5\u7433",
+        "C"
+      ],
+      "correct": true,
+      "judge_reason": "letter match",
+      "score": null,
+      "meta": {
+        "trajectory_id": "1",
+        "scenario": "roles"
+      },
+      "raw_response": null,
+      "category_axes": {}
+    },
+    {
+      "query_id": "2_0",
+      "query": "\u674e\u5f3a\u548c\u5f20\u96c5\u9759\u8c01\u7684\u8eab\u9ad8\u66f4\u9ad8\uff1f\n\nA. \u674e\u5f3a\nB. \u4e24\u8005\u4e00\u6837\nC. \u90fd\u4e0d\u6b63\u786e\nD. \u5f20\u96c5\u9759",
+      "answer": "d",
+      "reasoning": "The context only provides the height of \u5f20\u96c5\u9759, which is 168cm, but does not provide any information about \u674e\u5f3a's height. Therefore, we cannot conclude whether \u674e\u5f3a is taller, shorter, or the same height as \u5f20\u96c5\u9759 based solely on the information presented. Given that we know \u5f20\u96c5\u9759's height and have no information about \u674e\u5f3a's, the best choice referring to the known height is option D, as she has a confirmed height. The other options either cannot be verified or are not relevant as \u674e\u5f3a's height is unspecified.",
+      "context": "## Memory 1\nDocument ID: 2_1\n\n\u5f20\u96c5\u9759\u662f\u6211\u7684\u540c\u4e8b\uff0c\u5176\u8eab\u9ad8\u662f168cm\u3002 (time: 2024\u5e7404\u670802\u65e5 \u5468\u4e8c 07:49) (place: \u4e0a\u6d77)",
+      "context_tokens": 55,
+      "retrieve_time_ms": 1.2,
+      "gold_answers": [
+        "\u5f20\u96c5\u9759",
+        "D"
+      ],
+      "correct": true,
+      "judge_reason": "letter match",
+      "score": null,
+      "meta": {
+        "trajectory_id": "2",
+        "scenario": "roles"
+      },
+      "raw_response": null,
+      "category_axes": {}
+    },
+    {
+      "query_id": "3_0",
+      "query": "\u674e\u5f3a\u548c\u5f20\u96c5\u9759\u8c01\u7684\u751f\u65e5\u5728\u524d\uff1f\n\nA. \u5f20\u96c5\u9759\nB. \u4e24\u8005\u4e00\u6837\nC. \u90fd\u4e0d\u6b63\u786e\nD. \u674e\u5f3a",
+      "answer": "c",
+      "reasoning": "The context provides the birthday of \u5f20\u96c5\u9759 (December 10). However, it does not provide any information about \u674e\u5f3a's birthday. Therefore, we cannot determine whether his birthday is before or after \u5f20\u96c5\u9759's. Thus, the only option that accurately reflects the available data is that we cannot determine whose birthday is earlier, which means that 'both are not correct' is the only applicable option. Therefore, the best choice is C: \u90fd\u4e0d\u6b63\u786e.",
+      "context": "## Memory 1\nDocument ID: 3_1\n\n\u5f20\u96c5\u9759\u662f\u6211\u7684\u540c\u4e8b\uff0c\u5176\u751f\u65e5\u662f12\u670810\u65e5\u3002 (time: 2024\u5e7404\u670801\u65e5 \u5468\u4e00 12:27) (place: \u4e0a\u6d77)",
+      "context_tokens": 57,
+      "retrieve_time_ms": 1.2,
+      "gold_answers": [
+        "\u674e\u5f3a",
+        "D"
+      ],
+      "correct": false,
+      "judge_reason": "expected one of ['\u674e\u5f3a', 'D'], got 'c'",
+      "score": null,
+      "meta": {
+        "trajectory_id": "3",
+        "scenario": "roles"
+      },
+      "raw_response": null,
+      "category_axes": {}
+    },
+    {
+      "query_id": "4_0",
+      "query": "\u738b\u5fd7\u9e4f\u548c\u674e\u660e\u8c01\u7684\u6559\u80b2\u80cc\u666f\u66f4\u9ad8\uff1f\n\nA. \u738b\u5fd7\u9e4f\nB. \u4e24\u8005\u4e00\u6837\nC. \u674e\u660e\nD. \u65e0\u6cd5\u5224\u65ad",
+      "answer": "d",
+      "reasoning": "The context only provides information about Wang Zhipeng's education background, stating that he has an associate degree (\u4e13\u79d1). There is no information given about Li Ming's education background. Without knowing Li Ming's education level, we cannot make a direct comparison. Therefore, the best option is 'D. \u65e0\u6cd5\u5224\u65ad', as we cannot determine who has a higher education background based on the available information.",
+      "context": "## Memory 1\nDocument ID: 4_0\n\n\u738b\u5fd7\u9e4f\u662f\u6211\u7684\u4e0a\u53f8\uff0c\u5176\u6559\u80b2\u80cc\u666f\u662f\u4e13\u79d1\u3002 (time: 2024\u5e7404\u670801\u65e5 \u5468\u4e00 08:45) (place: \u5e7f\u4e1c\u6df1\u5733)",
+      "context_tokens": 67,
+      "retrieve_time_ms": 1.3,
+      "gold_answers": [
+        "\u4e24\u8005\u4e00\u6837",
+        "B"
+      ],
+      "correct": false,
+      "judge_reason": "expected one of ['\u4e24\u8005\u4e00\u6837', 'B'], got 'd'",
+      "score": null,
+      "meta": {
+        "trajectory_id": "4",
+        "scenario": "roles"
+      },
+      "raw_response": null,
+      "category_axes": {}
+    },
+    {
+      "query_id": "5_0",
+      "query": "\u674e\u660e\u548c\u738b\u5fd7\u9e4f\u8c01\u7684\u751f\u65e5\u66f4\u65e9\uff1f\n\nA. \u738b\u5fd7\u9e4f\nB. \u4e24\u8005\u4e00\u6837\nC. \u674e\u660e\nD. \u90fd\u4e0d\u6b63\u786e",
+      "answer": "d",
+      "reasoning": "The context states that \u738b\u5fd7\u9e4f's birthday is on November 13. Since there is no information provided about \u674e\u660e's birthday, we cannot compare the two birthdays directly. Therefore, we cannot definitively say whose birthday is earlier without additional information about \u674e\u660e. The best answer, given that we cannot establish a comparison, is to choose option D, '\u90fd\u4e0d\u6b63\u786e' (None of the above).",
+      "context": "## Memory 1\nDocument ID: 5_1\n\n\u738b\u5fd7\u9e4f\u662f\u6211\u7684\u4e0a\u53f8\uff0c\u5176\u751f\u65e5\u662f11\u670813\u65e5\u3002 (time: 2024\u5e7404\u670801\u65e5 \u5468\u4e00 20:40) (place: \u5e7f\u4e1c\u6df1\u5733)",
+      "context_tokens": 64,
+      "retrieve_time_ms": 1.1,
+      "gold_answers": [
+        "\u674e\u660e",
+        "C"
+      ],
+      "correct": false,
+      "judge_reason": "expected one of ['\u674e\u660e', 'C'], got 'd'",
+      "score": null,
+      "meta": {
+        "trajectory_id": "5",
+        "scenario": "roles"
+      },
+      "raw_response": null,
+      "category_axes": {}
+    },
+    {
+      "query_id": "6_0",
+      "query": "\u738b\u601d\u742a\u548c\u5218\u5b87\u8f69\u8c01\u7684\u751f\u65e5\u66f4\u65e9\uff1f\n\nA. \u5218\u5b87\u8f69\nB. \u4e24\u8005\u4e00\u6837\nC. \u738b\u601d\u742a\nD. \u90fd\u4e0d\u6b63\u786e",
+      "answer": "c",
+      "reasoning": "To determine whose birthday is earlier between \u738b\u601d\u742a and \u5218\u5b87\u8f69, we need to compare their birthdays based on the context given.\\n\\n- \u5218\u5b87\u8f69's birthday is on September 13 (09\u670813\u65e5).\\n- \u738b\u601d\u742a has two documented birthdays: one on September 11 (09\u670811\u65e5) and another on December 10 (12\u670810\u65e5).\\n\\nSince September 11 is earlier in the year than September 13, \u738b\u601d\u742a's birthday on September 11 is earlier than \u5218\u5b87\u8f69's birthday on September 13. Therefore, the correct answer is C. \u738b\u601d\u742a.",
+      "context": "## Memory 1\nDocument ID: 6_1\n\n\u5218\u5b87\u8f69\u662f\u6211\u7684\u53d4\u53d4\uff0c\u5176\u751f\u65e5\u662f09\u670813\u65e5\u3002 (time: 2024\u5e7404\u670802\u65e5 \u5468\u4e8c 07:38) (place: \u5e7f\u4e1c\u5e7f\u5dde)\n\n## Memory 2\nDocument ID: 6_0\n\n\u738b\u601d\u742a\u662f\u6211\u7684\u4e0a\u53f8\uff0c\u5176\u751f\u65e5\u662f09\u670811\u65e5\u3002 (time: 2024\u5e7404\u670801\u65e5 \u5468\u4e00 08:51) (place: \u5e7f\u4e1c\u5e7f\u5dde)\n\n## Memory 3\nDocument ID: 6_0\n\n\u738b\u601d\u742a\u662f\u6211\u7684\u4e0a\u53f8\uff0c\u5176\u751f\u65e5\u662f12\u670810\u65e5\u3002 (time: 2024\u5e7404\u670801\u65e5 \u5468\u4e00 08:00) (place: \u4e0a\u6d77)",
+      "context_tokens": 183,
+      "retrieve_time_ms": 1.2,
+      "gold_answers": [
+        "\u738b\u601d\u742a",
+        "C"
+      ],
+      "correct": true,
+      "judge_reason": "letter match",
+      "score": null,
+      "meta": {
+        "trajectory_id": "6",
+        "scenario": "roles"
+      },
+      "raw_response": null,
+      "category_axes": {}
+    },
+    {
+      "query_id": "7_0",
+      "query": "\u738b\u601d\u742a\u548c\u5f20\u7ff0\u6797\u8c01\u66f4\u5e74\u8f7b\uff1f\n\nA. \u738b\u601d\u742a\nB. \u5f20\u7ff0\u6797\nC. \u4e24\u8005\u4e00\u6837\nD. \u90fd\u4e0d\u6b63\u786e",
+      "answer": "a",
+      "reasoning": "First, we need to compare the ages of \u738b\u601d\u742a and \u5f20\u7ff0\u6797 based on the context provided. \u738b\u601d\u742a has two entries: she is 43 years old in Memory 2 and 45 years old in Memory 3. Since Memory 3 (where she is 45) comes after Memory 2 (where she is 43), we assume she is now 45 as of April 2, 2024. On the other hand, \u5f20\u7ff0\u6797 is 62 years old according to Memory 1. Comparing the two ages: 45 (\u738b\u601d\u742a) and 62 (\u5f20\u7ff0\u6797), it is clear that \u738b\u601d\u742a is younger than \u5f20\u7ff0\u6797. Therefore, the correct answer is option A, \u738b\u601d\u742a. The other options are incorrect as \u5f20\u7ff0\u6797 is not younger than \u738b\u601d\u742a and they are not the same age.",
+      "context": "## Memory 1\nDocument ID: 7_1\n\n\u5f20\u7ff0\u6797\u662f\u6211\u7684\u8205\u8205\uff0c\u5176\u5e74\u9f84\u662f62\u5c81\u3002 (time: 2024\u5e7404\u670801\u65e5 \u5468\u4e00 14:30) (place: \u5e7f\u4e1c\u5e7f\u5dde)\n\n## Memory 2\nDocument ID: 7_0\n\n\u738b\u601d\u742a\u662f\u6211\u7684\u4e0a\u53f8\uff0c\u5176\u5e74\u9f84\u662f43\u5c81\u3002 (time: 2024\u5e7404\u670801\u65e5 \u5468\u4e00 08:11) (place: \u5e7f\u4e1c\u5e7f\u5dde)\n\n## Memory 3\nDocument ID: 7_4\n\n\u738b\u601d\u742a\u662f\u6211\u7684\u4e0a\u53f8\uff0c\u5176\u5e74\u9f84\u662f45\u5c81\u3002 (time: 2024\u5e7404\u670802\u65e5 \u5468\u4e8c 17:50) (place: \u4e0a\u6d77)",
+      "context_tokens": 180,
+      "retrieve_time_ms": 1.2,
+      "gold_answers": [
+        "\u738b\u601d\u742a",
+        "A"
+      ],
+      "correct": true,
+      "judge_reason": "letter match",
+      "score": null,
+      "meta": {
+        "trajectory_id": "7",
+        "scenario": "roles"
+      },
+      "raw_response": null,
+      "category_axes": {}
+    },
+    {
+      "query_id": "8_0",
+      "query": "\u5b59\u9038\u98de\u548c\u674e\u6893\u8f69\u8c01\u7684\u8eab\u9ad8\u66f4\u9ad8\uff1f\n\nA. \u5b59\u9038\u98de\nB. \u4e24\u8005\u4e00\u6837\nC. \u674e\u6893\u8f69\nD. \u90fd\u4e0d\u6b63\u786e",
+      "answer": "c",
+      "reasoning": "In the context provided, it is explicitly stated that \u5b59\u9038\u98de has a height of 161cm and \u674e\u6893\u8f69 has a height of 177cm. Comparing these two heights, it is clear that \u674e\u6893\u8f69 is taller than \u5b59\u9038\u98de. Therefore, the option that indicates who is taller is \u674e\u6893\u8f69. Thus, the correct choice is C.",
+      "context": "## Memory 1\nDocument ID: 8_0\n\n\u5b59\u9038\u98de\u662f\u6211\u7684\u540c\u4e8b\uff0c\u5176\u8eab\u9ad8\u662f161cm\u3002 (time: 2024\u5e7404\u670801\u65e5 \u5468\u4e00 08:40) (place: \u5e7f\u4e1c\u5e7f\u5dde)\n\n## Memory 2\nDocument ID: 8_1\n\n\u674e\u6893\u8f69\u662f\u6211\u7684\u4e0a\u53f8\uff0c\u5176\u8eab\u9ad8\u662f177cm\u3002 (time: 2024\u5e7404\u670801\u65e5 \u5468\u4e00 14:01) (place: \u5e7f\u4e1c\u5e7f\u5dde)",
+      "context_tokens": 121,
+      "retrieve_time_ms": 1.3,
+      "gold_answers": [
+        "\u674e\u6893\u8f69",
+        "C"
+      ],
+      "correct": true,
+      "judge_reason": "letter match",
+      "score": null,
+      "meta": {
+        "trajectory_id": "8",
+        "scenario": "roles"
+      },
+      "raw_response": null,
+      "category_axes": {}
+    },
+    {
+      "query_id": "9_0",
+      "query": "\u674e\u6893\u8f69\u548c\u5f20\u9759\u6021\u8c01\u7684\u6559\u80b2\u80cc\u666f\u66f4\u9ad8\uff1f\n\nA. \u5f20\u9759\u6021\nB. \u674e\u6893\u8f69\nC. \u4e24\u8005\u4e00\u6837\nD. \u90fd\u4e0d\u6b63\u786e",
+      "answer": "b",
+      "reasoning": "According to the context provided, \u5f20\u9759\u6021 (Zh\u0101ng J\u00ecngy\u00ed) has a high school education, whereas \u674e\u6893\u8f69 (L\u01d0 Z\u01d0xu\u0101n) has a PhD. Therefore, \u674e\u6893\u8f69's education level is definitively higher than that of \u5f20\u9759\u6021. The question asks who has the higher educational background, and based on the qualifications provided, the answer is clear: \u674e\u6893\u8f69 has a doctoral degree, which is significantly higher than a high school education.",
+      "context": "## Memory 1\nDocument ID: 9_1\n\n\u5f20\u9759\u6021\u662f\u6211\u7684\u6bcd\u4eb2\uff0c\u5176\u6559\u80b2\u80cc\u666f\u662f\u9ad8\u4e2d\u3002 (time: 2024\u5e7404\u670801\u65e5 \u5468\u4e00 07:00) (place: \u5e7f\u4e1c\u5e7f\u5dde)\n\n## Memory 2\nDocument ID: 9_0\n\n\u674e\u6893\u8f69\u662f\u6211\u7684\u4e0a\u53f8\uff0c\u5176\u6559\u80b2\u80cc\u666f\u662f\u535a\u58eb\u3002 (time: 2024\u5e7404\u670801\u65e5 \u5468\u4e00 08:44) (place: \u5e7f\u4e1c\u5e7f\u5dde)",
+      "context_tokens": 134,
+      "retrieve_time_ms": 3.3,
+      "gold_answers": [
+        "\u674e\u6893\u8f69",
+        "B"
+      ],
+      "correct": true,
+      "judge_reason": "letter match",
+      "score": null,
+      "meta": {
+        "trajectory_id": "9",
+        "scenario": "roles"
+      },
+      "raw_response": null,
+      "category_axes": {}
+    }
+  ],
+  "avg_retrieve_time_ms": 2.3,
+  "avg_context_tokens": 124.2
+}

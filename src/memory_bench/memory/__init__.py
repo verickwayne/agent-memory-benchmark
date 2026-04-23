@@ -7,6 +7,7 @@ from .mastra_om import MastraOMMemoryProvider
 from .mem0 import Mem0MemoryProvider
 from .mem0_cloud import Mem0CloudMemoryProvider
 from .hybrid_search import HybridSearchMemoryProvider
+from .mnemo import MnemoMemoryProvider
 from .ogham import OghamMemoryProvider
 from .supermemory import SupermemoryMemoryProvider
 
@@ -21,6 +22,7 @@ REGISTRY: dict[str, type[MemoryProvider]] = {
     "mastra-om": MastraOMMemoryProvider,
     "mem0": Mem0MemoryProvider,
     "mem0-cloud": Mem0CloudMemoryProvider,
+    "mnemo": MnemoMemoryProvider,
     "ogham": OghamMemoryProvider,
     "qdrant": HybridSearchMemoryProvider,
     "supermemory": SupermemoryMemoryProvider,

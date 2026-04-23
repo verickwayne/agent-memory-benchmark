@@ -1,0 +1,71 @@
+{
+  "dataset": "longmemeval",
+  "split": "s",
+  "category": null,
+  "memory_provider": "mnemo",
+  "run_name": "mnemo-smoke",
+  "mode": "rag",
+  "oracle": false,
+  "total_queries": 2,
+  "correct": 0,
+  "accuracy": 0.0,
+  "ingestion_time_ms": 91.0,
+  "ingested_docs": 98,
+  "description": null,
+  "answer_llm": "openai:gpt-4o-mini",
+  "judge_llm": "openai:gpt-4o-mini",
+  "results": [
+    {
+      "query_id": "e47becba",
+      "query": "What degree did I graduate with?",
+      "answer": "I do not have information on what degree you graduated with.",
+      "reasoning": "In the retrieved context, there are no mentions or indications regarding what degree the user graduated with. The conversation primarily includes interactions about task management apps, home office setup, sports updates, organizing coupons, and other unrelated topics. Because of this, there is no relevant information regarding the user's educational background or the specific degree obtained, which leads to determining that this information is either unknown or not covered in the prior conversations.",
+      "context": "## Memory 1\nTimestamp: 2023-05-30T00:00:00+00:00\nContext: Session e47becba_answer_280352e9 - you are the assistant in this conversation - happened on 2023-05-30 00:00:00 UTC.\nDocument ID: e47becba_answer_280352e9\n\n[{\"role\": \"user\", \"content\": \"I'm trying to organize my life a bit better, can you recommend some task management apps that can help me prioritize my work and personal tasks? I've been using a planner, but I think I need something more digital.\"}, {\"role\": \"assistant\", \"content\": \"Making the leap \n\n## Memory 2\nTimestamp: 2023-05-30T00:00:00+00:00\nContext: Session e47becba_02bd2b90_3 - you are the assistant in this conversation - happened on 2023-05-30 00:00:00 UTC.\nDocument ID: e47becba_02bd2b90_3\n\n[{\"role\": \"user\", \"content\": \"I'm looking to get some advice on setting up a comfortable home workspace. I've recently converted my guest room into a home office, and I'm trying to make the most of the space.\"}, {\"role\": \"assistant\", \"content\": \"Congratulations on converting your guest room into a home offi\n\n## Memory 3\nTimestamp: 2023-05-22T00:00:00+00:00\nContext: Session e47becba_41abc171_4 - you are the assistant in this conversation - happened on 2023-05-22 00:00:00 UTC.\nDocument ID: e47becba_41abc171_4\n\n[{\"role\": \"user\", \"content\": \"I'm looking for some sports news updates. By the way, the World Series just ended, and I was rooting for the Astros all the way. I'm still on a high from their win! Can you give me some analysis on their performance this season?\"}, {\"role\": \"assistant\", \"content\": \"Congratulati\n\n## Memory 4\nTimestamp: 2023-05-23T00:00:00+00:00\nContext: Session e47becba_aae4411b_2 - you are the assistant in this conversation - happened on 2023-05-23 00:00:00 UTC.\nDocument ID: e47becba_aae4411b_2\n\n[{\"role\": \"user\", \"content\": \"I'm looking for some advice on organizing my coupons. I've got a bunch of physical ones from the Sunday paper and some digital ones on my grocery store app. Do you have any tips on how to keep them all in order? By the way, speaking of online deals, I just bought a new vacuum c\n\n## Memory 5\nTimestamp: 2023-05-20T00:00:00+00:00\nContext: Session e47becba_sharegpt_Cr2tc1f_0 - you are the assistant in this conversation - happened on 2023-05-20 00:00:00 UTC.\nDocument ID: e47becba_sharegpt_Cr2tc1f_0\n\n[{\"role\": \"user\", \"content\": \"Rewrite the script for the bank heist and escape scenes in Heat, but replace Neil McCauley with the Joker from the Dark Knight.\"}, {\"role\": \"assistant\", \"content\": \"Title: Heat's Dark Knight\\n\\nCharacters:\\n\\n* Joker (previously Neil McCauley)\\n* Chris Shiherlis\n\n## Memory 6\nTimestamp: 2023-05-25T00:00:00+00:00\nContext: Session e47becba_ultrachat_336116 - you are the assistant in this conversation - happened on 2023-05-25 00:00:00 UTC.\nDocument ID: e47becba_ultrachat_336116\n\n[{\"role\": \"user\", \"content\": \"How does the physical anatomy of a sea turtle enable it to swim and dive for hours without needing to resurface for air?\"}, {\"role\": \"assistant\", \"content\": \"The physical anatomy of a sea turtle enables it to swim and dive for hours without needing to resurface for \n\n## Memory 7\nTimestamp: 2023-05-20T00:00:00+00:00\nContext: Session e47becba_f6859b48_2 - you are the assistant in this conversation - happened on 2023-05-20 00:00:00 UTC.\nDocument ID: e47becba_f6859b48_2\n\n[{\"role\": \"user\", \"content\": \"I've been thinking about starting my own business and I was wondering if you could recommend some inspiring podcasts about entrepreneurship, aside from \\\"How I Built This\\\" which I've been listening to for months now. By the way, I just finished listening to a true crime podcas\n\n## Memory 8\nTimestamp: 2023-05-28T00:00:00+00:00\nContext: Session e47becba_ultrachat_214101 - you are the assistant in this conversation - happened on 2023-05-28 00:00:00 UTC.\nDocument ID: e47becba_ultrachat_214101\n\n[{\"role\": \"user\", \"content\": \"What factors led to the formation of the ANZAC organization, and how did this contribute to shaping national identity?\"}, {\"role\": \"assistant\", \"content\": \"The formation of the ANZAC organization was primarily influenced by political, social, and cultural factors. T\n\n## Memory 9\nTimestamp: 2023-05-22T00:00:00+00:00\nContext: Session e47becba_5dac7cc2_1 - you are the assistant in this conversation - happened on 2023-05-22 00:00:00 UTC.\nDocument ID: e47becba_5dac7cc2_1\n\n[{\"role\": \"user\", \"content\": \"I'm looking for some advice on how to properly wash my Nike Dri-FIT running socks to get rid of the smell. I've been using them for about 6 months now and they've been great, but I've been using them non-stop for my morning jogs in my new Asics Gel-Kayano shoes, which I got las\n\n## Memory 10\nTimestamp: 2023-05-25T00:00:00+00:00\nContext: Session e47becba_978c0e70 - you are the assistant in this conversation - happened on 2023-05-25 00:00:00 UTC.\nDocument ID: e47becba_978c0e70\n\n[{\"role\": \"user\", \"content\": \"I'm looking for some new healthy snack ideas, something easy to grab and go.\"}, {\"role\": \"assistant\", \"content\": \"Healthy snacking is a great habit to cultivate! Here are some easy, grab-and-go snack ideas that are nutritious and delicious:\\n\\n**Fresh Fruits**\\n\\n1. Apples, bananas",
+      "context_tokens": 1549,
+      "retrieve_time_ms": 17.3,
+      "gold_answers": [
+        "Business Administration"
+      ],
+      "correct": false,
+      "judge_reason": "The model response does not provide any information about the degree and therefore does not contain the correct answer.",
+      "score": null,
+      "meta": {
+        "question_type": "single-session-user",
+        "query_timestamp": "2023-05-30T00:00:00+00:00"
+      },
+      "raw_response": null,
+      "category_axes": {
+        "Question Type": [
+          "single-session-user"
+        ]
+      }
+    },
+    {
+      "query_id": "118b2229",
+      "query": "How long is my daily commute to work?",
+      "answer": "I'm sorry, but the context does not provide any details about the duration of your daily commute to work.",
+      "reasoning": "In the retrieved context, there is no specific information related to the user's daily commute time to work. The conversations primarily revolve around interests in audiobooks, music, documentaries, and other subjects but not commuting details. The user mentioned enjoying audiobooks during their commute on May 22, but this does not give any measure of time. Therefore, I cannot ascertain the duration of the daily commute from the available information.",
+      "context": "## Memory 1\nTimestamp: 2023-05-22T00:00:00+00:00\nContext: Session 118b2229_answer_40a90d51 - you are the assistant in this conversation - happened on 2023-05-22 00:00:00 UTC.\nDocument ID: 118b2229_answer_40a90d51\n\n[{\"role\": \"user\", \"content\": \"I'm looking for some new fiction audiobook recommendations. I've been enjoying audiobooks a lot lately, especially during my daily commute.\"}, {\"role\": \"assistant\", \"content\": \"Audiobooks are a great way to make the most of your commute time! I'd be happy to recommend\n\n## Memory 2\nTimestamp: 2023-05-25T00:00:00+00:00\nContext: Session 118b2229_afe04238_1 - you are the assistant in this conversation - happened on 2023-05-25 00:00:00 UTC.\nDocument ID: 118b2229_afe04238_1\n\n[{\"role\": \"user\", \"content\": \"I've been really into learning new things lately, especially on YouTube. I've watched at least 10 hours of Crash Course videos over the past month, covering topics like world history, biology, and astronomy. Can you recommend some good documentaries on astronomy that I might en\n\n## Memory 3\nTimestamp: 2023-05-24T00:00:00+00:00\nContext: Session 118b2229_ultrachat_392094 - you are the assistant in this conversation - happened on 2023-05-24 00:00:00 UTC.\nDocument ID: 118b2229_ultrachat_392094\n\n[{\"role\": \"user\", \"content\": \"How are coral reefs being protected and restored in the Red Sea?\"}, {\"role\": \"assistant\", \"content\": \"Coral reefs in the Red Sea are being protected and restored through various methods. \\n\\n1. Marine Protected Areas (MPAs): The Red Sea has established several marin\n\n## Memory 4\nTimestamp: 2023-05-20T00:00:00+00:00\nContext: Session 118b2229_db73b7e4_4 - you are the assistant in this conversation - happened on 2023-05-20 00:00:00 UTC.\nDocument ID: 118b2229_db73b7e4_4\n\n[{\"role\": \"user\", \"content\": \"I'm looking for some advice on how to take care of my leather boots. I've been wearing my new boots almost daily since January 15th, and I want to make sure they last long. Do you have any tips on how to condition them?\"}, {\"role\": \"assistant\", \"content\": \"Congratulations on yo\n\n## Memory 5\nTimestamp: 2023-05-26T00:00:00+00:00\nContext: Session 118b2229_5dce60dd - you are the assistant in this conversation - happened on 2023-05-26 00:00:00 UTC.\nDocument ID: 118b2229_5dce60dd\n\n[{\"role\": \"user\", \"content\": \"I need help finding a good stain remover for a sequined top. Do you have any recommendations?\"}, {\"role\": \"assistant\", \"content\": \"Sparkly sequins can be a challenge when it comes to stain removal! Don't worry, I've got some recommendations to help you find a good stain remover for\n\n## Memory 6\nTimestamp: 2023-05-24T00:00:00+00:00\nContext: Session 118b2229_db50c0f6 - you are the assistant in this conversation - happened on 2023-05-24 00:00:00 UTC.\nDocument ID: 118b2229_db50c0f6\n\n[{\"role\": \"user\", \"content\": \"I'm looking for some tips on how to stay motivated to exercise regularly. I've been doing a lot of charity events lately, and I want to keep the momentum going.\"}, {\"role\": \"assistant\", \"content\": \"Congratulations on your charity event endeavors! Maintaining motivation to exercise \n\n## Memory 7\nTimestamp: 2023-05-30T00:00:00+00:00\nContext: Session 118b2229_3ea9f765 - you are the assistant in this conversation - happened on 2023-05-30 00:00:00 UTC.\nDocument ID: 118b2229_3ea9f765\n\n[{\"role\": \"user\", \"content\": \"I'm looking for some new music recommendations. Can you suggest some similar artists to Tame Impala and Phoebe Bridgers?\"}, {\"role\": \"assistant\", \"content\": \"Tame Impala and Phoebe Bridgers are both incredible artists. Here are some similar artists you might enjoy:\\n\\n**Similar to \n\n## Memory 8\nTimestamp: 2023-05-20T00:00:00+00:00\nContext: Session 118b2229_a0b8b0ad_6 - you are the assistant in this conversation - happened on 2023-05-20 00:00:00 UTC.\nDocument ID: 118b2229_a0b8b0ad_6\n\n[{\"role\": \"user\", \"content\": \"I'm trying to explore more music genres and artists. I've been listening to a lot of indie-folk lately, but I want to branch out. I've been keeping a music journal to track what I've been listening to and what I think of it, which has been helpful in identifying patterns in my \n\n## Memory 9\nTimestamp: 2023-05-29T00:00:00+00:00\nContext: Session 118b2229_d600c646 - you are the assistant in this conversation - happened on 2023-05-29 00:00:00 UTC.\nDocument ID: 118b2229_d600c646\n\n[{\"role\": \"user\", \"content\": \"I'm planning to go on a birding trip to the nearby nature reserve soon. Can you tell me what species of warblers I might see this time of year?\"}, {\"role\": \"assistant\", \"content\": \"Exciting! I'd be happy to help you with that! However, to provide you with accurate information, I'll\n\n## Memory 10\nTimestamp: 2023-05-30T00:00:00+00:00\nContext: Session 118b2229_sharegpt_1rIk8tS_17 - you are the assistant in this conversation - happened on 2023-05-30 00:00:00 UTC.\nDocument ID: 118b2229_sharegpt_1rIk8tS_17\n\n[{\"role\": \"assistant\", \"content\": \"As Jinju was used and carried water for the villagers every day, she began to show signs of wear and tear. Over time, small cracks began to form in her surface, gradually spreading and deepening. These cracks were caused by the constant pressure of the wa",
+      "context_tokens": 1553,
+      "retrieve_time_ms": 5.0,
+      "gold_answers": [
+        "45 minutes each way"
+      ],
+      "correct": false,
+      "judge_reason": "The model response does not provide any information about the duration of the daily commute and thus does not contain the correct answer.",
+      "score": null,
+      "meta": {
+        "question_type": "single-session-user",
+        "query_timestamp": "2023-05-30T00:00:00+00:00"
+      },
+      "raw_response": null,
+      "category_axes": {
+        "Question Type": [
+          "single-session-user"
+        ]
+      }
+    }
+  ],
+  "avg_retrieve_time_ms": 11.2,
+  "avg_context_tokens": 1551.0
+}
